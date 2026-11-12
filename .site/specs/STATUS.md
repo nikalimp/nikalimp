@@ -3,7 +3,7 @@
 Этап: живой сайт, развитие. Карточка — [[Сайт NikAlimp]] (Network/Products). Стандарт — «AI-Ready сайт — стандарт», «Публикация — стандарт».
 
 ## Как устроено
-- Код — `.site/` в публичном репозитории nikalimp/nikalimp.ru (с 12.11.2026; раньше — vault NikitOS). При сборке читает `Library/*` этого репозитория. Минуты Actions у публичного репозитория бесплатные.
+- Код — `.site/` в публичном репозитории nikalimp/nikalimp (с 12.11.2026; раньше — vault NikitOS). При сборке читает `Library/*` этого репозитория. Минуты Actions у публичного репозитория бесплатные.
 - Выкладка — deploy-kit (`.github/workflows/deploy.yml`, паспорт `publish.json` в корне): SSH на REG.RU, запасной путь FTP. PR агента — `pr.yml`: check → автослияние → выкладка.
 - Перед выкладкой — `npm run check` (стартер): объём 250+ слов, title/description, geo-check, Главред, реквизиты. Проектные настройки — `scripts/check.local.mjs`.
 - Редиректы — `public/.htaccess` (Apache включён в ISPmanager 17.10.2026), список — `scripts/redirects.json`. HTTPS — галочкой в панели.

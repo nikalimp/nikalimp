@@ -1,6 +1,6 @@
 {
   "project": "nikalimp.ru",
-  "repo": "nikalimp/nikalimp.ru",
+  "repo": "nikalimp/nikalimp",
   "site_dir": ".site",
   "url": "https://nikalimp.ru",
   "adapter": "ssh-ftp",
@@ -14,7 +14,7 @@
     "days": "1-7"
   },
   "version": 1,
-  "notes": "Сайт — публичный репозиторий nikalimp/nikalimp.ru (с 12.11.2026, раньше — .site в vault NikitOS); при сборке читает Library/* этого репозитория. Сервер REG.RU server284 (31.31.197.26), u3672757, папка www/nikalimp.ru. SSH из Actions работает (одно соединение на попытку); FTP — страховка, нужны секреты FTP_*. Конфиг Wordstat API лежит вне папки сайта (/var/www/u3672757/data/wordstat/config.php) — rsync его не трогает.",
+  "notes": "Сайт — публичный репозиторий nikalimp/nikalimp (с 12.11.2026, раньше — .site в vault NikitOS); при сборке читает Library/* этого репозитория. Сервер REG.RU server284 (31.31.197.26), u3672757, папка www/nikalimp.ru. SSH из Actions работает (одно соединение на попытку); FTP — страховка, нужны секреты FTP_*. Конфиг Wordstat API лежит вне папки сайта (/var/www/u3672757/data/wordstat/config.php) — rsync его не трогает.",
   "out_dir": "out",
   "app_path": "",
   "rsync_exclude": "",

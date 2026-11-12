@@ -1,4 +1,4 @@
-# Выкладка nikalimp.ru — вызов общего сценария nikalimp/deploy-kit (стандарт «Публикация — стандарт»).
+# Выкладка nikalimp.ru (репозиторий nikalimp/nikalimp) — вызов общего сценария nikalimp/deploy-kit (стандарт «Публикация — стандарт»).
 # Порядок: SSH (rsync) → если не прошёл, FTP → если упали оба, сборка в артефакте site-build.
 # Значения with: повторяют publish.json. Сайт — папка .site; при сборке он читает справочники Library/* из этого же репозитория (публичный: минуты Actions бесплатные).
 # Секреты репозитория: SSH_KEY (есть); FTP_HOST, FTP_USER, FTP_PASS, FTP_DIR = www/nikalimp.ru/ — для запасного пути FTP;
