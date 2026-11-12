@@ -152,4 +152,5 @@ async function main() {
   console.log(`✓ ${site}: ${report.totals.current?.clicks ?? 0} кликов, ${report.totals.current?.impressions ?? 0} показов за ${cS}…${cE}; страниц с показами ${pagesC.length} из ${urls.length}; проверено адресов ${inspections.length} → ${file}`);
 }
 
-main().catch((e) => { console.error(`✗ ${e.message}`); process.exit(1); });
+// ::error:: — причина видна в аннотациях запуска (журналы Actions из облачной сессии не читаются)
+main().catch((e) => { const m = String(e.message).replace(/\s+/g, " ").slice(0, 900); console.error(`✗ ${m}`); console.log(`::error::GSC: ${m}`); process.exit(1); });
