@@ -1,0 +1,33 @@
+{
+  "name": "NikAlimp",
+  "site": "https://nikalimp.ru",
+  "siteLabel": "nikalimp.ru",
+  "author": "Никита Алимпиев",
+  "avatar": "../../public/avatar.webp",
+  "logosDir": "../../public/logos",
+  "font": {
+    "family": "Inter",
+    "source": "fontsource:inter"
+  },
+  "colors": {
+    "bg": "oklch(1 0 0)",
+    "fg": "oklch(0.205 0 0)",
+    "card": "oklch(0.99 0 0)",
+    "muted": "oklch(0.97 0 0)",
+    "mfg": "oklch(0.52 0 0)",
+    "border": "oklch(0.922 0 0)",
+    "brand": "oklch(0.55 0.15 255)",
+    "brandBg": "oklch(0.97 0.02 255)",
+    "onBrand": "#fff",
+    "shade": "rgb(23 23 23)"
+  },
+  "radius": 14,
+  "pattern": "dots",
+  "cta": {
+    "title": "Хотите, чтобы нейросети рекомендовали ваш бизнес?",
+    "text": "Разберу сайт и скажу, что мешает попасть в ответы Алисы AI и ChatGPT. Консультация — 30 минут в Zoom.",
+    "label": "Заказать GEO-аудит →",
+    "url": "https://nikalimp.ru/geo-audit/"
+  },
+  "blogPath": "/blog/"
+}

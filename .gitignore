@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+.env*
+.DS_Store
+.site/specs/reports/geo-check-*.md
+Library/Sites/source/cls*.tsv

@@ -1,0 +1,42 @@
+# PR агента: проверка → автослияние → выкладка (deploy-kit pr.yml + site.yml). Стандарт — «Публикация — стандарт» §4.
+# Ветка claude/* с зелёным check сливается сама и сразу выкладывается этим же запуском:
+# слияние токеном GITHUB_TOKEN не запускает deploy.yml. Метка needs-nik или правка .github/ и publish.json — ждёт Ника.
+# Значения with: у job deploy — те же, что в deploy.yml (паспорт publish.json).
+name: PR
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
+concurrency: { group: "pr-${{ github.event.pull_request.number }}", cancel-in-progress: true }
+jobs:
+  pr:
+    permissions: { contents: write, pull-requests: write }
+    uses: nikalimp/deploy-kit/.github/workflows/pr.yml@main
+    with:
+      site_dir: ".site"
+  deploy:
+    needs: pr
+    if: needs.pr.outputs.merged == 'true'
+    concurrency: { group: deploy, cancel-in-progress: false }
+    permissions: { contents: write }
+    uses: nikalimp/deploy-kit/.github/workflows/site.yml@main
+    with:
+      ref: main
+      adapter: ssh-ftp
+      site_dir: ".site"
+      out_dir: out
+      url: https://nikalimp.ru
+    secrets:
+      SSH_KEY: ${{ secrets.SSH_KEY }}
+      SSH_HOST: "31.31.197.26"
+      SSH_USER: "u3672757"
+      SITE_DIR: "/var/www/u3672757/data/www/nikalimp.ru/"
+      FTP_HOST: ${{ secrets.FTP_HOST }}
+      FTP_USER: ${{ secrets.FTP_USER }}
+      FTP_PASS: ${{ secrets.FTP_PASS }}
+      FTP_DIR: ${{ secrets.FTP_DIR }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      MAX_BOT_TOKEN: ${{ secrets.MAX_BOT_TOKEN }}
+      MAX_CHAT_ID: ${{ secrets.MAX_CHAT_ID }}
+      NOTIFY_BOT_TOKEN: ${{ secrets.NOTIFY_BOT_TOKEN }}
+      NOTIFY_CHAT_ID: ${{ secrets.NOTIFY_CHAT_ID }}

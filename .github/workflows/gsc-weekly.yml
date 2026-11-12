@@ -1,0 +1,30 @@
+# Еженедельная выгрузка Google Search Console → .site/specs/reports/gsc/YYYY-MM-DD.json (папка specs не выкладывается).
+# Воскресенье 12:04 по Бангкоку — за полчаса до задачи Claude (12:34), которая разбирает данные и присылает чек-лист.
+# Секрет GSC_SERVICE_ACCOUNT — JSON-ключ сервисного аккаунта; его почта добавлена в ресурс nikalimp.ru в Search Console.
+name: GSC weekly
+on:
+  schedule:
+    - cron: "4 5 * * 0"
+  workflow_dispatch: {}
+concurrency: { group: gsc, cancel-in-progress: false }
+jobs:
+  gsc:
+    runs-on: ubuntu-latest
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Выгрузка Search Console
+        env:
+          GSC_SERVICE_ACCOUNT: ${{ secrets.GSC_SERVICE_ACCOUNT }}
+        run: node .site/scripts/gsc-report.mjs
+      - name: Сохранить отчёт в репозиторий
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .site/specs/reports/gsc
+          git diff --cached --quiet && exit 0
+          git commit -m "Search Console: выгрузка $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1

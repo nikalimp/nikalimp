@@ -1,0 +1,299 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* shadcn/ui neutral — как в NikitOS; единственный акцент — синий */
+:root {
+  --radius: 0.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.205 0 0);
+  --card: oklch(0.99 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.52 0 0);
+  --accent: oklch(0.965 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --border: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --brand: oklch(0.55 0.15 255);
+  --brand-bg: oklch(0.97 0.02 255);
+}
+
+.dark {
+  --background: oklch(0.17 0 0);
+  --foreground: oklch(0.93 0 0);
+  --card: oklch(0.2 0 0);
+  --primary: oklch(0.93 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.26 0 0);
+  --secondary-foreground: oklch(0.93 0 0);
+  --muted: oklch(0.25 0 0);
+  --muted-foreground: oklch(0.66 0 0);
+  --accent: oklch(0.255 0 0);
+  --accent-foreground: oklch(0.93 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --ring: oklch(0.556 0 0);
+  --brand: oklch(0.74 0.12 255);
+  --brand-bg: oklch(0.74 0.12 255 / 12%);
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-bg: var(--brand-bg);
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  /* scroll-behavior: smooth не ставим глобально: при переходе между страницами Next.js прокручивает наверх, и анимация выглядит как возврат к началу той же страницы (решение Ника, 2026-11-10) */
+  body { @apply bg-background text-foreground; font-size: 15px; -webkit-font-smoothing: antialiased; }
+  ::selection { background: oklch(0.55 0.15 255 / 20%); }
+}
+
+/* Типографика статей */
+.prose-site { font-size: 16.5px; line-height: 1.7; }
+.prose-site > * + * { margin-top: 0.85em; }
+.prose-site h2 { font-size: 1.45em; font-weight: 600; margin-top: 1.8em; line-height: 1.3; letter-spacing: -0.01em; }
+.prose-site h3 { font-size: 1.15em; font-weight: 600; margin-top: 1.4em; }
+.prose-site a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in oklch, var(--brand) 35%, transparent); }
+.prose-site ul { list-style: disc; padding-left: 1.3em; }
+.prose-site ol { list-style: decimal; padding-left: 1.3em; }
+.prose-site li + li { margin-top: 0.3em; }
+.prose-site .not-prose ol { list-style: none; padding-left: 0; }
+.prose-site .not-prose li + li { margin-top: 0; }
+.prose-site strong { font-weight: 600; }
+.prose-site code { font-family: var(--font-mono); font-size: 0.88em; background: var(--muted); padding: 0.1em 0.35em; border-radius: 4px; }
+.prose-site pre { background: var(--muted); padding: 1em; border-radius: var(--radius); overflow-x: auto; font-size: 0.85em; line-height: 1.55; }
+.prose-site pre code { background: none; padding: 0; }
+.prose-site table { width: 100%; border-collapse: collapse; font-size: 0.92em; display: block; overflow-x: auto; }
+.prose-site th, .prose-site td { border-bottom: 1px solid var(--border); padding: 0.55em 0.7em 0.55em 0; text-align: left; vertical-align: top; }
+.prose-site th { font-weight: 600; }
+.prose-site img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); margin: 1.6em 0 0.4em; }
+.prose-site p:has(> img) { margin-top: 1.6em; }
+.prose-site p:has(> img) + p > em:only-child { display: block; font-size: 0.86em; color: var(--muted-foreground); font-style: normal; }
+.prose-site blockquote { border-left: 2px solid var(--brand); padding-left: 1em; color: var(--muted-foreground); }
+
+/* Логотипы клиентов — бегущая строка (Marquee, как в Magic UI) */
+.marquee { --gap: 3.5rem; --duration: 45s; position: relative; display: flex; gap: var(--gap); overflow: hidden; user-select: none; }
+.marquee::before, .marquee::after { content: ""; position: absolute; inset-block: 0; z-index: 1; width: 12%; pointer-events: none; }
+.marquee::before { left: 0; background: linear-gradient(90deg, var(--background), transparent); }
+.marquee::after { right: 0; background: linear-gradient(270deg, var(--background), transparent); }
+.marquee-group { display: flex; flex-shrink: 0; align-items: center; justify-content: space-around; gap: var(--gap); min-width: 100%; margin: 0; padding: 0; list-style: none; animation: marquee var(--duration) linear infinite; will-change: transform; backface-visibility: hidden; }
+.marquee:hover .marquee-group { animation-play-state: paused; }
+@keyframes marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(calc(-100% - var(--gap)), 0, 0); } }
+@media (prefers-reduced-motion: reduce) { .marquee-group { animation: none; } }
+.marquee-group img { display: block; height: 2.25rem; width: auto; max-width: 8.5rem; object-fit: contain; filter: grayscale(1); opacity: .55; transition: opacity .2s; }
+.marquee-group img:hover { filter: none; opacity: 1; }
+.dark .marquee-group img { filter: grayscale(1) invert(1); }
+.dark .marquee-group img:hover { filter: invert(1) hue-rotate(180deg); }
+.marquee-group img.logo-square { height: 3.25rem; }
+.marquee-group img.logo-wide { max-width: 10.5rem; }
+
+/* ───────────── Анимации ─────────────
+   Всё на CSS, без JavaScript-библиотек: текст всегда есть в HTML.
+   Появление при прокрутке — scroll-driven animations; где их нет, элементы просто видны.
+   При «уменьшить движение» в системе анимации отключены. */
+@property --beam-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+
+@keyframes rise-in { from { opacity: 0; translate: 0 16px; } to { opacity: 1; translate: none; } }
+@keyframes fade-up { from { opacity: 0; translate: 0 10px; filter: blur(4px); } to { opacity: 1; translate: none; filter: none; } }
+@keyframes beam-spin { to { --beam-angle: 360deg; } }
+@keyframes btn-shine { from { transform: translateX(-120%) skewX(-20deg); } to { transform: translateX(220%) skewX(-20deg); } }
+@keyframes hero-drift { 0%, 100% { transform: translate(-50%, 0) scale(1); } 50% { transform: translate(-46%, 18px) scale(1.08); } }
+@keyframes eyebrow-glow { 0%, 22%, 100% { color: inherit; } 8%, 14% { color: var(--brand); } }
+@keyframes draw-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* 1. Появление блоков при прокрутке */
+  @supports (animation-timeline: view()) {
+    main section:not(.hero) :is(h2, .reveal),
+    main section:not(.hero) :is(.grid:not(.grid-rows-subgrid), ol, .reveal-group) > * {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+    main section:not(.hero) :is(.grid:not(.grid-rows-subgrid), ol, .reveal-group) > :nth-child(4n + 2) { animation-range: entry 8% entry 63%; }
+    main section:not(.hero) :is(.grid:not(.grid-rows-subgrid), ol, .reveal-group) > :nth-child(4n + 3) { animation-range: entry 16% entry 71%; }
+    main section:not(.hero) :is(.grid:not(.grid-rows-subgrid), ol, .reveal-group) > :nth-child(4n + 4) { animation-range: entry 24% entry 79%; }
+    /* линия под шагами «Как работаем» прорисовывается при прокрутке */
+    .steps-line { transform-origin: left; animation: draw-x linear both; animation-timeline: view(); animation-range: entry 20% cover 45%; }
+  }
+
+  /* 4. Первый экран: слова заголовка, текст и кнопка по очереди */
+  .hero .hero-in { animation: fade-up .7s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero .hero-word { display: inline-block; animation: fade-up .6s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero-glow { animation: hero-drift 14s ease-in-out infinite; }
+  /* по очереди подсвечиваются AEO → GEO → SEO (первые три пункта надзаголовка) */
+  .eyebrow-cycle > .tip:nth-child(-n + 3) > .tip-trigger { animation: eyebrow-glow 7.5s linear infinite; }
+  .eyebrow-cycle > .tip:nth-child(2) > .tip-trigger { animation-delay: 2.5s; }
+  .eyebrow-cycle > .tip:nth-child(3) > .tip-trigger { animation-delay: 5s; }
+
+  /* 2. Кнопки */
+  [data-slot="button"] { transition: color .2s, background-color .2s, border-color .2s, box-shadow .25s, transform .15s, background-size .35s cubic-bezier(.2, .7, .2, 1); }
+  [data-slot="button"]:active { transform: scale(.98); }
+  [data-slot="button"] > svg:last-child { transition: transform .2s; }
+  [data-slot="button"]:hover > svg:last-child { transform: translateX(3px); }
+  [data-variant="default"] { position: relative; overflow: hidden; isolation: isolate; }
+  [data-variant="default"]::after {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 40%; z-index: -1; pointer-events: none;
+    background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--primary-foreground) 22%, transparent), transparent);
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  [data-variant="default"]:hover::after { animation: btn-shine .8s ease-out; }
+  [data-variant="default"]:hover { box-shadow: 0 0 0 4px color-mix(in oklch, var(--brand) 18%, transparent), 0 6px 20px -6px color-mix(in oklch, var(--brand) 45%, transparent); }
+  [data-variant="outline"] { background-image: linear-gradient(var(--accent), var(--accent)); background-repeat: no-repeat; background-size: 0% 100%; }
+  [data-variant="outline"]:hover { background-size: 100% 100%; }
+
+  /* 3. Карточки: подъём, тень, подсветка рамки за курсором */
+  .card { position: relative; transition: transform .25s cubic-bezier(.2, .7, .2, 1), box-shadow .25s, border-color .25s, background-color .25s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 12px 32px -16px color-mix(in oklch, var(--foreground) 22%, transparent); }
+  .card::before {
+    content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none; opacity: 0; transition: opacity .3s;
+    background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 0%), color-mix(in oklch, var(--brand) 70%, transparent), transparent 70%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  }
+  .card:hover::before { opacity: 1; }
+  .card .card-icon { transition: transform .25s cubic-bezier(.2, .7, .2, 1), color .25s; }
+  .card:hover .card-icon { transform: scale(1.08) rotate(-3deg); color: var(--brand); }
+
+  /* Карточка GEO-аудита: бегущий блик по рамке */
+  .border-beam { position: relative; }
+  .border-beam::after {
+    content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none;
+    background: conic-gradient(from var(--beam-angle), transparent 0 75%, var(--brand) 88%, transparent 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+    animation: beam-spin 6s linear infinite;
+  }
+
+  /* 5. Мелочи: логотипы, раскрытие FAQ */
+  .marquee-group img { transition: opacity .2s, filter .2s, transform .25s; }
+  .marquee-group img:hover { transform: scale(1.06); }
+  @supports (interpolate-size: allow-keywords) {
+    :root { interpolate-size: allow-keywords; }
+    details::details-content { height: 0; overflow: clip; transition: height .3s cubic-bezier(.2, .7, .2, 1), content-visibility .3s allow-discrete; }
+    details[open]::details-content { height: auto; }
+  }
+}
+
+/* Фон первого экрана: мягкое пятно бренда и сетка, гаснущая к краям */
+.hero { position: relative; isolation: isolate; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.hero-bg::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px; opacity: .55;
+  -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 30%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 60% 55% at 50% 30%, #000 20%, transparent 75%);
+}
+.hero-glow { position: absolute; left: 50%; top: -12rem; width: 46rem; height: 26rem; transform: translateX(-50%); border-radius: 9999px; background: radial-gradient(closest-side, color-mix(in oklch, var(--brand) 16%, transparent), transparent); filter: blur(20px); }
+
+/* Подсказки в надзаголовке первого экрана: CSS, наведение и фокус (тап на телефоне) */
+.tip { position: relative; display: inline-block; }
+.tip-trigger { cursor: help; border-bottom: 1px dashed color-mix(in oklch, currentColor 45%, transparent); outline: none; }
+.tip-trigger:focus-visible { border-radius: 2px; box-shadow: 0 0 0 2px var(--ring); }
+.tip-body {
+  position: absolute; left: 50%; bottom: calc(100% + 10px); z-index: 30; width: max-content; max-width: min(16rem, 80vw);
+  translate: -50% 4px; opacity: 0; visibility: hidden; pointer-events: none;
+  padding: .5rem .7rem; border-radius: var(--radius); border: 1px solid var(--border); background: var(--background); color: var(--foreground);
+  box-shadow: 0 10px 30px -12px color-mix(in oklch, var(--foreground) 30%, transparent);
+  font-family: var(--font-sans); font-size: 13px; line-height: 1.4; letter-spacing: normal; text-transform: none; text-align: left; white-space: normal;
+  transition: opacity .15s, translate .15s, visibility .15s;
+}
+.tip-body::after { content: ""; position: absolute; left: 50%; top: 100%; width: 8px; height: 8px; translate: -50% -4px; rotate: 45deg; background: var(--background); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.tip:hover .tip-body, .tip:focus-within .tip-body { opacity: 1; visibility: visible; translate: -50% 0; pointer-events: auto; }
+/* крайние подсказки не вылезают за экран: первые две — от левого края слова, последние две — от правого */
+.tip:nth-child(-n + 2) .tip-body { left: 0; translate: 0 4px; }
+.tip:nth-child(-n + 2) .tip-body::after { left: 1rem; }
+.tip:nth-child(n + 4) .tip-body { left: auto; right: 0; translate: 0 4px; }
+.tip:nth-child(n + 4) .tip-body::after { left: auto; right: 1rem; translate: 50% -4px; }
+.tip:nth-child(-n + 2):is(:hover, :focus-within) .tip-body, .tip:nth-child(n + 4):is(:hover, :focus-within) .tip-body { translate: 0 0; pointer-events: auto; }
+/* на телефоне над надзаголовком мало места (там шапка) — показываем подсказку снизу */
+@media (max-width: 639px) {
+  .tip-body { bottom: auto; top: calc(100% + 10px); max-width: min(15rem, 70vw); }
+  .tip-body::after { top: auto; bottom: 100%; translate: -50% 4px; rotate: 225deg; }
+  .tip:nth-child(n + 4) .tip-body::after { translate: 50% 4px; }
+}
+.eyebrow-cycle { position: relative; z-index: 20; }
+/* подсказки у тегов в карточках предложений: у каждого тега своя позиция в строке, поэтому правила nth-child для надзаголовка сбрасываем — подсказка от левого края тега */
+.offer-tips .tip .tip-body, .offer-tips .tip:nth-child(n) .tip-body { left: 0; right: auto; translate: 0 4px; }
+.offer-tips .tip .tip-body::after, .offer-tips .tip:nth-child(n) .tip-body::after { left: 1.25rem; right: auto; translate: -50% -4px; }
+.offer-tips .tip:is(:hover, :focus-within) .tip-body { translate: 0 0; }
+
+/* ссылка «Подробнее» внутри подсказки; невидимый мостик, чтобы курсор доходил до неё без закрытия */
+.tip-body::before { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 12px; }
+.tip-more { display: block; width: fit-content; margin-top: .35rem; font-weight: 500; color: var(--brand); text-decoration: none; }
+.tip-more:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (hover: none) { .tip-trigger { cursor: pointer; } }
+@media (max-width: 639px) { .tip-body::before { top: auto; bottom: 100%; } }
+
+/* Документ в генераторе политики (/privacy-generator/) */
+.policy-doc { font-size: 14px; line-height: 1.65; }
+.policy-doc > * + * { margin-top: 0.7em; }
+.policy-doc h3 { font-size: 15px; font-weight: 600; margin-top: 1.6em; }
+.policy-doc ul { list-style: disc; padding-left: 1.3em; }
+.policy-doc li + li { margin-top: 0.25em; }
+.policy-doc a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; word-break: break-all; }
+.policy-doc table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 13px; }
+.policy-doc th, .policy-doc td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; white-space: pre-line; }
+.policy-doc th { background: var(--muted); font-weight: 500; }
+
+/* Текущая страница в шапке и подвале — акцентным цветом */
+.nav-active { color: var(--brand) !important; }
+.nav-active:hover { color: var(--brand) !important; }
+
+/* Сторителлинг на главной: горизонтальная лента без полосы прокрутки, управление — кнопками и ползунком */
+.story-track { scrollbar-width: none; }
+.story-track::-webkit-scrollbar { display: none; }
+@media (min-width: 640px) { .story-track { mask-image: linear-gradient(to right, #000 calc(100% - 64px), transparent); } }
+
+/* Самолётик Telegram в шапке: улетает вправо-вверх, возвращается слева-снизу */
+@keyframes tg-out { to { transform: translate(140%, -140%); } }
+@keyframes tg-in { from { transform: translate(-140%, 140%); } to { transform: none; } }
+.tg-plane.tg-out { animation: tg-out .32s cubic-bezier(.5, 0, .75, 0) forwards; }
+.tg-plane.tg-in { animation: tg-in .38s cubic-bezier(.2, .7, .2, 1); }
+@media (prefers-reduced-motion: reduce) { .tg-plane.tg-out, .tg-plane.tg-in { animation: none; } }
+
+/* Печать отчётов аудита: только сам отчёт, без шапки и подвала */
+@media print {
+  body > header, body > footer { display: none !important; }
+  .audit details { break-inside: avoid; }
+  .audit details:not([open]) > div { display: block; }
+}
+
+/* Договор в PDF: на печать уходит только копия документа .print-doc (генератор договора) */
+.print-doc { display: none; }
+@media print {
+  @page { size: A4; margin: 2cm 1.5cm 2cm 2.5cm; }
+  body.print-doc-only { background: #fff !important; }
+  body.print-doc-only > *:not(.print-doc) { display: none !important; }
+  body.print-doc-only > .print-doc { display: block; color: #000; }
+  .print-doc .policy-doc { font: 12pt/1.4 "Times New Roman", Times, serif; text-align: justify; }
+  .print-doc .policy-doc > h2 { font-size: 14pt; text-align: center; margin-bottom: 1em; }
+  .print-doc .policy-doc h3 { font-size: 12pt; break-after: avoid; }
+  .print-doc .policy-doc table { min-width: 0; font-size: 11pt; break-inside: avoid; text-align: left; }
+  .print-doc .policy-doc th, .print-doc .policy-doc td { border-color: #000; }
+  .print-doc .policy-doc th { background: none; font-weight: 700; }
+  .print-doc .policy-doc mark::before { content: "["; }
+  .print-doc .policy-doc mark::after { content: "]"; }
+  .print-doc .policy-doc a, .print-doc .policy-doc mark, .print-doc .text-muted-foreground { color: inherit !important; background: none !important; text-decoration: none; padding: 0; }
+}

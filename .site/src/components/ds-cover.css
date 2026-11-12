@@ -1,0 +1,17 @@
+/* Обложки дизайн-систем и UI-библиотек: движение только у сцен «Анимации» и курсоров. Только transform и opacity. */
+.ds-cover .dsc-orb { animation: dsc-float 7s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+.ds-cover .dsc-orb2 { animation-duration: 9s; animation-direction: alternate-reverse; }
+.ds-cover .dsc-spin { animation: dsc-spin 24s linear infinite; }
+.ds-cover .dsc-pulse { animation: dsc-pulse 3s ease-in-out infinite; }
+.ds-cover .dsc-marquee { animation: dsc-marquee 6s linear infinite; }
+.ds-cover .dsc-marquee-w { animation: dsc-marquee-w 10s linear infinite; }
+.ds-cover .dsc-blink { animation: dsc-blink 1.1s steps(1) infinite; }
+@keyframes dsc-float { from { transform: translate(-8px, -4px) scale(0.96); } to { transform: translate(10px, 6px) scale(1.06); } }
+@keyframes dsc-spin { to { transform: rotate(360deg); } }
+@keyframes dsc-pulse { 50% { opacity: 0.55; } }
+@keyframes dsc-marquee { to { transform: translateX(-160px); } }
+@keyframes dsc-marquee-w { to { transform: translateX(-240px); } }
+@keyframes dsc-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .ds-cover * { animation: none !important; }
+}

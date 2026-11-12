@@ -1,0 +1,128 @@
+# HTTP → HTTPS — галочкой в ISPmanager («Перенаправлять HTTP-запросы в HTTPS»), не здесь:
+# nginx снимает TLS перед Apache, правило по %{SERVER_PORT}/%{HTTPS} грозит бесконечным циклом («Хостинги — что проверено»).
+
+# www → https://nikalimp.ru одним редиректом (7.11.2026, Search Console: Google выбирал www-адреса главными).
+# Условие по имени хоста, не по порту/HTTPS — цикла за nginx не будет.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.nikalimp\.ru$ [NC]
+  RewriteRule ^(.*)$ https://nikalimp.ru/$1 [R=301,L]
+</IfModule>
+
+# Защитные заголовки (HSTS включается галочкой в ISPmanager). IfModule — чтобы без mod_headers сайт не падал с 500.
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# Кодировка для llms.txt, robots.txt, sitemap.xml
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .txt .xml .html
+
+# Старые адреса (транслит) → новые. Список — scripts/redirects.json.
+# Работает, только если на хостинге включён Apache: nginx .htaccess не читает.
+# Коллекция сайтов переехала с /tilda-sites/ (7.11.2026, адреса успели уйти в IndexNow)
+RedirectMatch 301 ^/tilda-sites/(.*)$ https://nikalimp.ru/sites/$1
+RedirectMatch 301 ^/about/?$ https://nikalimp.ru/cases/
+RedirectMatch 301 ^/kejsy/?$ https://nikalimp.ru/cases/
+RedirectMatch 301 ^/uslugi/?$ https://nikalimp.ru/services/
+RedirectMatch 301 ^/uslugi/geo-prodvizhenie-sajta/?$ https://nikalimp.ru/geo-audit/
+RedirectMatch 301 ^/uslugi/geo-prodvizhenie-telegram/?$ https://nikalimp.ru/geo-audit/
+RedirectMatch 301 ^/uslugi/ekspertnye-stati/?$ https://nikalimp.ru/services/content-factory/
+RedirectMatch 301 ^/uslugi/kontent-zavod/?$ https://nikalimp.ru/services/content-factory/
+RedirectMatch 301 ^/uslugi/prodvizhenie-u-blogerov/?$ https://nikalimp.ru/services/content-factory/
+RedirectMatch 301 ^/uslugi/lending/?$ https://nikalimp.ru/services/personal-website/
+RedirectMatch 301 ^/uslugi/korporativnyj-sajt/?$ https://nikalimp.ru/services/corporate-website/
+RedirectMatch 301 ^/uslugi/razrabotka-veb-servisa/?$ https://nikalimp.ru/services/web-service-development/
+RedirectMatch 301 ^/uslugi/admin-panel-i-dashboard/?$ https://nikalimp.ru/services/web-service-development/
+RedirectMatch 301 ^/uslugi/administrirovanie-sajtov/?$ https://nikalimp.ru/services/corporate-website/
+RedirectMatch 301 ^/produkty/?$ https://nikalimp.ru/products/
+RedirectMatch 301 ^/etapy-raboty/?$ https://nikalimp.ru/process/
+RedirectMatch 301 ^/kontakty/?$ https://nikalimp.ru/contacts/
+RedirectMatch 301 ^/partnery/?$ https://nikalimp.ru/partners/
+RedirectMatch 301 ^/metodika/?$ https://nikalimp.ru/methodology/
+RedirectMatch 301 ^/soglashenie/?$ https://nikalimp.ru/terms/
+RedirectMatch 301 ^/poisk/?$ https://nikalimp.ru/search/
+RedirectMatch 301 ^/generator-dogovora/?$ https://nikalimp.ru/contract-generator/
+RedirectMatch 301 ^/ru/?$ https://nikalimp.ru/
+# 23.10.2026 — английские адреса статей, терминов глоссария и политики (web:sync)
+RedirectMatch 301 ^/blog/ai-ready-sajt-chek-list/?$ https://nikalimp.ru/blog/ai-ready-website-checklist/
+RedirectMatch 301 ^/blog/analogi-semrush-ahrefs/?$ https://nikalimp.ru/blog/semrush-ahrefs-alternatives/
+RedirectMatch 301 ^/blog/chto-takoe-geo/?$ https://nikalimp.ru/blog/what-is-geo/
+RedirectMatch 301 ^/blog/dnevnik-eksperimenta-nedelya-1/?$ https://nikalimp.ru/blog/experiment-diary-week-1/
+RedirectMatch 301 ^/blog/eksperiment-mesyac-0/?$ https://nikalimp.ru/blog/experiment-month-0/
+RedirectMatch 301 ^/blog/istoriya-webflow/?$ https://nikalimp.ru/blog/webflow-history/
+RedirectMatch 301 ^/blog/kak-popast-v-otvety-alisy-ai/?$ https://nikalimp.ru/blog/how-to-get-into-alice-ai-answers/
+RedirectMatch 301 ^/blog/kak-popast-v-otvety-chatgpt/?$ https://nikalimp.ru/blog/how-to-get-into-chatgpt-answers/
+RedirectMatch 301 ^/blog/lichnyj-sajt-ili-behance/?$ https://nikalimp.ru/blog/personal-website-vs-behance/
+RedirectMatch 301 ^/blog/llms-txt-chto-eto/?$ https://nikalimp.ru/blog/what-is-llms-txt/
+RedirectMatch 301 ^/blog/sajt-pod-klyuch-etapy/?$ https://nikalimp.ru/blog/turnkey-website-stages/
+RedirectMatch 301 ^/blog/trafik-iz-nejrosetej-2026/?$ https://nikalimp.ru/blog/ai-traffic-2026/
+RedirectMatch 301 ^/blog/utm-metki/?$ https://nikalimp.ru/blog/utm-tags/
+RedirectMatch 301 ^/blog/ux-issledovanie-pered-zapuskom/?$ https://nikalimp.ru/blog/ux-research-before-launch/
+RedirectMatch 301 ^/blog/vibe-coding-mertv/?$ https://nikalimp.ru/blog/vibe-coding-is-dead/
+RedirectMatch 301 ^/glossary/agentnyy-poisk/?$ https://nikalimp.ru/glossary/agentic-search/
+RedirectMatch 301 ^/glossary/alisa-ai/?$ https://nikalimp.ru/glossary/alice-ai/
+RedirectMatch 301 ^/glossary/brendovye-signaly/?$ https://nikalimp.ru/glossary/brand-signals/
+RedirectMatch 301 ^/glossary/bystryy-otvet/?$ https://nikalimp.ru/glossary/quick-answer/
+RedirectMatch 301 ^/glossary/vidimost-v-ai/?$ https://nikalimp.ru/glossary/ai-visibility/
+RedirectMatch 301 ^/glossary/voprosno-otvetnyy-format/?$ https://nikalimp.ru/glossary/qa-content-format/
+RedirectMatch 301 ^/glossary/gallyutsinatsiya/?$ https://nikalimp.ru/glossary/hallucination/
+RedirectMatch 301 ^/glossary/generativnyy-poisk/?$ https://nikalimp.ru/glossary/generative-search/
+RedirectMatch 301 ^/glossary/golosovoy-poisk/?$ https://nikalimp.ru/glossary/voice-search/
+RedirectMatch 301 ^/glossary/graf-znaniy/?$ https://nikalimp.ru/glossary/knowledge-graph/
+RedirectMatch 301 ^/glossary/izvlekaemost-kontenta/?$ https://nikalimp.ru/glossary/content-extractability/
+RedirectMatch 301 ^/glossary/lokalnoe-seo/?$ https://nikalimp.ru/glossary/local-seo/
+RedirectMatch 301 ^/glossary/neyro/?$ https://nikalimp.ru/glossary/yandex-neuro/
+RedirectMatch 301 ^/glossary/neyavnye-ssylki/?$ https://nikalimp.ru/glossary/implied-links/
+RedirectMatch 301 ^/glossary/nulevoy-klik/?$ https://nikalimp.ru/glossary/zero-click/
+RedirectMatch 301 ^/glossary/optimizatsiya-pod-golosovoy-poisk/?$ https://nikalimp.ru/glossary/voice-search-optimization/
+RedirectMatch 301 ^/glossary/passazh/?$ https://nikalimp.ru/glossary/passage/
+RedirectMatch 301 ^/glossary/pervoistochnik/?$ https://nikalimp.ru/glossary/primary-source/
+RedirectMatch 301 ^/glossary/portfolio-dizaynera/?$ https://nikalimp.ru/glossary/designer-portfolio/
+RedirectMatch 301 ^/glossary/prompt-issledovanie/?$ https://nikalimp.ru/glossary/prompt-research/
+RedirectMatch 301 ^/glossary/prompt-treking/?$ https://nikalimp.ru/glossary/prompt-tracking/
+RedirectMatch 301 ^/glossary/razgovornyy-zapros/?$ https://nikalimp.ru/glossary/conversational-query/
+RedirectMatch 301 ^/glossary/razgovornyy-poisk/?$ https://nikalimp.ru/glossary/conversational-search/
+RedirectMatch 301 ^/glossary/rekomendatsiya-v-ai/?$ https://nikalimp.ru/glossary/ai-recommendation/
+RedirectMatch 301 ^/glossary/retrospektiva/?$ https://nikalimp.ru/glossary/retrospective/
+RedirectMatch 301 ^/glossary/semanticheskaya-blizost/?$ https://nikalimp.ru/glossary/semantic-similarity/
+RedirectMatch 301 ^/glossary/sinteticheskiy-zapros/?$ https://nikalimp.ru/glossary/synthetic-query/
+RedirectMatch 301 ^/glossary/spetsifikatsiya/?$ https://nikalimp.ru/glossary/specification/
+RedirectMatch 301 ^/glossary/sushchnost/?$ https://nikalimp.ru/glossary/entity/
+RedirectMatch 301 ^/glossary/upominanie-brenda-v-llm/?$ https://nikalimp.ru/glossary/llm-brand-mention/
+RedirectMatch 301 ^/glossary/utochnyayushchiy-zapros/?$ https://nikalimp.ru/glossary/follow-up-query/
+RedirectMatch 301 ^/glossary/tsitirovanie-v-ai/?$ https://nikalimp.ru/glossary/ai-citation/
+RedirectMatch 301 ^/glossary/tsitiruemost/?$ https://nikalimp.ru/glossary/citability/
+RedirectMatch 301 ^/glossary/chanking-kontenta/?$ https://nikalimp.ru/glossary/content-chunking/
+RedirectMatch 301 ^/glossary/yandeks-metrika/?$ https://nikalimp.ru/glossary/yandex-metrica/
+RedirectMatch 301 ^/glossary/ai-ready-sayt/?$ https://nikalimp.ru/glossary/ai-ready-website/
+RedirectMatch 301 ^/glossary/ai-krauler/?$ https://nikalimp.ru/glossary/ai-crawler/
+RedirectMatch 301 ^/glossary/ai-otvet/?$ https://nikalimp.ru/glossary/ai-answer/
+RedirectMatch 301 ^/glossary/ai-referalnyy-trafik/?$ https://nikalimp.ru/glossary/ai-referral-traffic/
+RedirectMatch 301 ^/glossary/faq-razmetka/?$ https://nikalimp.ru/glossary/faqpage-schema/
+RedirectMatch 301 ^/glossary/howto-razmetka/?$ https://nikalimp.ru/glossary/howto-schema/
+RedirectMatch 301 ^/glossary/llm-trafik/?$ https://nikalimp.ru/glossary/llm-traffic/
+RedirectMatch 301 ^/glossary/machine-readable-kontent/?$ https://nikalimp.ru/glossary/machine-readable-content/
+RedirectMatch 301 ^/glossary/sentiment-v-ai-otvetakh/?$ https://nikalimp.ru/glossary/ai-answer-sentiment/
+RedirectMatch 301 ^/glossary/seo-dlya-marketpleysov/?$ https://nikalimp.ru/glossary/marketplace-seo/
+RedirectMatch 301 ^/glossary/utm-metka/?$ https://nikalimp.ru/glossary/utm-parameters/
+RedirectMatch 301 ^/glossary/ux-issledovanie/?$ https://nikalimp.ru/glossary/ux-research/
+RedirectMatch 301 ^/privacy/?$ https://nikalimp.ru/privacy-policy/
+
+# 29.10.2026: услуги сокращены до четырёх, страница этапов — на главной
+RedirectMatch 301 ^/services/website-geo/?$ https://nikalimp.ru/geo-audit/
+RedirectMatch 301 ^/services/telegram-geo/?$ https://nikalimp.ru/geo-audit/
+RedirectMatch 301 ^/services/expert-articles/?$ https://nikalimp.ru/services/content-factory/
+RedirectMatch 301 ^/services/influencer-marketing/?$ https://nikalimp.ru/services/content-factory/
+RedirectMatch 301 ^/services/landing-page/?$ https://nikalimp.ru/services/personal-website/
+RedirectMatch 301 ^/services/admin-panel-dashboard/?$ https://nikalimp.ru/services/web-service-development/
+RedirectMatch 301 ^/services/website-support/?$ https://nikalimp.ru/services/corporate-website/
+RedirectMatch 301 ^/process/?$ https://nikalimp.ru/#process
+
+# 7.11.2026: старая страница Tilda, 57 показов в Google за октябрь
+RedirectMatch 301 ^/page23901716\.html$ https://nikalimp.ru/
+
+ErrorDocument 404 /404.html

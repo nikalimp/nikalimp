@@ -1,0 +1,36 @@
+{
+  "cover": {
+    "layout": "logos",
+    "title": "Аналоги Semrush и Ahrefs, которые работают в России",
+    "kicker": "Инструменты",
+    "logos": ["favicon:keys.so", "favicon:topvisor.com", "favicon:pixeltools.ru", "favicon:rush-analytics.ru", "favicon:mutagen.ru", "favicon:wordstat.yandex.ru"]
+  },
+  "graphics": [
+    {
+      "name": "info-1",
+      "type": "compare",
+      "kicker": "Инструменты · nikalimp.ru",
+      "title": "Semrush и Ahrefs в России заменяет связка сервисов, а не один",
+      "subtitle": "Задачи комплексных SEO-платформ и российские сервисы, которые их закрывают, октябрь 2026 года",
+      "data": {
+        "columns": ["Semrush / Ahrefs", "Сервисы Рунета"],
+        "highlight": 1,
+        "labelWidth": 260,
+        "rows": [
+          ["Конкуренты", "Domain Overview, Site Explorer", "Keys.so, SpyWords"],
+          ["Запросы", "Keyword Magic Tool, Keywords Explorer", "Яндекс Вордстат, Key Collector, Мутаген"],
+          ["Позиции", "Position Tracking, Rank Tracker", "Топвизор, Rush Analytics"],
+          ["Технический аудит", "Site Audit", "Яндекс Вебмастер, Search Console, Labrika"],
+          ["Обратные ссылки", "Лучшая база ссылок у Ahrefs", "MegaIndex; полной замены нет"],
+          ["Видимость в нейросетях", "AI Toolkit, Brand Radar", "GEO-модуль Pixel Tools, ручной замер"],
+          ["Цена входа", "от 99 $ (Ahrefs Lite) и 139,95 $ (Semrush Pro) в месяц", "Вордстат бесплатно, Топвизор от 0,09 ₽ за проверку"],
+          ["Оплата из России", "российские карты и «Мир» не принимают", "рубли, карта или счёт для юрлица"]
+        ]
+      },
+      "source": "Источники: SEO.com, цены Semrush и Ahrefs на октябрь 2026; Топвизор, цены с 1 апреля 2025; vc.ru, оплата Ahrefs из России, 2026"
+    }
+  ],
+  "telegram": {
+    "text": "<b>Semrush ушёл, задачи остались.</b>\n\nСобрал, чем заменить Semrush и Ahrefs в России в 2026 году, задача за задачей:\n\n— конкуренты и их запросы: Keys.so вместо Domain Overview;\n— подбор запросов: Вордстат бесплатно и Мутаген за копейки;\n— позиции: Топвизор с оплатой за проверку от 0,09 ₽;\n— ссылки: где честно нет полной замены Ahrefs;\n— видимость в нейросетях: новая задача, которой не было в 2022-м.\n\nP. S. Semrush теперь принадлежит Adobe. Ждём отчёт по позициям в Photoshop."
+  }
+}

@@ -1,0 +1,422 @@
+{
+ "shadcn-ui": {
+  "primary": "#18181b",
+  "accent": "#2563eb",
+  "radius": 8,
+  "dark": false
+ },
+ "shadcn-vue": {
+  "primary": "#18181b",
+  "accent": "#41b883",
+  "radius": 8,
+  "dark": false
+ },
+ "shadcn-svelte": {
+  "primary": "#fafafa",
+  "accent": "#ff3e00",
+  "radius": 8,
+  "dark": true
+ },
+ "spartan-ng": {
+  "primary": "#18181b",
+  "accent": "#dd0031",
+  "radius": 8,
+  "dark": false
+ },
+ "zard-ui": {
+  "primary": "#fafafa",
+  "accent": "#dd0031",
+  "radius": 8,
+  "dark": true
+ },
+ "solid-ui": {
+  "primary": "#2c4f7c",
+  "accent": "#4f88c6",
+  "radius": 8,
+  "dark": false
+ },
+ "shadcn-solid": {
+  "primary": "#18181b",
+  "accent": "#4f88c6",
+  "radius": 6,
+  "dark": false
+ },
+ "react-native-reusables": {
+  "primary": "#18181b",
+  "accent": "#61dafb",
+  "radius": 10,
+  "dark": false
+ },
+ "shadcn-ui-flutter": {
+  "primary": "#18181b",
+  "accent": "#02569b",
+  "radius": 6,
+  "dark": false
+ },
+ "shadcn-flutter": {
+  "primary": "#fafafa",
+  "accent": "#54c5f8",
+  "radius": 6,
+  "dark": true
+ },
+ "basecoat": {
+  "primary": "#171717",
+  "accent": "#f59e0b",
+  "radius": 8,
+  "dark": false
+ },
+ "franken-ui": {
+  "primary": "#fafafa",
+  "accent": "#a855f7",
+  "radius": 6,
+  "dark": true
+ },
+ "nativewind-ui": {
+  "primary": "#007aff",
+  "accent": "#34c759",
+  "radius": 12,
+  "dark": false
+ },
+ "tremor": {
+  "primary": "#3b82f6",
+  "accent": "#10b981",
+  "radius": 8,
+  "dark": false
+ },
+ "tailwind-plus": {
+  "primary": "#4f46e5",
+  "accent": "#38bdf8",
+  "radius": 6,
+  "dark": false
+ },
+ "headless-ui": {
+  "primary": "#6366f1",
+  "accent": "#a5b4fc",
+  "radius": 8,
+  "dark": false
+ },
+ "heroui": {
+  "primary": "#006fee",
+  "accent": "#f31260",
+  "radius": 14,
+  "dark": false
+ },
+ "daisyui": {
+  "primary": "#605dff",
+  "accent": "#ff4fa0",
+  "radius": 16,
+  "dark": false
+ },
+ "flowbite": {
+  "primary": "#1a56db",
+  "accent": "#7e3af2",
+  "radius": 8,
+  "dark": false
+ },
+ "preline": {
+  "primary": "#2563eb",
+  "accent": "#14b8a6",
+  "radius": 8,
+  "dark": false
+ },
+ "hyperui": {
+  "primary": "#4f46e5",
+  "accent": "#ec4899",
+  "radius": 6,
+  "dark": false
+ },
+ "base-ui": {
+  "primary": "#111111",
+  "accent": "#6b7280",
+  "radius": 6,
+  "dark": false
+ },
+ "radix-themes": {
+  "primary": "#3e63dd",
+  "accent": "#e54666",
+  "radius": 6,
+  "dark": false
+ },
+ "react-aria": {
+  "primary": "#7b61ff",
+  "accent": "#e93d82",
+  "radius": 8,
+  "dark": false
+ },
+ "mantine": {
+  "primary": "#228be6",
+  "accent": "#40c057",
+  "radius": 8,
+  "dark": false
+ },
+ "chakra-ui": {
+  "primary": "#319795",
+  "accent": "#805ad5",
+  "radius": 6,
+  "dark": false
+ },
+ "ark-ui": {
+  "primary": "#eb5e41",
+  "accent": "#f59e0b",
+  "radius": 8,
+  "dark": false
+ },
+ "park-ui": {
+  "primary": "#14b8a6",
+  "accent": "#eb5e41",
+  "radius": 8,
+  "dark": false
+ },
+ "mui": {
+  "primary": "#1976d2",
+  "accent": "#9c27b0",
+  "radius": 4,
+  "dark": false
+ },
+ "ant-design": {
+  "primary": "#1677ff",
+  "accent": "#52c41a",
+  "radius": 6,
+  "dark": false
+ },
+ "untitled-ui": {
+  "primary": "#7f56d9",
+  "accent": "#17b26a",
+  "radius": 8,
+  "dark": false
+ },
+ "once-ui": {
+  "primary": "#8b5cf6",
+  "accent": "#22d3ee",
+  "radius": 10,
+  "dark": true
+ },
+ "nuxt-ui": {
+  "primary": "#00dc82",
+  "accent": "#3b82f6",
+  "radius": 6,
+  "dark": true
+ },
+ "prime": {
+  "primary": "#10b981",
+  "accent": "#6366f1",
+  "radius": 6,
+  "dark": false
+ },
+ "vuetify": {
+  "primary": "#1867c0",
+  "accent": "#5cbbf6",
+  "radius": 4,
+  "dark": false
+ },
+ "quasar": {
+  "primary": "#1976d2",
+  "accent": "#26a69a",
+  "radius": 4,
+  "dark": false
+ },
+ "naive-ui": {
+  "primary": "#18a058",
+  "accent": "#2080f0",
+  "radius": 3,
+  "dark": false
+ },
+ "element-plus": {
+  "primary": "#409eff",
+  "accent": "#67c23a",
+  "radius": 4,
+  "dark": false
+ },
+ "skeleton": {
+  "primary": "#0ea5e9",
+  "accent": "#d4163c",
+  "radius": 12,
+  "dark": true
+ },
+ "bits-ui": {
+  "primary": "#fafafa",
+  "accent": "#ff3e00",
+  "radius": 8,
+  "dark": true
+ },
+ "melt-ui": {
+  "primary": "#ff6b35",
+  "accent": "#7c3aed",
+  "radius": 8,
+  "dark": true
+ },
+ "gravity-ui": {
+  "primary": "#ffbe5c",
+  "accent": "#5282ff",
+  "radius": 8,
+  "dark": false
+ },
+ "taiga-ui": {
+  "primary": "#526ed3",
+  "accent": "#ff7043",
+  "radius": 12,
+  "dark": false
+ },
+ "consta": {
+  "primary": "#0078d2",
+  "accent": "#22c38e",
+  "radius": 4,
+  "dark": false
+ },
+ "vkui": {
+  "primary": "#0077ff",
+  "accent": "#4bb34b",
+  "radius": 10,
+  "dark": false
+ },
+ "admiral-ds": {
+  "primary": "#0062ff",
+  "accent": "#00b3a6",
+  "radius": 4,
+  "dark": false
+ },
+ "plasma": {
+  "primary": "#21a038",
+  "accent": "#1e88e5",
+  "radius": 12,
+  "dark": true
+ },
+ "alfa-core": {
+  "primary": "#ef3124",
+  "accent": "#0b1f35",
+  "radius": 12,
+  "dark": false
+ },
+ "kontur-ui": {
+  "primary": "#1c7edf",
+  "accent": "#3d3d3d",
+  "radius": 8,
+  "dark": false
+ },
+ "material-3": {
+  "primary": "#6750a4",
+  "accent": "#7d5260",
+  "radius": 20,
+  "dark": false
+ },
+ "fluent-2": {
+  "primary": "#0f6cbd",
+  "accent": "#c239b3",
+  "radius": 4,
+  "dark": false
+ },
+ "carbon": {
+  "primary": "#0f62fe",
+  "accent": "#24a148",
+  "radius": 0,
+  "dark": true
+ },
+ "polaris": {
+  "primary": "#303030",
+  "accent": "#008060",
+  "radius": 8,
+  "dark": false
+ },
+ "primer": {
+  "primary": "#1f883d",
+  "accent": "#0969da",
+  "radius": 6,
+  "dark": false
+ },
+ "atlassian": {
+  "primary": "#0c66e4",
+  "accent": "#6e5dc6",
+  "radius": 3,
+  "dark": false
+ },
+ "spectrum": {
+  "primary": "#3b63fb",
+  "accent": "#e34850",
+  "radius": 8,
+  "dark": false
+ },
+ "geist": {
+  "primary": "#ededed",
+  "accent": "#0070f3",
+  "radius": 6,
+  "dark": true
+ },
+ "elastic-eui": {
+  "primary": "#0b64dd",
+  "accent": "#f04e98",
+  "radius": 6,
+  "dark": false
+ },
+ "slds": {
+  "primary": "#0176d3",
+  "accent": "#2e844a",
+  "radius": 4,
+  "dark": false
+ },
+ "govuk": {
+  "primary": "#00703c",
+  "accent": "#1d70b8",
+  "radius": 0,
+  "dark": false
+ },
+ "uswds": {
+  "primary": "#005ea2",
+  "accent": "#e52207",
+  "radius": 4,
+  "dark": false
+ },
+ "sap-ui5": {
+  "primary": "#0070f2",
+  "accent": "#e76500",
+  "radius": 8,
+  "dark": false
+ },
+ "apple-hig": {
+  "primary": "#007aff",
+  "accent": "#ff9500",
+  "radius": 12,
+  "dark": false
+ },
+ "bootstrap": {
+  "primary": "#0d6efd",
+  "accent": "#7952b3",
+  "radius": 6,
+  "dark": false
+ },
+ "bulma": {
+  "primary": "#00d1b2",
+  "accent": "#485fc7",
+  "radius": 4,
+  "dark": false
+ },
+ "foundation": {
+  "primary": "#1779ba",
+  "accent": "#ec5840",
+  "radius": 0,
+  "dark": false
+ },
+ "pico": {
+  "primary": "#0172ad",
+  "accent": "#d93526",
+  "radius": 6,
+  "dark": false
+ },
+ "open-props": {
+  "primary": "#e64980",
+  "accent": "#7048e8",
+  "radius": 10,
+  "dark": true
+ },
+ "web-awesome": {
+  "primary": "#0a84ff",
+  "accent": "#f36944",
+  "radius": 6,
+  "dark": false
+ },
+ "relume": {
+  "primary": "#000000",
+  "accent": "#ff5a1f",
+  "radius": 0,
+  "dark": false
+ }
+}

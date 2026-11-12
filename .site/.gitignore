@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+.env*
+.DS_Store
+
+# Отчёт geo-check за день — не храним в git (npm run check пишет его в specs/reports/)
+specs/reports/geo-check-*.md
+public/og/

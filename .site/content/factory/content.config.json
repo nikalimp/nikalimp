@@ -1,0 +1,116 @@
+{
+  "factory_version": 2,
+  "project": "nikalimp.ru",
+  "site": "https://nikalimp.ru",
+  "root": "../../..",
+  "stack": "nextjs-github",
+  "language": "ru",
+  "timezone": "Europe/Moscow",
+  "cadence": "20",
+  "approval": false,
+  "author": "Никита Алимпиев",
+  "voice_mode": "first_person",
+  "paths": {
+    "plan": ".site/content/factory/plan.md",
+    "voice": [
+      "Business/2. Content/Tone of Voice.md",
+      ".site/content/factory/voice.md"
+    ],
+    "facts": "Business/2. Content/Tone of Voice.md",
+    "brand": ".site/content/factory/brand.json",
+    "journal": "Business/2. Content/Блог nikalimp.ru.md",
+    "reports": ".site/content/factory/reports/{date}-weekly.md",
+    "article": ".site/content/blog/{slug}.md",
+    "media_spec": ".site/content/media/{slug}.json",
+    "media_out": ".site/public/blog/{slug}",
+    "photos": ".site/public",
+    "drafts": ".site/content/factory/drafts/{slug}.md",
+    "strategy": ".site/content/factory/strategy.md",
+    "secrets": ".site/content/factory/.env",
+    "channels_registry": ".site/content/media/channels.json"
+  },
+  "article": {
+    "url": "https://nikalimp.ru/blog/{slug}/",
+    "image_url": "/blog/{slug}/",
+    "cover_url": "/blog/{slug}/cover.jpg",
+    "frontmatter_required": [
+      "title",
+      "description",
+      "date",
+      "cover",
+      "coverAlt",
+      "rubric"
+    ],
+    "frontmatter_optional": [
+      "seoTitle",
+      "updated",
+      "legacy",
+      "photo",
+      "channels"
+    ],
+    "photo_field": "",
+    "cover_rule": "Обложка — /blog/{slug}/cover.jpg (рисует media.mjs по спецификации)."
+  },
+  "links": {
+    "blog_prefix": "/blog/",
+    "internal": [
+      "/blog/",
+      "/glossary/",
+      "/tools/"
+    ],
+    "services": {
+      "source": ".site/src/lib/services.ts",
+      "regex": "slug: \"([a-z0-9-]+)\"",
+      "prefix": "/services/"
+    },
+    "service_extra": [
+      "/geo-audit/"
+    ],
+    "catalogs": [
+      "Library/Glossary/glossary-terms.csv",
+      "Library/Tools/tools.csv"
+    ]
+  },
+  "rules": {
+    "meta_asterisk": true,
+    "forbidden": [
+      "Тбилиси"
+    ],
+    "emoji": false,
+    "first_person": true
+  },
+  "publish": {
+    "how": "Push из облака (stacks/nextjs-github.md, «Публикация — стандарт» §6): add_repo nikalimp/NikitOS (push) → git clone --depth 1 --filter=blob:none --sparse, git sparse-checkout set .site/content → статья в .site/content/blog/<slug>.md и спецификация → коммит «статья: <заголовок>» в main → deploy-kit (.github/workflows/deploy.yml): media.mjs → npm run check → rsync по SSH на REG.RU (FTP — запасной) → channels.mjs → IndexNow. Mac и .sync для статей не нужны (с 30.10.2026).",
+    "verify": "https://nikalimp.ru/blog/{slug}/",
+    "wait_minutes": 30
+  },
+  "channels": {
+    "runner": "ci",
+    "telegram": "@nikitaalimpiev",
+    "telegram_public": "https://t.me/s/nikitaalimpiev",
+    "max": null,
+    "enabled": false
+  },
+  "notify": "telegram_bot",
+  "analytics": {
+    "metrika": "nikalimp.ru",
+    "webmaster": "nikalimp.ru",
+    "gsc": "nikalimp.ru",
+    "geo_pool": "Business/2. Content/Блог nikalimp.ru.md"
+  },
+  "schedule": {
+    "daily": "Пн–Пт 11:11 Asia/Bangkok",
+    "weekly": "Пт 11:11 Asia/Bangkok (отчёт), Сб 11:11 (копирайтинг)"
+  },
+  "tasks": {
+    "daily": "Контент-завод — публикация",
+    "weekly": "Контент-завод — отчёт недели",
+    "write": "Контент-завод — копирайтинг недели"
+  },
+  "tilda": {
+    "projectid": "",
+    "feeduid": "",
+    "parts": {},
+    "fields": {}
+  }
+}
