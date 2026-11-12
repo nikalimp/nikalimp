@@ -117,7 +117,7 @@
 @property --beam-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 
 @keyframes rise-in { from { opacity: 0; translate: 0 16px; } to { opacity: 1; translate: none; } }
-@keyframes fade-up { from { opacity: 0; translate: 0 10px; filter: blur(4px); } to { opacity: 1; translate: none; filter: none; } }
+@keyframes fade-up { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: none; } }
 @keyframes beam-spin { to { --beam-angle: 360deg; } }
 @keyframes btn-shine { from { transform: translateX(-120%) skewX(-20deg); } to { transform: translateX(220%) skewX(-20deg); } }
 @keyframes hero-drift { 0%, 100% { transform: translate(-50%, 0) scale(1); } 50% { transform: translate(-46%, 18px) scale(1.08); } }
@@ -141,13 +141,17 @@
   }
 
   /* 4. Первый экран: слова заголовка, текст и кнопка по очереди */
-  .hero .hero-in { animation: fade-up .7s cubic-bezier(.2, .7, .2, 1) both; }
-  .hero .hero-word { display: inline-block; animation: fade-up .6s cubic-bezier(.2, .7, .2, 1) both; }
-  .hero-glow { animation: hero-drift 14s ease-in-out infinite; }
-  /* по очереди подсвечиваются AEO → GEO → SEO (первые три пункта надзаголовка) */
-  .eyebrow-cycle > .tip:nth-child(-n + 3) > .tip-trigger { animation: eyebrow-glow 7.5s linear infinite; }
-  .eyebrow-cycle > .tip:nth-child(2) > .tip-trigger { animation-delay: 2.5s; }
-  .eyebrow-cycle > .tip:nth-child(3) > .tip-trigger { animation-delay: 5s; }
+  /* Скорость на телефоне (PageSpeed ≥ 90, стандарт §6.6): первый экран на телефоне без анимаций —
+     заголовок (LCP) виден сразу, бесконечные анимации не грузят процессор. На больших экранах с мышью — как было. */
+  @media (min-width: 1024px) and (hover: hover) {
+    .hero .hero-in { animation: fade-up .7s cubic-bezier(.2, .7, .2, 1) both; }
+    .hero .hero-word { display: inline-block; animation: fade-up .6s cubic-bezier(.2, .7, .2, 1) both; }
+    .hero-glow { animation: hero-drift 14s ease-in-out infinite; }
+    /* по очереди подсвечиваются AEO → GEO → SEO (первые три пункта надзаголовка) */
+    .eyebrow-cycle > .tip:nth-child(-n + 3) > .tip-trigger { animation: eyebrow-glow 7.5s linear infinite; }
+    .eyebrow-cycle > .tip:nth-child(2) > .tip-trigger { animation-delay: 2.5s; }
+    .eyebrow-cycle > .tip:nth-child(3) > .tip-trigger { animation-delay: 5s; }
+  }
 
   /* 2. Кнопки */
   [data-slot="button"] { transition: color .2s, background-color .2s, border-color .2s, box-shadow .25s, transform .15s, background-size .35s cubic-bezier(.2, .7, .2, 1); }
@@ -183,8 +187,9 @@
     content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none;
     background: conic-gradient(from var(--beam-angle), transparent 0 75%, var(--brand) 88%, transparent 100%);
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
-    animation: beam-spin 6s linear infinite;
   }
+  /* бегущий блик перерисовывает рамку каждый кадр — только на больших экранах с мышью */
+  @media (min-width: 1024px) and (hover: hover) { .border-beam::after { animation: beam-spin 6s linear infinite; } }
 
   /* 5. Мелочи: логотипы, раскрытие FAQ */
   .marquee-group img { transition: opacity .2s, filter .2s, transform .25s; }
