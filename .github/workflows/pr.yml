@@ -27,6 +27,7 @@ jobs:
       url: https://nikalimp.ru
     secrets:
       SSH_KEY: ${{ secrets.SSH_KEY }}
+      BUILD_ENV: ${{ secrets.BUILD_ENV }}
       SSH_HOST: "31.31.197.26"
       SSH_USER: "u3672757"
       SITE_DIR: "/var/www/u3672757/data/www/nikalimp.ru/"

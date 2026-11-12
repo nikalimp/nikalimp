@@ -32,6 +32,7 @@ export const site = {
   ],
   since: 2019,
   metrikaId: 113548506,
-  // Ключ Google PageSpeed Insights для бесплатных аудитов: браузерный, ограничен доменом nikalimp.ru в Google Cloud. Пусто — замер скорости через общий лимит Google.
-  psiKey: "AIzaSyATTQ_jfT48edG7ijxsWPN3-n6k3c_ESrU",
+  // Ключ Google PageSpeed Insights для бесплатных аудитов: браузерный, ограничен доменом nikalimp.ru и API PageSpeed в Google Cloud.
+  // Не в git: секрет репозитория BUILD_ENV, строка NEXT_PUBLIC_PSI_KEY=… (deploy-kit кладёт её в .env.production.local). Пусто — общий лимит Google.
+  psiKey: process.env.NEXT_PUBLIC_PSI_KEY || "",
 };
