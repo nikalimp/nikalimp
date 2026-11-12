@@ -22,7 +22,7 @@ export default function DigestIndex() {
         <Container className="max-w-3xl">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl text-center mx-auto text-balance">Дайджест недели</h1>
           <p className="mt-3 text-muted-foreground text-center mx-auto max-w-2xl">
-            Каждую неделю читаю 38 изданий об ИИ, бизнесе, трендах и маркетинге в США, Китае и России. Сюда попадают сюжеты, которые важны для бизнеса, — с моим выводом и ссылкой на первоисточник.
+            Каждую неделю читаю 45 источников об ИИ, бизнесе, трендах и маркетинге в США, Китае и России. Сюда попадают сюжеты, которые важны для бизнеса, — с моим выводом и ссылкой на первоисточник.
           </p>
           {all.length === 0 ? (
             <p className="mt-10 text-center text-muted-foreground">Первый выпуск выйдет во вторник.</p>
@@ -46,7 +46,7 @@ export default function DigestIndex() {
           <div className="prose-site mt-14">
             <h2>Как собирается выпуск</h2>
             <p>
-              Каждое утро моя лента забирает новые статьи из 38 изданий. Нейросеть Claude читает анонс каждой статьи и определяет тему и страну. Статьи об одном событии она склеивает в один сюжет и пишет короткий обзор на русском: что произошло и почему это важно для бизнеса.
+              Каждое утро моя лента забирает новые статьи из 45 источников: официальных блогов компаний, авторов с собственным анализом и изданий с собственной журналистикой. Сайты, которые пересказывают чужие новости, в ленту не попадают. Нейросеть Claude читает анонс каждой статьи и определяет тему и страну. Статьи об одном событии она склеивает в один сюжет и пишет короткий обзор на русском: что произошло и почему это важно для бизнеса.
             </p>
             <p>
               За неделю я отмечаю сюжеты, которые стоит обсудить, и добавляю к части из них свой вывод. Во вторник выходит выпуск: короткое вступление о главном за неделю, затем список сюжетов. У каждого сюжета есть обзор, страна, издание и ссылка на первоисточник. Полный текст статьи читайте на сайте издания.
@@ -64,11 +64,11 @@ export default function DigestIndex() {
             </p>
             <h2>Откуда берутся новости</h2>
             <p>
-              США и мир: The Economist, Financial Times, The Guardian, Bloomberg, Wired, The Verge, Engadget, MIT Technology Review, Stratechery, Platformer, Dazed, Wallpaper*, Adweek, Digiday, Marketing Week. Китай: SCMP, Sixth Tone, TechNode, ChinaTalk, ChinAI, Sinocism. Россия: «Коммерсантъ», «Ведомости», The Bell, Rozetked, Sostav, Cossa.
+              Компании: OpenAI, Google, Microsoft, NVIDIA, Mistral, Hugging Face, Apple, Samsung, Meta, YouTube, Stripe, Банк России, Яндекс, Сбер. Авторы: One Useful Thing, Import AI, Simon Willison, Benedict Evans, Platformer, Lenny’s Newsletter, ChinaTalk, ChinAI, Sinocism. Издания: The Economist, Financial Times, Bloomberg, The Guardian, Wired, The Verge, MIT Technology Review, Dazed, Wallpaper*, Adweek, Digiday, SCMP, Sixth Tone, «Коммерсантъ», «Ведомости», The Bell, Cossa.
             </p>
             <h2>Частые вопросы</h2>
             <h3>Зачем читать дайджест, а не сами издания?</h3>
-            <p>Дайджест экономит время. За 10 минут вы видите главное из 38 изданий на трёх рынках и сразу понимаете, какие статьи стоит открыть целиком.</p>
+            <p>Дайджест экономит время. За 10 минут вы видите главное из 45 источников на трёх рынках и сразу понимаете, какие статьи стоит открыть целиком.</p>
             <h3>Как часто выходит дайджест?</h3>
             <p>Раз в неделю, по вторникам. Выпуск охватывает семь дней до даты выхода.</p>
             <h3>Кто отбирает сюжеты?</h3>
