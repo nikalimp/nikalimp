@@ -125,8 +125,8 @@
 @keyframes draw-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 @media (prefers-reduced-motion: no-preference) {
-  /* 1. Появление блоков при прокрутке */
-  @supports (animation-timeline: view()) {
+  /* 1. Появление блоков при прокрутке — только на больших экранах: на телефоне это лишняя вёрстка при каждом кадре прокрутки (PageSpeed) */
+  @supports (animation-timeline: view()) { @media (min-width: 1024px) {
     main section:not(.hero) :is(h2, .reveal),
     main section:not(.hero) :is(.grid:not(.grid-rows-subgrid), ol, .reveal-group) > * {
       animation: rise-in linear both;
@@ -138,7 +138,7 @@
     main section:not(.hero) :is(.grid:not(.grid-rows-subgrid), ol, .reveal-group) > :nth-child(4n + 4) { animation-range: entry 24% entry 79%; }
     /* линия под шагами «Как работаем» прорисовывается при прокрутке */
     .steps-line { transform-origin: left; animation: draw-x linear both; animation-timeline: view(); animation-range: entry 20% cover 45%; }
-  }
+  } }
 
   /* 4. Первый экран: слова заголовка, текст и кнопка по очереди */
   /* Скорость на телефоне (PageSpeed ≥ 90, стандарт §6.6): первый экран на телефоне без анимаций —
@@ -302,3 +302,7 @@
   .print-doc .policy-doc mark::after { content: "]"; }
   .print-doc .policy-doc a, .print-doc .policy-doc mark, .print-doc .text-muted-foreground { color: inherit !important; background: none !important; text-decoration: none; padding: 0; }
 }
+
+/* Скорость: блоки ниже первого экрана браузер рисует, только когда до них доходит прокрутка.
+   Текст остаётся в HTML (поиск и нейросети его видят), высота блока запоминается — прокрутка не прыгает. */
+main > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: auto 720px; }
