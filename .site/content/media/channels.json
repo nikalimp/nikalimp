@@ -95,6 +95,10 @@
   "pochemu-sajt-ne-prodaet": {
    "tg": "off",
    "max": "off"
+  },
+  "statya-dlya-nejrosetej": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
