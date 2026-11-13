@@ -1,12 +1,12 @@
 # Еженедельный разбор Google Search Console — nikalimp.ru
 
-Запускается задачей по расписанию каждое воскресенье в 12:34 (Asia/Bangkok). Данные за полчаса до этого выгружает GitHub Actions `GSC weekly` (`.github/workflows/gsc-weekly.yml` → `.site/scripts/gsc-report.mjs`) в `.site/specs/reports/gsc/YYYY-MM-DD.json`.
+С 13.11.2026 разбор Search Console входит в субботнюю задачу «Неделя — все проекты» (раздел nikalimp.ru). Данные в 11:04 (Asia/Bangkok) выгружает GitHub Actions `Data weekly` (`.github/workflows/data.yml` → deploy-kit `data.yml`, скрипты `shared/gsc-report.mjs` и `shared/yandex-report.mjs`) в `.site/specs/reports/gsc/` и `.site/specs/reports/yandex/`.
 
 ## 1. Данные
-1. `git pull` в репозитории nikalimp/NikitOS.
+1. `git pull` в репозитории nikalimp/nikalimp.
 2. Найди свежий JSON в `.site/specs/reports/gsc/` (сегодняшняя дата). Если его нет:
-   - проверь последний запуск: `gh run list --workflow gsc-weekly.yml -L 3`;
-   - если не было или упал — `gh workflow run gsc-weekly.yml`, дождись завершения циклом `until` и сделай `git pull`;
+   - проверь последний запуск: `gh run list --workflow data.yml -L 3`;
+   - если не было или упал — `gh api -X POST repos/nikalimp/nikalimp/actions/workflows/data.yml/dispatches -f ref=main`, дождись завершения циклом `until` и сделай `git pull`;
    - если упал с ошибкой доступа (нет секрета, `account not found`, ресурс не открыт) — не анализируй, а пришли Нику короткую инструкцию, что настроить (см. «Настройка» ниже), и закончи.
 3. Возьми прошлую выгрузку (предыдущий JSON в той же папке) — для сравнения неделя к неделе.
 
