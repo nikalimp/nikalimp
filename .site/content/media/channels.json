@@ -99,6 +99,10 @@
   "statya-dlya-nejrosetej": {
    "tg": "off",
    "max": "off"
+  },
+  "dnevnik-eksperimenta-nedelya-2": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
