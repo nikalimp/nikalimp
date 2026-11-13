@@ -26,7 +26,7 @@ const MAX = 14; // максимум
 const PER_TOPIC = 5; // автодобор: не больше сюжетов одной темы
 const MODEL = process.env.NEWS_MODEL || "claude-haiku-5-5";
 
-const TOPIC = { ai: "ИИ", business: "Бизнес", gadgets: "Гаджеты", trends: "Тренды", marketing: "Маркетинг", other: "Разное" };
+const TOPIC = { ai: "ИИ", robots: "Роботы", gadgets: "Гаджеты", business: "Бизнес", trends: "Тренды", marketing: "Маркетинг", other: "Разное" };
 const ORDER = Object.keys(TOPIC);
 const COUNTRY = { us: "США", cn: "Китай", ru: "Россия", world: "Мир" };
 const MONTHS = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
