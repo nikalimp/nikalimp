@@ -12,14 +12,25 @@ on:
       - "!.site/specs/**"
       - "Library/**"
       - ".github/workflows/deploy.yml"
+  schedule:
+    - cron: "11 4 * * 1-5"   # очередь контент-завода: Пн–Пт 11:11 по Бангкоку
   workflow_dispatch: {}
 concurrency: { group: deploy, cancel-in-progress: false }
 jobs:
+  # Очередь: статья дня из плана (ready, дата ≤ сегодня) → блог. Пишет её субботняя задача «Неделя — все проекты».
+  queue:
+    permissions: { contents: write }
+    uses: nikalimp/deploy-kit/.github/workflows/queue.yml@main
+    with:
+      config: .site/content/factory/content.config.json
   site:
+    needs: queue
+    if: github.event_name != 'schedule' || needs.queue.outputs.published == 'true'
     # без этой строки запуск падает со startup_failure: сценарий коммитит медиа обратно в репозиторий
     permissions: { contents: write }
     uses: nikalimp/deploy-kit/.github/workflows/site.yml@main
     with:
+      ref: main  # выкладывать main вместе с коммитом очереди
       adapter: ssh-ftp
       site_dir: ".site"
       out_dir: out

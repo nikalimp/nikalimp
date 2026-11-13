@@ -1,7 +1,7 @@
 // После сборки: делит out/sitemap.xml на карты по разделам (out/sitemaps/<раздел>.xml) и собирает out/sitemap-index.xml.
 // Зачем: в Search Console один sitemap на 6 000+ адресов показывает «проиндексировано 0» без разбивки.
 // Карта по разделу даёт долю индекса по каждому разделу (Search Console 9.11). Общий sitemap.xml остаётся как был:
-// его читают robots.txt, check.mjs, indexnow.mjs и gsc-report.mjs.
+// его читают robots.txt, check.mjs, indexnow.mjs и gsc-report.mjs (deploy-kit).
 import fs from "node:fs";
 import path from "node:path";
 
