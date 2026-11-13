@@ -59,7 +59,7 @@ async function metrika(from, to) {
   const c = counters.find((x) => String(x.site ?? "").replace(/^www\./, "").startsWith(HOST)) ?? counters.find((x) => (x.site2?.site ?? "").includes(HOST));
   if (!c) return { error: `Счётчик для ${HOST} не найден. Есть: ${counters.map((x) => `${x.id} ${x.site}`).join(", ") || "нет"}` };
   const stat = (o) => safe(get(`${MT}/stat/v1/data?${qs({ ids: c.id, date1: from, date2: to, accuracy: "full", limit: 100, ...o })}`)
-    .then((d) => ({ totals: d.totals, rows: (d.data ?? []).map((r) => ({ key: r.dimensions.map((x) => x.name ?? x.id).join(" | "), values: r.metrics })) }))));
+    .then((d) => ({ totals: d.totals, rows: (d.data ?? []).map((r) => ({ key: r.dimensions.map((x) => x.name ?? x.id).join(" | "), values: r.metrics })) })));
   const m = "ym:s:visits,ym:s:users,ym:s:bounceRate,ym:s:avgVisitDurationSeconds";
   const [sources, referers, landing, daily, goals] = await Promise.all([
     stat({ metrics: m, dimensions: "ym:s:lastTrafficSource" }),
