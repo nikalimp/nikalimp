@@ -1,0 +1,1613 @@
+{
+ "host": "nikalimp.ru",
+ "generated": "2026-11-13T06:46:43.997Z",
+ "period": [
+  "2026-10-16",
+  "2026-11-12"
+ ],
+ "webmaster": {
+  "host": "https://nikalimp.ru/",
+  "verified": true,
+  "summary": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/summary: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
+  },
+  "queries": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/search-queries/popular: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
+  },
+  "history": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/search-queries/all/history: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
+  },
+  "indexing": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/indexing/history: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
+  },
+  "inSearch": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/search-urls/in-search/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+  },
+  "sitemaps": {
+   "sitemaps": []
+  },
+  "diagnostics": {
+   "problems": {
+    "INSIGNIFICANT_CGI_PARAMETER": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "URL_ALERT_4XX": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "FAVICON_ERROR": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DUPLICATE_CONTENT_ATTRS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "FAVICON_PROBLEM": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "URL_ALERT_5XX": {
+     "severity": "CRITICAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "VIDEOHOST_OFFER_NEED_PAPER": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_PAGE_REDIRECTS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "SLOW_AVG_RESPONSE_TIME": {
+     "severity": "CRITICAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_METRIKA_COUNTER_CRAWL_ENABLED": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "PRESENT",
+     "last_state_update": "2026-11-13T09:05:27.384+03:00"
+    },
+    "BIG_FAVICON_ABSENT": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DISALLOWED_IN_ROBOTS": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_MIRROR_IS_NOT_HTTPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DOCUMENTS_MISSING_DESCRIPTION": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_REGIONS": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "THREATS": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NOT_IN_SPRAV": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "ERRORS_IN_SITEMAPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NOT_MOBILE_FRIENDLY": {
+     "severity": "RECOMMENDATION",
+     "state": "UNDEFINED",
+     "last_state_update": null
+    },
+    "NO_METRIKA_COUNTER_BINDING": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "SOFT_404": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_SITEMAP_MODIFICATIONS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "TOO_MANY_DOMAINS_ON_SEARCH": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DNS_ERROR": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "ERROR_IN_ROBOTS_TXT": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DOCUMENTS_MISSING_TITLE": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_PAGE_ERROR": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_ROBOTS_TXT": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_SITEMAPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "PRESENT",
+     "last_state_update": "2026-10-10T08:07:59.368+03:00"
+    },
+    "DUPLICATE_PAGES": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "CONNECT_FAILED": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "VIDEOHOST_OFFER_FAILED": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    }
+   }
+  }
+ },
+ "metrika": {
+  "counter": {
+   "id": 113548506,
+   "site": "nikalimp.ru",
+   "status": "Active"
+  },
+  "metrics": [
+   "ym:s:visits",
+   "ym:s:users",
+   "ym:s:bounceRate",
+   "ym:s:avgVisitDurationSeconds"
+  ],
+  "sources": {
+   "totals": [
+    1185,
+    986,
+    27.08860759,
+    110.24050633
+   ],
+   "rows": [
+    {
+     "key": "Direct traffic",
+     "values": [
+      600,
+      482,
+      25.83333333,
+      127.25333333
+     ]
+    },
+    {
+     "key": "Search engine traffic",
+     "values": [
+      493,
+      459,
+      29.81744422,
+      72.15821501
+     ]
+    },
+    {
+     "key": "Internal traffic",
+     "values": [
+      33,
+      18,
+      9.09090909,
+      257.60606061
+     ]
+    },
+    {
+     "key": "Social network traffic",
+     "values": [
+      30,
+      29,
+      16.66666667,
+      57.86666667
+     ]
+    },
+    {
+     "key": "Link traffic",
+     "values": [
+      27,
+      22,
+      37.03703704,
+      313.22222222
+     ]
+    },
+    {
+     "key": "Messenger traffic",
+     "values": [
+      2,
+      1,
+      50,
+      7.5
+     ]
+    }
+   ]
+  },
+  "referers": {
+   "totals": [
+    582,
+    518,
+    28.17869416,
+    92.37800687
+   ],
+   "rows": [
+    {
+     "key": "google.com",
+     "values": [
+      488,
+      454,
+      29.91803279,
+      72.35040984
+     ]
+    },
+    {
+     "key": "nikalimp.ru",
+     "values": [
+      33,
+      18,
+      9.09090909,
+      257.60606061
+     ]
+    },
+    {
+     "key": "l.instagram.com",
+     "values": [
+      24,
+      23,
+      4.16666667,
+      49.625
+     ]
+    },
+    {
+     "key": "stayaekb.ru",
+     "values": [
+      8,
+      7,
+      37.5,
+      21.625
+     ]
+    },
+    {
+     "key": "google.ru",
+     "values": [
+      4,
+      4,
+      25,
+      63
+     ]
+    },
+    {
+     "key": "staya.nikalimp.ru",
+     "values": [
+      4,
+      4,
+      75,
+      9.25
+     ]
+    },
+    {
+     "key": "search.google.com",
+     "values": [
+      3,
+      3,
+      0,
+      62.33333333
+     ]
+    },
+    {
+     "key": "1handshake.com",
+     "values": [
+      2,
+      2,
+      100,
+      0.5
+     ]
+    },
+    {
+     "key": "android-app",
+     "values": [
+      2,
+      1,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "ecoenergygroup.fr",
+     "values": [
+      2,
+      2,
+      50,
+      15.5
+     ]
+    },
+    {
+     "key": "facebook.com",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "metrika.yandex.ru",
+     "values": [
+      2,
+      2,
+      0,
+      1677.5
+     ]
+    },
+    {
+     "key": "away.vk.ru",
+     "values": [
+      1,
+      1,
+      0,
+      26
+     ]
+    },
+    {
+     "key": "bing.com",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "eco-pro.nikalimp.ru",
+     "values": [
+      1,
+      1,
+      0,
+      1286
+     ]
+    },
+    {
+     "key": "hvala.nikalimp.ru",
+     "values": [
+      1,
+      1,
+      0,
+      1687
+     ]
+    },
+    {
+     "key": "perlova.nikalimp.ru",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "stayapool.com",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "ugc.nikalimp.ru",
+     "values": [
+      1,
+      1,
+      0,
+      1669
+     ]
+    },
+    {
+     "key": "uraldoma.ru",
+     "values": [
+      1,
+      1,
+      100,
+      1
+     ]
+    }
+   ]
+  },
+  "ai": [],
+  "landing": {
+   "totals": [
+    1187,
+    988,
+    27.21145746,
+    110.0547599
+   ],
+   "rows": [
+    {
+     "key": "/",
+     "values": [
+      307,
+      226,
+      29.96742671,
+      204.69055375
+     ]
+    },
+    {
+     "key": "/startups/interview-boost-ai/",
+     "values": [
+      234,
+      203,
+      17.94871795,
+      20.96581197
+     ]
+    },
+    {
+     "key": "/startups/",
+     "values": [
+      26,
+      23,
+      7.69230769,
+      397.76923077
+     ]
+    },
+    {
+     "key": "/startups/soroditeli/",
+     "values": [
+      13,
+      13,
+      30.76923077,
+      13.23076923
+     ]
+    },
+    {
+     "key": "/startups/nejroinzhener/",
+     "values": [
+      12,
+      11,
+      33.33333333,
+      19.75
+     ]
+    },
+    {
+     "key": "/fonts/",
+     "values": [
+      9,
+      9,
+      0,
+      51.11111111
+     ]
+    },
+    {
+     "key": "/fonts/gilroy/",
+     "values": [
+      9,
+      9,
+      66.66666667,
+      9.55555556
+     ]
+    },
+    {
+     "key": "/startups/medstat-pro/",
+     "values": [
+      9,
+      6,
+      33.33333333,
+      34.88888889
+     ]
+    },
+    {
+     "key": "/startups/kickcheck/",
+     "values": [
+      8,
+      6,
+      50,
+      10.875
+     ]
+    },
+    {
+     "key": "/glossary/",
+     "values": [
+      7,
+      5,
+      28.57142857,
+      143.42857143
+     ]
+    },
+    {
+     "key": "/startups/hirety/",
+     "values": [
+      7,
+      7,
+      14.28571429,
+      20.14285714
+     ]
+    },
+    {
+     "key": "/design-systems/open-props/",
+     "values": [
+      6,
+      1,
+      0,
+      82.16666667
+     ]
+    },
+    {
+     "key": "/glossary/image-generation/",
+     "values": [
+      6,
+      5,
+      66.66666667,
+      3.83333333
+     ]
+    },
+    {
+     "key": "/startups/savetest/",
+     "values": [
+      6,
+      1,
+      0,
+      16.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/admiral-ds/",
+     "values": [
+      5,
+      3,
+      0,
+      139.6
+     ]
+    },
+    {
+     "key": "/fonts/averta/",
+     "values": [
+      5,
+      5,
+      60,
+      8.2
+     ]
+    },
+    {
+     "key": "/startups/keyray/",
+     "values": [
+      5,
+      5,
+      60,
+      6.8
+     ]
+    },
+    {
+     "key": "/ui-libraries/",
+     "values": [
+      5,
+      5,
+      0,
+      378.2
+     ]
+    },
+    {
+     "key": "/contacts/",
+     "values": [
+      4,
+      4,
+      75,
+      4
+     ]
+    },
+    {
+     "key": "/fonts/blup/",
+     "values": [
+      4,
+      4,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/yookassa/",
+     "values": [
+      4,
+      4,
+      25,
+      11.25
+     ]
+    },
+    {
+     "key": "/sites/nikolaikuleshov-com/",
+     "values": [
+      4,
+      3,
+      0,
+      458.75
+     ]
+    },
+    {
+     "key": "/startups/price-alert/",
+     "values": [
+      4,
+      3,
+      50,
+      28
+     ]
+    },
+    {
+     "key": "/startups/recca-ru/",
+     "values": [
+      4,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/startups/smartxlsx/",
+     "values": [
+      4,
+      4,
+      25,
+      13.25
+     ]
+    },
+    {
+     "key": "/startups/workaem/",
+     "values": [
+      4,
+      3,
+      75,
+      5.5
+     ]
+    },
+    {
+     "key": "/tools/",
+     "values": [
+      4,
+      4,
+      25,
+      12.75
+     ]
+    },
+    {
+     "key": "/cases/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      12.66666667
+     ]
+    },
+    {
+     "key": "/fonts/actay/",
+     "values": [
+      3,
+      2,
+      0,
+      47.33333333
+     ]
+    },
+    {
+     "key": "/fonts/always-angry/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5.33333333
+     ]
+    },
+    {
+     "key": "/fonts/damn-font/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5
+     ]
+    },
+    {
+     "key": "/fonts/manrope/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      80.33333333
+     ]
+    },
+    {
+     "key": "/fonts/santa-catarina/",
+     "values": [
+      3,
+      1,
+      33.33333333,
+      11
+     ]
+    },
+    {
+     "key": "/geo-audit/",
+     "values": [
+      3,
+      3,
+      0,
+      16.33333333
+     ]
+    },
+    {
+     "key": "/glossary/ai-first/",
+     "values": [
+      3,
+      3,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/guest-post/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5
+     ]
+    },
+    {
+     "key": "/glossary/inclusive-design/",
+     "values": [
+      3,
+      2,
+      66.66666667,
+      5
+     ]
+    },
+    {
+     "key": "/glossary/neumorphism/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      49.66666667
+     ]
+    },
+    {
+     "key": "/services/personal-website/",
+     "values": [
+      3,
+      3,
+      0,
+      74.33333333
+     ]
+    },
+    {
+     "key": "/sites/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      173
+     ]
+    },
+    {
+     "key": "/sites/c/portfolio/design/",
+     "values": [
+      3,
+      3,
+      0,
+      108.33333333
+     ]
+    },
+    {
+     "key": "/sites/lizagoroshko-com/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      92
+     ]
+    },
+    {
+     "key": "/sites/setyaeva-studio-ru/",
+     "values": [
+      3,
+      3,
+      0,
+      404.66666667
+     ]
+    },
+    {
+     "key": "/startups/aerobim/",
+     "values": [
+      3,
+      3,
+      0,
+      113.66666667
+     ]
+    },
+    {
+     "key": "/startups/c/marketing-sales/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      10
+     ]
+    },
+    {
+     "key": "/startups/georisk/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      74.33333333
+     ]
+    },
+    {
+     "key": "/startups/hireseeker/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      70.33333333
+     ]
+    },
+    {
+     "key": "/startups/kosareva-cloud/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5.33333333
+     ]
+    },
+    {
+     "key": "/startups/okrest/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      938
+     ]
+    },
+    {
+     "key": "/startups/platforma-slazhivanie/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      208.33333333
+     ]
+    },
+    {
+     "key": "/startups/quaize/",
+     "values": [
+      3,
+      1,
+      33.33333333,
+      12
+     ]
+    },
+    {
+     "key": "/startups/stimchek/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      15
+     ]
+    },
+    {
+     "key": "/startups/youtube-v-tekst/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      38
+     ]
+    },
+    {
+     "key": "/tools/linktree/",
+     "values": [
+      3,
+      3,
+      0,
+      31.66666667
+     ]
+    },
+    {
+     "key": "/tools/windsurf/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      12.66666667
+     ]
+    },
+    {
+     "key": "/utm-generator/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      18.66666667
+     ]
+    },
+    {
+     "key": "/about/",
+     "values": [
+      2,
+      2,
+      0,
+      908
+     ]
+    },
+    {
+     "key": "/blog/",
+     "values": [
+      2,
+      2,
+      0,
+      1172.5
+     ]
+    },
+    {
+     "key": "/blog/ai-ready-website-checklist/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/card/",
+     "values": [
+      2,
+      2,
+      0,
+      887.5
+     ]
+    },
+    {
+     "key": "/fonts/age/",
+     "values": [
+      2,
+      2,
+      0,
+      28
+     ]
+    },
+    {
+     "key": "/fonts/alcotton/",
+     "values": [
+      2,
+      1,
+      0,
+      251.5
+     ]
+    },
+    {
+     "key": "/fonts/arsenica/",
+     "values": [
+      2,
+      2,
+      0,
+      44
+     ]
+    },
+    {
+     "key": "/fonts/bonche/",
+     "values": [
+      2,
+      2,
+      0,
+      26.5
+     ]
+    },
+    {
+     "key": "/fonts/cascadiacode/",
+     "values": [
+      2,
+      2,
+      50,
+      8
+     ]
+    },
+    {
+     "key": "/fonts/district/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/ekran/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/iglets/",
+     "values": [
+      2,
+      1,
+      100,
+      2.5
+     ]
+    },
+    {
+     "key": "/fonts/inter/",
+     "values": [
+      2,
+      2,
+      50,
+      57
+     ]
+    },
+    {
+     "key": "/fonts/lilita-one-russian/",
+     "values": [
+      2,
+      2,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/fonts/miratrix/",
+     "values": [
+      2,
+      2,
+      50,
+      266.5
+     ]
+    },
+    {
+     "key": "/fonts/new-computer-modern/",
+     "values": [
+      2,
+      2,
+      0,
+      20
+     ]
+    },
+    {
+     "key": "/fonts/nudla-thin/",
+     "values": [
+      2,
+      2,
+      50,
+      426.5
+     ]
+    },
+    {
+     "key": "/fonts/oswald/",
+     "values": [
+      2,
+      2,
+      0,
+      146
+     ]
+    },
+    {
+     "key": "/fonts/pangolin/",
+     "values": [
+      2,
+      2,
+      50,
+      10
+     ]
+    },
+    {
+     "key": "/fonts/pangram-sans-rounded/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/rawline/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/fonts/songer/",
+     "values": [
+      2,
+      2,
+      50,
+      13.5
+     ]
+    },
+    {
+     "key": "/glossary/alice-ai/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/avatar/",
+     "values": [
+      2,
+      1,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/glossary/dev-mode/",
+     "values": [
+      2,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/fl-ru/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/freelance-marketplace/",
+     "values": [
+      2,
+      1,
+      0,
+      703.5
+     ]
+    },
+    {
+     "key": "/glossary/mixpanel/",
+     "values": [
+      2,
+      1,
+      0,
+      63.5
+     ]
+    },
+    {
+     "key": "/glossary/model-api/",
+     "values": [
+      2,
+      2,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "/glossary/pas/",
+     "values": [
+      2,
+      1,
+      50,
+      8
+     ]
+    },
+    {
+     "key": "/glossary/problem-solution-fit/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/glossary/shape-up/",
+     "values": [
+      2,
+      1,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/glossary/vc-ru/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/wordmark/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/products/",
+     "values": [
+      2,
+      2,
+      0,
+      154
+     ]
+    },
+    {
+     "key": "/qr-generator/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/redirect",
+     "values": [
+      2,
+      2,
+      50,
+      15.5
+     ]
+    },
+    {
+     "key": "/services/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/sites/c/business/events/",
+     "values": [
+      2,
+      2,
+      50,
+      17
+     ]
+    },
+    {
+     "key": "/startups/botbotan-ii-repetitor/",
+     "values": [
+      2,
+      2,
+      0,
+      16.5
+     ]
+    },
+    {
+     "key": "/startups/c/telegram-mini-apps/",
+     "values": [
+      2,
+      2,
+      0,
+      20
+     ]
+    },
+    {
+     "key": "/startups/connecta/",
+     "values": [
+      2,
+      2,
+      50,
+      12
+     ]
+    },
+    {
+     "key": "/startups/creatormusic/",
+     "values": [
+      2,
+      2,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/startups/decision-matrix-ai/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    }
+   ]
+  },
+  "daily": {
+   "totals": [
+    1187,
+    988
+   ],
+   "rows": [
+    {
+     "key": "2026-10-16",
+     "values": [
+      7,
+      4
+     ]
+    },
+    {
+     "key": "2026-10-17",
+     "values": [
+      24,
+      16
+     ]
+    },
+    {
+     "key": "2026-10-18",
+     "values": [
+      7,
+      7
+     ]
+    },
+    {
+     "key": "2026-10-19",
+     "values": [
+      8,
+      7
+     ]
+    },
+    {
+     "key": "2026-10-20",
+     "values": [
+      17,
+      16
+     ]
+    },
+    {
+     "key": "2026-10-21",
+     "values": [
+      4,
+      3
+     ]
+    },
+    {
+     "key": "2026-10-22",
+     "values": [
+      14,
+      9
+     ]
+    },
+    {
+     "key": "2026-10-23",
+     "values": [
+      9,
+      9
+     ]
+    },
+    {
+     "key": "2026-10-24",
+     "values": [
+      6,
+      6
+     ]
+    },
+    {
+     "key": "2026-10-25",
+     "values": [
+      9,
+      9
+     ]
+    },
+    {
+     "key": "2026-10-26",
+     "values": [
+      9,
+      9
+     ]
+    },
+    {
+     "key": "2026-10-27",
+     "values": [
+      11,
+      10
+     ]
+    },
+    {
+     "key": "2026-10-28",
+     "values": [
+      14,
+      7
+     ]
+    },
+    {
+     "key": "2026-10-29",
+     "values": [
+      13,
+      12
+     ]
+    },
+    {
+     "key": "2026-10-30",
+     "values": [
+      13,
+      10
+     ]
+    },
+    {
+     "key": "2026-10-31",
+     "values": [
+      17,
+      15
+     ]
+    },
+    {
+     "key": "2026-11-01",
+     "values": [
+      19,
+      14
+     ]
+    },
+    {
+     "key": "2026-11-02",
+     "values": [
+      11,
+      11
+     ]
+    },
+    {
+     "key": "2026-11-03",
+     "values": [
+      32,
+      26
+     ]
+    },
+    {
+     "key": "2026-11-04",
+     "values": [
+      94,
+      92
+     ]
+    },
+    {
+     "key": "2026-11-05",
+     "values": [
+      64,
+      62
+     ]
+    },
+    {
+     "key": "2026-11-06",
+     "values": [
+      100,
+      95
+     ]
+    },
+    {
+     "key": "2026-11-07",
+     "values": [
+      125,
+      117
+     ]
+    },
+    {
+     "key": "2026-11-08",
+     "values": [
+      124,
+      115
+     ]
+    },
+    {
+     "key": "2026-11-09",
+     "values": [
+      130,
+      123
+     ]
+    },
+    {
+     "key": "2026-11-10",
+     "values": [
+      121,
+      115
+     ]
+    },
+    {
+     "key": "2026-11-11",
+     "values": [
+      98,
+      90
+     ]
+    },
+    {
+     "key": "2026-11-12",
+     "values": [
+      87,
+      84
+     ]
+    }
+   ]
+  },
+  "goals": {
+   "totals": [
+    149
+   ],
+   "rows": [
+    {
+     "key": "Search engine traffic",
+     "values": [
+      99
+     ]
+    },
+    {
+     "key": "Direct traffic",
+     "values": [
+      35
+     ]
+    },
+    {
+     "key": "Social network traffic",
+     "values": [
+      7
+     ]
+    },
+    {
+     "key": "Link traffic",
+     "values": [
+      6
+     ]
+    },
+    {
+     "key": "Internal traffic",
+     "values": [
+      2
+     ]
+    }
+   ]
+  }
+ }
+}
