@@ -1,6 +1,6 @@
 {
  "site": "sc-domain:nikalimp.ru",
- "generated": "2026-11-14T05:42:46.239Z",
+ "generated": "2026-11-14T07:07:39.314Z",
  "period": {
   "current": [
    "2026-10-15",
@@ -34873,7 +34873,7 @@
    ]
   }
  ],
- "sitemapUrls": 12178,
+ "sitemapUrls": 13195,
  "pagesWithImpressions": 2480,
  "bySection": {
   "/": {
@@ -35045,7 +35045,7 @@
    "impressions": 7899
   },
   "/sites/": {
-   "urls": 1050,
+   "urls": 2067,
    "withImpressions": 82,
    "clicks": 9,
    "impressions": 424
@@ -35108,8 +35108,8 @@
  "coverage": {
   "Страница отправлена и проиндексирована": 40,
   "Вариант страницы с тегом canonical": 1,
-  "Обнаружена, не проиндексирована": 10,
-  "URL неизвестен Google": 9
+  "Обнаружена, не проиндексирована": 12,
+  "URL неизвестен Google": 7
  },
  "inspections": [
   {
@@ -35725,10 +35725,11 @@
    "url": "https://nikalimp.ru/sites/c/business/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
+   "coverageState": "Обнаружена, не проиндексирована",
    "indexingState": "INDEXING_STATE_UNSPECIFIED",
    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
    "richResults": []
   },
   {
@@ -35800,10 +35801,11 @@
    "url": "https://nikalimp.ru/design-styles/particles/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
+   "coverageState": "Обнаружена, не проиндексирована",
    "indexingState": "INDEXING_STATE_UNSPECIFIED",
    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
    "richResults": []
   },
   {
@@ -35844,21 +35846,21 @@
    "url": "https://nikalimp.ru/fonts/3270/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
-   "coverageState": "Обнаружена, не проиндексирована",
+   "coverageState": "URL неизвестен Google",
    "indexingState": "INDEXING_STATE_UNSPECIFIED",
    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-   "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
    "richResults": []
   },
   {
    "url": "https://nikalimp.ru/startups/c/telegram-bots/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
+   "coverageState": "Обнаружена, не проиндексирована",
    "indexingState": "INDEXING_STATE_UNSPECIFIED",
    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
    "richResults": []
   },
   {
