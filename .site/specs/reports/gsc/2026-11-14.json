@@ -1,6 +1,6 @@
 {
  "site": "sc-domain:nikalimp.ru",
- "generated": "2026-11-14T07:07:39.314Z",
+ "generated": "2026-11-14T11:20:27.533Z",
  "period": {
   "current": [
    "2026-10-15",
@@ -34852,7 +34852,7 @@
    "contents": [
     {
      "type": "web",
-     "submitted": "6225",
+     "submitted": "7243",
      "indexed": "0"
     }
    ]
@@ -35108,8 +35108,8 @@
  "coverage": {
   "Страница отправлена и проиндексирована": 40,
   "Вариант страницы с тегом canonical": 1,
-  "Обнаружена, не проиндексирована": 12,
-  "URL неизвестен Google": 7
+  "Обнаружена, не проиндексирована": 15,
+  "URL неизвестен Google": 4
  },
  "inspections": [
   {
@@ -35694,20 +35694,22 @@
    "url": "https://nikalimp.ru/ui-libraries/8bitcn/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
+   "coverageState": "Обнаружена, не проиндексирована",
    "indexingState": "INDEXING_STATE_UNSPECIFIED",
    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
    "richResults": []
   },
   {
    "url": "https://nikalimp.ru/fonts/20-db/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
+   "coverageState": "Обнаружена, не проиндексирована",
    "indexingState": "INDEXING_STATE_UNSPECIFIED",
    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
    "richResults": []
   },
   {
@@ -35846,10 +35848,11 @@
    "url": "https://nikalimp.ru/fonts/3270/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
+   "coverageState": "Обнаружена, не проиндексирована",
    "indexingState": "INDEXING_STATE_UNSPECIFIED",
    "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
    "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
    "richResults": []
   },
   {

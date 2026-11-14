@@ -1,6 +1,6 @@
 {
  "host": "nikalimp.ru",
- "generated": "2026-11-14T07:07:48.739Z",
+ "generated": "2026-11-14T11:20:34.765Z",
  "period": [
   "2026-10-17",
   "2026-11-13"
@@ -17,7 +17,7 @@
    "https://nikalimp.ru/ verified=true"
   ],
   "summary": {
-   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/summary: {\"host_id\":null,\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/summary: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
   },
   "queries": {
    "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/search-queries/popular: {\"host_id\":null,\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
@@ -26,47 +26,32 @@
    "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/search-queries/all/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
   },
   "indexing": {
-   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/indexing/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/indexing/history: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
   },
   "inSearch": {
-   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/search-urls/in-search/history: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Anikalimp.ru%3A443/search-urls/in-search/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:nikalimp.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
   },
   "sitemaps": {
    "sitemaps": []
   },
   "diagnostics": {
    "problems": {
-    "NO_REGIONS": {
+    "INSIGNIFICANT_CGI_PARAMETER": {
      "severity": "RECOMMENDATION",
      "state": "ABSENT",
      "last_state_update": null
     },
-    "NOT_IN_SPRAV": {
+    "URL_ALERT_4XX": {
      "severity": "RECOMMENDATION",
      "state": "ABSENT",
      "last_state_update": null
     },
-    "DISALLOWED_IN_ROBOTS": {
-     "severity": "FATAL",
+    "FAVICON_ERROR": {
+     "severity": "POSSIBLE_PROBLEM",
      "state": "ABSENT",
      "last_state_update": null
     },
     "DUPLICATE_CONTENT_ATTRS": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "NO_ROBOTS_TXT": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "NO_METRIKA_COUNTER_BINDING": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "VIDEOHOST_OFFER_FAILED": {
      "severity": "POSSIBLE_PROBLEM",
      "state": "ABSENT",
      "last_state_update": null
@@ -76,23 +61,8 @@
      "state": "ABSENT",
      "last_state_update": null
     },
-    "NOT_MOBILE_FRIENDLY": {
-     "severity": "RECOMMENDATION",
-     "state": "UNDEFINED",
-     "last_state_update": null
-    },
-    "NO_SITEMAP_MODIFICATIONS": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
     "URL_ALERT_5XX": {
      "severity": "CRITICAL",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "DOCUMENTS_MISSING_DESCRIPTION": {
-     "severity": "POSSIBLE_PROBLEM",
      "state": "ABSENT",
      "last_state_update": null
     },
@@ -101,23 +71,8 @@
      "state": "ABSENT",
      "last_state_update": null
     },
-    "DOCUMENTS_MISSING_TITLE": {
+    "MAIN_PAGE_REDIRECTS": {
      "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "ERROR_IN_ROBOTS_TXT": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "TOO_MANY_DOMAINS_ON_SEARCH": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "INSIGNIFICANT_CGI_PARAMETER": {
-     "severity": "RECOMMENDATION",
      "state": "ABSENT",
      "last_state_update": null
     },
@@ -129,34 +84,14 @@
     "NO_METRIKA_COUNTER_CRAWL_ENABLED": {
      "severity": "POSSIBLE_PROBLEM",
      "state": "PRESENT",
-     "last_state_update": "2026-11-14T10:05:27.034+03:00"
-    },
-    "CONNECT_FAILED": {
-     "severity": "FATAL",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "NO_SITEMAPS": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "PRESENT",
-     "last_state_update": "2026-10-10T08:07:59.368+03:00"
+     "last_state_update": "2026-11-14T14:05:25.662+03:00"
     },
     "BIG_FAVICON_ABSENT": {
      "severity": "RECOMMENDATION",
      "state": "ABSENT",
      "last_state_update": null
     },
-    "THREATS": {
-     "severity": "FATAL",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "DUPLICATE_PAGES": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "MAIN_PAGE_ERROR": {
+    "DISALLOWED_IN_ROBOTS": {
      "severity": "FATAL",
      "state": "ABSENT",
      "last_state_update": null
@@ -166,23 +101,23 @@
      "state": "ABSENT",
      "last_state_update": null
     },
-    "URL_ALERT_4XX": {
+    "DOCUMENTS_MISSING_DESCRIPTION": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_REGIONS": {
      "severity": "RECOMMENDATION",
      "state": "ABSENT",
      "last_state_update": null
     },
-    "DNS_ERROR": {
+    "THREATS": {
      "severity": "FATAL",
      "state": "ABSENT",
      "last_state_update": null
     },
-    "FAVICON_ERROR": {
-     "severity": "POSSIBLE_PROBLEM",
-     "state": "ABSENT",
-     "last_state_update": null
-    },
-    "MAIN_PAGE_REDIRECTS": {
-     "severity": "POSSIBLE_PROBLEM",
+    "NOT_IN_SPRAV": {
+     "severity": "RECOMMENDATION",
      "state": "ABSENT",
      "last_state_update": null
     },
@@ -191,7 +126,72 @@
      "state": "ABSENT",
      "last_state_update": null
     },
+    "NOT_MOBILE_FRIENDLY": {
+     "severity": "RECOMMENDATION",
+     "state": "UNDEFINED",
+     "last_state_update": null
+    },
+    "NO_METRIKA_COUNTER_BINDING": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
     "SOFT_404": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_SITEMAP_MODIFICATIONS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "TOO_MANY_DOMAINS_ON_SEARCH": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DNS_ERROR": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "ERROR_IN_ROBOTS_TXT": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DOCUMENTS_MISSING_TITLE": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_PAGE_ERROR": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_ROBOTS_TXT": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_SITEMAPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "PRESENT",
+     "last_state_update": "2026-10-10T08:07:59.368+03:00"
+    },
+    "DUPLICATE_PAGES": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "CONNECT_FAILED": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "VIDEOHOST_OFFER_FAILED": {
      "severity": "POSSIBLE_PROBLEM",
      "state": "ABSENT",
      "last_state_update": null
