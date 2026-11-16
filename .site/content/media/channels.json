@@ -103,6 +103,10 @@
   "dnevnik-eksperimenta-nedelya-2": {
    "tg": "off",
    "max": "off"
+  },
+  "experiment-diary-week-4": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
