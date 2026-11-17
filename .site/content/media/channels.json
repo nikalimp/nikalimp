@@ -107,6 +107,10 @@
   "experiment-diary-week-4": {
    "tg": "off",
    "max": "off"
+  },
+  "website-or-telegram-channel": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
