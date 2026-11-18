@@ -112,7 +112,7 @@ export default async function StartupPage({ params }: { params: Promise<{ slug: 
           </Container>
         )}
       </Section>
-      <Cta />
+      <Cta offer="startup" />
     </>
   );
 }

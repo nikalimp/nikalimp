@@ -6,6 +6,7 @@ import { Container, Eyebrow, Section } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Bot, FileCode2, Gift, ShieldCheck, Zap } from "lucide-react";
 import { AuditTool } from "@/components/audit-tool";
+import { Cta } from "@/components/cta";
 import { AiAsk } from "@/components/ai-ask";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbs, faqSchema, graph, orgId } from "@/lib/schema";
@@ -96,7 +97,7 @@ export default function AuditPage() {
             <div>
               <p className="text-xl font-semibold">Бесплатный старт</p>
               <p className="mt-2 text-muted-foreground">Аудит — первый шаг перед работой, поэтому для всех, кто планирует начать, он бесплатный. Вы получаете полный отчёт и план на 90 дней и сами решаете, что дальше: внедрить план своими силами или со мной. Если нужен только отчёт, без старта работ, — {audit.price}.</p>
-              <Button asChild variant="outline" className="mt-4"><a href={site.telegram} target="_blank" rel="noopener">Заказать аудит в Telegram</a></Button>
+              <Button asChild className="mt-4"><a href="#lead">Заказать аудит</a></Button>
             </div>
           </div>
           <h3 className="mt-12 text-lg font-semibold">Что входит в аудит</h3>
@@ -127,6 +128,7 @@ export default function AuditPage() {
           </div>
         </Container>
       </Section>
+      <Cta offer="geo" />
     </>
   );
 }

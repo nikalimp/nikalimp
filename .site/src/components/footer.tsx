@@ -48,7 +48,7 @@ export function Footer() {
         <div>
           <p className="mb-2 font-medium">Разделы</p>
           <ul className="space-y-1.5 text-muted-foreground">
-            <li><NavLink href="/#process" className="hover:text-foreground">Этапы работы</NavLink></li>
+            <li><NavLink href="/services/#process" className="hover:text-foreground">Этапы работы</NavLink></li>
             <li><NavLink href="/methodology/" className="hover:text-foreground">Методика замеров</NavLink></li>
             <li><NavLink section href="/blog/" className="hover:text-foreground">Блог</NavLink></li>
             <li><NavLink section href="/digest/" className="hover:text-foreground">Дайджест</NavLink></li>

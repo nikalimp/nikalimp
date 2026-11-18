@@ -5,9 +5,12 @@ import { audit, services } from "@/lib/services";
 import { site } from "@/lib/site";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { Cta } from "@/components/cta";
+import { ProcessSection } from "@/components/process-section";
+import { SystemSection } from "@/components/system-section";
+import { processAnswer, processSteps } from "@/lib/process";
 import { ServiceCard } from "@/components/service-card";
 import { JsonLd } from "@/components/json-ld";
-import { breadcrumbs, faqSchema, graph } from "@/lib/schema";
+import { breadcrumbs, faqSchema, graph, orgId } from "@/lib/schema";
 import { offers, support } from "@/lib/offers";
 
 const whom: Record<string, string> = {
@@ -39,6 +42,14 @@ export default function Services() {
           { "@type": "ItemList", name: "Услуги NikAlimp", itemListElement: services.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: s.title, url: `${site.url}/services/${s.slug}/` })) },
           breadcrumbs([{ name: "Главная", path: "/" }, { name: "Услуги", path: "/services/" }]),
           faqSchema(hubFaq),
+          {
+            "@type": "HowTo",
+            name: "Как проходит разработка сайта",
+            description: processAnswer,
+            url: `${site.url}/services/#process`,
+            provider: { "@id": orgId },
+            step: processSteps.map((st, i) => ({ "@type": "HowToStep", position: i + 1, name: st.title, text: `${st.what} Результат: ${st.result}`, url: `${site.url}/services/#step-${i + 1}` })),
+          },
         )}
       />
       <Section className="pt-12">
@@ -102,6 +113,8 @@ export default function Services() {
           </div>
         </Container>
       </Section>
+      <ProcessSection />
+      <SystemSection />
       <Cta />
     </>
   );

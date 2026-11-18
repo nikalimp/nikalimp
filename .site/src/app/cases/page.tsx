@@ -9,6 +9,8 @@ import { cases, casesCount } from "@/lib/cases";
 import { ArrowUpRight } from "lucide-react";
 import { getCaseStudies } from "@/lib/case-studies";
 import { CaseCard } from "@/components/case-card";
+import { StoryCarousel } from "@/components/story-carousel";
+import { story } from "@/lib/story";
 
 export const metadata: Metadata = {
   title: `Кейсы: ${casesCount} проектов с 2021 года — ${site.person}`,
@@ -64,9 +66,16 @@ export default function Cases() {
             </section>
           ))}
 
-          <h2 className="mt-12 text-2xl font-semibold tracking-tight">Путь</h2>
-          <p className="mt-3 leading-relaxed text-muted-foreground">Каждые год-два я менял страну, профессию или роль. История по годам — <Link href="/#story" className="text-brand hover:underline">на главной</Link>.</p>
 
+        </Container>
+      </Section>
+      {/* История по годам — перенесена с главной 18.11.2026 */}
+      <Section id="story" className="scroll-mt-14 overflow-hidden border-t bg-card">
+        <Container>
+          <Eyebrow>Моя история</Eyebrow>
+          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Умение адаптироваться — главный навык</h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">Каждый год я меняю страну и совершенствую свои навыки: от преподавателя акробатики в Екатеринбурге до работы с лидерами мнений и стартапами в сфере MarTech.</p>
+          <StoryCarousel steps={story} />
         </Container>
       </Section>
       <Cta />

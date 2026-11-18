@@ -61,7 +61,7 @@ export default function DesignStylesPage() {
           </div>
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="design" />
     </>
   );
 }

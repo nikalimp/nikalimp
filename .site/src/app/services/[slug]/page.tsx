@@ -65,8 +65,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <h1 className="text-3xl font-semibold leading-tight tracking-tight text-balance sm:text-4xl text-center mx-auto max-w-3xl">{s.h1}</h1>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground text-center mx-auto max-w-2xl">{s.answer}</p>
           <div className="mt-8 flex flex-wrap items-center gap-4 justify-center">
-            <Button asChild size="lg"><a href={site.booking} target="_blank" rel="noopener">Записаться на консультацию</a></Button>
-            <p className="text-sm text-muted-foreground">30 минут, Zoom · {s.prices[0].value}</p>
+            <Button asChild size="lg"><a href="#lead">Обсудить проект</a></Button>
+            <p className="text-sm text-muted-foreground">{s.prices[0].value} · <a href={site.booking} target="_blank" rel="noopener" className="underline underline-offset-4">или 30 минут в Zoom</a></p>
           </div>
         </Container>
       </Section>
@@ -150,7 +150,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </>
           )}
           {(s.slug === "personal-website" || s.slug === "corporate-website") && (
-            <Link href="/#process" className="mt-8 inline-flex text-sm text-brand hover:underline">Подробно: что происходит на каждом этапе и что нужно от вас →</Link>
+            <Link href="/services/#process" className="mt-8 inline-flex text-sm text-brand hover:underline">Подробно: что происходит на каждом этапе и что нужно от вас →</Link>
           )}
         </Container>
       </Section>
@@ -236,7 +236,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </Section>
       )}
 
-      <Cta />
+      <Cta offer={({ "personal-website": "personal", "corporate-website": "corporate", "content-factory": "content", "web-service-development": "service" } as const)[s.slug as "personal-website"] ?? "site"} />
     </>
   );
 }

@@ -10,6 +10,7 @@ import { getTerm, getTerms, linkTerms } from "@/lib/glossary";
 import { site } from "@/lib/site";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { Cta } from "@/components/cta";
+import { offerForTerm } from "@/lib/lead-offers";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbs, graph } from "@/lib/schema";
 import { getTools } from "@/lib/tools";
@@ -56,7 +57,7 @@ export default async function TermPage({ params }: { params: Promise<{ slug: str
           </article>
           {tool && (
             <Link href={`/tools/${tool.slug}/`} className="mt-8 flex items-center justify-between gap-4 rounded-xl border p-5 hover:bg-accent">
-              <span><span className="block font-semibold">{tool.name}: обзор, тарифы и аналоги</span><span className="mt-1 block text-sm text-muted-foreground">Цены, работа из России, плюсы и минусы — в каталоге инструментов</span></span>
+              <span><span className="block font-semibold">{tool.name}: обзор, тарифы и аналоги</span><span className="mt-1 block text-sm text-muted-foreground">Цены, работа из России, плюсы и минусы — в каталоге инструментов</span></span>
               <span aria-hidden className="text-muted-foreground">→</span>
             </Link>
           )}
@@ -91,7 +92,7 @@ export default async function TermPage({ params }: { params: Promise<{ slug: str
           )}
         </Container>
       </Section>
-      <Cta />
+      <Cta offer={offerForTerm(t.slug, t.category)} />
     </>
   );
 }

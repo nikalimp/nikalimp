@@ -93,7 +93,7 @@ export default function Glossary() {
           </div>
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="geo" />
     </>
   );
 }

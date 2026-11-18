@@ -1,4 +1,4 @@
-// Этапы работы над сайтом — блок #process на главной и llms-full.txt (страница /process/ убрана 29.10.2026).
+// Этапы работы над сайтом — блок #process на /services/ (с 18.11.2026; раньше — на главной) и llms-full.txt (страница /process/ убрана 29.10.2026).
 // Внутренняя версия процесса: Resources/Frameworks/AI-Ready сайт — флоу.md
 
 export const processAnswer =

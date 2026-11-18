@@ -65,7 +65,7 @@ export default async function StartupCategoryPage({ params }: { params: Promise<
           <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">Хотите добавить свой проект или нашли ошибку — <a href={site.telegram} target="_blank" rel="noopener" className="text-brand hover:underline">напишите мне</a>.</p>
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="startup" />
     </>
   );
 }

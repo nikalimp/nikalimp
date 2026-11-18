@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { LeadForm } from "./lead-form";
 import { AlertTriangle, ArrowRight, Check, ChevronDown, Copy, Download, Info, Loader2, Search, Send, X } from "lucide-react";
 import { audit, priorities, reportText, score, type Facts, type Mode, type Status } from "@/lib/audit";
 import { site } from "@/lib/site";
@@ -182,11 +183,10 @@ export function AuditTool({ mode }: { mode: Mode }) {
           </div>
 
           <div className="mt-8 rounded-2xl border bg-foreground p-6 text-background sm:p-8 print:hidden">
-            <h2 className="text-2xl font-semibold tracking-tight">Нужен план исправлений?</h2>
-            <p className="mt-2 max-w-2xl text-background/75">Пришлите отчёт мне в Telegram — бесплатно разберу, что исправить в первую очередь и сколько это займёт. Отчёт уже скопирован в один клик.</p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <a href={site.telegram} target="_blank" rel="noopener" onClick={copy} className="inline-flex h-11 items-center gap-2 rounded-lg bg-background px-5 font-medium text-foreground hover:opacity-90"><Send className="size-4" />Скопировать и отправить в Telegram</a>
-              <a href={mode === "seo" ? "/geo-audit/" : mode === "geo" ? "#full-audit" : "/services/corporate-website/"} className="inline-flex h-11 items-center gap-2 rounded-lg border border-background/30 px-5 font-medium hover:bg-background/10">{mode === "seo" ? "GEO-проверка: готов ли сайт к нейросетям" : mode === "geo" ? "Полный GEO-аудит с замером ответов" : "Новый сайт без этих ошибок"}<ArrowRight className="size-4" /></a>
+            <LeadForm offer="audit" siteUrl={url} dark />
+            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 border-t border-background/20 pt-5 text-sm">
+              <a href={site.telegram} target="_blank" rel="noopener" onClick={copy} className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline"><Send className="size-4" />{copied ? "Отчёт скопирован — вставьте в Telegram" : "Скопировать отчёт и отправить в Telegram"}</a>
+              <a href={mode === "seo" ? "/geo-audit/" : mode === "geo" ? "#full-audit" : "/services/corporate-website/"} className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">{mode === "seo" ? "GEO-проверка: готов ли сайт к нейросетям" : mode === "geo" ? "Полный GEO-аудит с замером ответов" : "Новый сайт без этих ошибок"}<ArrowRight className="size-4" /></a>
             </div>
           </div>
         </div>

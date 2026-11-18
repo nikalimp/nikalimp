@@ -8,6 +8,7 @@ import { formatDate, getPost, getPosts } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { Container, Section } from "@/components/container";
 import { Cta } from "@/components/cta";
+import { offerForPost } from "@/lib/lead-offers";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbs, graph, orgId, personId } from "@/lib/schema";
 import { linkTerms } from "@/lib/glossary";
@@ -58,7 +59,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           </article>
         </Container>
       </Section>
-      <Cta />
+      <Cta offer={offerForPost(p.slug)} />
     </>
   );
 }

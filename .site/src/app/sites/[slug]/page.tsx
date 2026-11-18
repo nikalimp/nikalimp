@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const niche = getGalleryBase().niches[it.k];
   return {
     title: metaTitle(pageTitle(it.n, niche)),
-    description: metaDesc(`Сайт ${it.n} (${host(it.u)}) в коллекции примеров NikAlimp, ниша «${niche.toLowerCase()}». Скриншот главной, разбор структуры и что взять для своего сайта.`),
+    description: metaDesc(`Сайт ${it.n} (${host(it.u)}) в коллекции примеров NikAlimp, ниша «${niche.toLowerCase()}». Скриншот главной, разбор структуры и что взять для своего сайта.`),
     alternates: { canonical: `/sites/${it.s}/` },
     openGraph: { type: "article", title: pageTitle(it.n, niche), images: [{ url: it.img }] },
   };
@@ -56,7 +56,7 @@ export default async function SitePage({ params }: { params: Promise<{ slug: str
     ["Категория", <Link key="c" href={galleryCatPath(cat)} className="text-brand hover:underline">{cat.name}</Link>],
     ["Ниша", sub ? <Link key="k" href={galleryCatPath(sub)} className="text-brand hover:underline">{niche}</Link> : niche],
     ["Источник", <a key="src" href={src.url} target="_blank" rel="nofollow noopener" className="text-brand hover:underline">{src.name}</a>],
-    ...(it.rc ? [["Главная", `${it.rc} блоков${it.z ? `, из них вручную — ${it.z}` : ""}`] as [string, React.ReactNode]] : []),
+    ...(it.rc ? [["Главная", `${it.rc} блоков${it.z ? `, из них вручную — ${it.z}` : ""}`] as [string, React.ReactNode]] : []),
   ];
   return (
     <>
@@ -100,12 +100,12 @@ export default async function SitePage({ params }: { params: Promise<{ slug: str
         </Container>
         <Container className="mt-12 max-w-3xl">
           <article className="prose-site">
-            <h2>О проекте</h2>
-            <p>{it.n} — {it.ds ? <>проект в нише «{niche.toLowerCase()}». Как он описывает себя: «{it.ds.replace(/[.\s]+$/, "")}».</> : <>сайт в нише «{niche.toLowerCase()}»{it.t ? `: ${it.t.charAt(0).toLowerCase()}${it.t.slice(1)}` : ""}.</>} В коллекции он в разделе «{cat.name}».</p>
-            {anatomy(it).length > 0 && <h2>Как устроен сайт</h2>}
+            <h2>О проекте</h2>
+            <p>{it.n} — {it.ds ? <>проект в нише «{niche.toLowerCase()}». Как он описывает себя: «{it.ds.replace(/[.\s]+$/, "")}».</> : <>сайт в нише «{niche.toLowerCase()}»{it.t ? `: ${it.t.charAt(0).toLowerCase()}${it.t.slice(1)}` : ""}.</>} В коллекции он в разделе «{cat.name}».</p>
+            {anatomy(it).length > 0 && <h2>Как устроен сайт</h2>}
             {anatomy(it).map((p) => <p key={p}>{p}</p>)}
-            <h2>Что взять для своего сайта</h2>
-            <p>Если делаете сайт для {NICHE_FOR[it.k]}, вот что стоит проверить на этом примере и у себя:</p>
+            <h2>Что взять для своего сайта</h2>
+            <p>Если делаете сайт для {NICHE_FOR[it.k]}, вот что стоит проверить на этом примере и у себя:</p>
             <ul>{(NICHE_TIPS[it.k] ?? NICHE_TIPS.other).map((t) => <li key={t}>{t}</li>)}</ul>
           </article>
           <SiteLead name={it.n} url={it.u} personal={personal} price={svc?.prices[0]?.value ?? ""} upgrade={upgrade} className="mt-10" />
@@ -127,7 +127,7 @@ export default async function SitePage({ params }: { params: Promise<{ slug: str
           </Container>
         )}
       </Section>
-      <Cta />
+      <Cta offer={personal ? "personal" : "corporate"} />
     </>
   );
 }

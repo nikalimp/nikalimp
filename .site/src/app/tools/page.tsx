@@ -84,7 +84,7 @@ export default function ToolsIndex() {
           </div>
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="marketing" />
     </>
   );
 }

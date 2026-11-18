@@ -133,7 +133,7 @@ RedirectMatch 301 ^/services/influencer-marketing/?$ https://nikalimp.ru/service
 RedirectMatch 301 ^/services/landing-page/?$ https://nikalimp.ru/services/personal-website/
 RedirectMatch 301 ^/services/admin-panel-dashboard/?$ https://nikalimp.ru/services/web-service-development/
 RedirectMatch 301 ^/services/website-support/?$ https://nikalimp.ru/services/corporate-website/
-RedirectMatch 301 ^/process/?$ https://nikalimp.ru/#process
+RedirectMatch 301 ^/process/?$ https://nikalimp.ru/services/#process
 
 # 7.11.2026: старая страница Tilda, 57 показов в Google за октябрь
 RedirectMatch 301 ^/page23901716\.html$ https://nikalimp.ru/
