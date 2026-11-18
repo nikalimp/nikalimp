@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { getCaseStudies } from "@/lib/case-studies";
 import { formatDate, getPosts } from "@/lib/posts";
-import { CaseCard } from "@/components/case-card";
+import { CaseStack } from "@/components/case-stack";
 import Link from "next/link";
 import { ArrowRight, BarChart3, Check, X, BookOpen, Factory, Newspaper, Package, Send, Handshake, LayoutDashboard, QrCode, UserRound, Palette, PencilRuler, Sparkles, UserRoundSearch } from "lucide-react";
 import { LogoMarquee } from "@/components/logo-marquee";
@@ -122,15 +122,13 @@ export default function Home() {
         <LogoMarquee />
       </Section>
 
-      {/* Кейсы: все карточки в слайдере с боковой прокруткой, по 2 на экране (18.11.2026) */}
+      {/* Кейсы: одна колонка, стопка карточек при прокрутке, «Показать все» (19.11.2026) */}
       <Section id="cases" className="scroll-mt-14 border-t bg-card">
         <Container>
           <Eyebrow className="text-center">Кейсы</Eyebrow>
           <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Подробные разборы проектов</h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">Задача, решения, этапы и результат — на примерах сайтов и продуктов последних лет.</p>
-          <ul className="case-slider -mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-4 px-4 pb-4 sm:-mx-6 sm:scroll-px-6 sm:px-6" aria-label="Кейсы">
-            {caseStudies.map((c) => <li key={c.slug} className="grid w-[85%] shrink-0 snap-start sm:w-[calc(50%-0.5rem)]"><CaseCard c={c} /></li>)}
-          </ul>
+          <CaseStack cases={caseStudies} />
         </Container>
       </Section>
 

@@ -307,7 +307,7 @@
    Текст остаётся в HTML (поиск и нейросети его видят), высота блока запоминается — прокрутка не прыгает. */
 main > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: auto 720px; }
 
-/* Слайдер кейсов на главной: тонкая полоса прокрутки, карточки листаются по одной */
-.case-slider { scrollbar-width: thin; scrollbar-color: var(--border) transparent; overscroll-behavior-x: contain; }
-.case-slider::-webkit-scrollbar { height: 6px; }
-.case-slider::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+/* Кейсы на главной — стопка (CaseStack): карточку, которую накрывает следующая, чуть уменьшаем и затемняем.
+   --cover от 0 до 1 считает компонент; без JavaScript и при reduced motion карточки просто идут друг под другом. */
+.case-stack-card { --cover: 0; transform-origin: 50% 0; transform: scale(calc(1 - var(--cover) * 0.06)); filter: brightness(calc(1 - var(--cover) * 0.12)); will-change: transform; }
+@media (prefers-reduced-motion: reduce) { .case-stack-card { transform: none; filter: none; } }
