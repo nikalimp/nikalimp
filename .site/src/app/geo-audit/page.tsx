@@ -4,7 +4,7 @@ import { audit } from "@/lib/services";
 import { site } from "@/lib/site";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { Button } from "@/components/ui/button";
-import { Bot, FileCode2, Gift, ShieldCheck, Zap } from "lucide-react";
+import { Bot, Braces, FileCode2, Gift, Hourglass, MessageSquareText, ShieldCheck, Zap } from "lucide-react";
 import { AuditTool } from "@/components/audit-tool";
 import { Cta } from "@/components/cta";
 import { AiAsk } from "@/components/ai-ask";
@@ -73,6 +73,26 @@ export default function AuditPage() {
                 <span className="card-icon inline-flex size-9 items-center justify-center rounded-lg bg-brand-bg text-brand"><t.icon className="size-4" /></span>
                 <p className="mt-3 font-medium">{t.title}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{t.text}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </Section>
+
+      {/* Почему GEO сейчас — три карточки перенесены с главной 18.11.2026 */}
+      <Section className="border-t print:hidden">
+        <Container>
+          <Eyebrow className="text-center">Почему сейчас</Eyebrow>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Нейросети отвечают вместо поиска</h2>
+          <ul className="mt-10 grid divide-y rounded-xl border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            {([
+              [MessageSquareText, "Ответ вместо ссылок", "Алиса AI, ChatGPT и Perplexity дают готовый ответ. До сайта доходят только те, кого назвали."],
+              [Braces, "Побеждает понятный", "Нейросети цитируют источники с чёткой структурой, фактами и разметкой, а не самые красивые сайты."],
+              [Hourglass, "Окно открыто", "Большинство компаний в рунете ещё не занимаются GEO. Кто начнёт сейчас, займёт место в ответах."],
+            ] as const).map(([Icon, t, d]) => (
+              <li key={t} className="p-5">
+                <p className="flex items-center gap-2 font-medium"><Icon className="size-4 text-brand" />{t}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{d}</p>
               </li>
             ))}
           </ul>

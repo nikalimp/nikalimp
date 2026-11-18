@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { AchievementStories } from "@/components/achievement-stories";
+import { achievements } from "@/lib/achievements";
 import Link from "next/link";
 import { CalendarDays, Mail, Phone, Send } from "lucide-react";
 import { site } from "@/lib/site";
@@ -100,6 +102,10 @@ export default function ContactsPage() {
           <ul className="mt-3 list-disc space-y-1 pl-5 text-muted-foreground">
             {cv.education.map((e) => <li key={e}>{e}</li>)}
           </ul>
+          {/* Сертификаты и награды — перенесены с главной 18.11.2026 */}
+          <h3 className="mt-10 text-lg font-semibold">Сертификаты и награды</h3>
+          <p className="mt-2 mb-5 text-sm text-muted-foreground">Нажмите, чтобы посмотреть документы</p>
+          <AchievementStories groups={achievements} />
         </Container>
       </Section>
 

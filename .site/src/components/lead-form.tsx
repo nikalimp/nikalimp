@@ -12,7 +12,7 @@ import { leadOffers, type LeadOfferId } from "@/lib/lead-offers";
 type Ym = (...a: unknown[]) => void;
 const goal = (name: string, params?: Record<string, string>) => { try { (window as unknown as { ym?: Ym }).ym?.(site.metrikaId, "reachGoal", name, params); } catch {} };
 
-export function LeadForm({ offer, siteUrl = "", compact = false, dark = false, className = "" }: { offer: LeadOfferId; siteUrl?: string; compact?: boolean; dark?: boolean; className?: string }) {
+export function LeadForm({ offer, siteUrl = "", compact = false, dark = false, center = false, className = "" }: { offer: LeadOfferId; siteUrl?: string; compact?: boolean; dark?: boolean; center?: boolean; className?: string }) {
   const o = leadOffers[offer];
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
@@ -47,11 +47,11 @@ export function LeadForm({ offer, siteUrl = "", compact = false, dark = false, c
   return (
     <div className={`not-prose ${className}`}>
       {!compact && (
-        <>
+        <div className={center ? "text-center" : ""}>
           <p className={`font-mono text-[11px] uppercase tracking-wider ${dark ? "text-background/70" : "text-brand"}`}>{o.eyebrow}</p>
           <h2 id={`${id}-title`} className="mt-2 text-2xl font-semibold leading-snug tracking-tight text-balance sm:text-3xl">{o.title}</h2>
-          <p className={`mt-3 max-w-2xl ${muted}`}>{o.text}</p>
-        </>
+          <p className={`mt-3 max-w-2xl ${center ? "mx-auto" : ""} ${muted}`}>{o.text}</p>
+        </div>
       )}
       <form action="/api/lead.php" method="post" onSubmit={submit} aria-labelledby={compact ? undefined : `${id}-title`} aria-label={compact ? o.title : undefined} className={`grid gap-3 sm:grid-cols-2 ${compact ? "" : "mt-6"}`}>
         <input type="hidden" name="offer" value={o.id} />
