@@ -306,3 +306,8 @@
 /* Скорость: блоки ниже первого экрана браузер рисует, только когда до них доходит прокрутка.
    Текст остаётся в HTML (поиск и нейросети его видят), высота блока запоминается — прокрутка не прыгает. */
 main > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: auto 720px; }
+
+/* Слайдер кейсов на главной: тонкая полоса прокрутки, карточки листаются по одной */
+.case-slider { scrollbar-width: thin; scrollbar-color: var(--border) transparent; overscroll-behavior-x: contain; }
+.case-slider::-webkit-scrollbar { height: 6px; }
+.case-slider::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }

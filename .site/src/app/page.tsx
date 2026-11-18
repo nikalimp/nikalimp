@@ -1,12 +1,10 @@
 import { Fragment } from "react";
 import { getCaseStudies } from "@/lib/case-studies";
+import { formatDate, getPosts } from "@/lib/posts";
 import { CaseCard } from "@/components/case-card";
 import Link from "next/link";
-import { ArrowRight, BarChart3, Check, X, BookOpen, Factory, Newspaper, Package, Send, Braces, Handshake, LayoutDashboard, QrCode, UserRound, Hourglass, MessageSquareText, Palette, PencilRuler, Sparkles, UserRoundSearch } from "lucide-react";
+import { ArrowRight, BarChart3, Check, X, BookOpen, Factory, Newspaper, Package, Send, Handshake, LayoutDashboard, QrCode, UserRound, Palette, PencilRuler, Sparkles, UserRoundSearch } from "lucide-react";
 import { LogoMarquee } from "@/components/logo-marquee";
-import { AchievementStories } from "@/components/achievement-stories";
-import { achievements } from "@/lib/achievements";
-import { site } from "@/lib/site";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
@@ -14,18 +12,9 @@ import { faqSchema, graph } from "@/lib/schema";
 import { Cta } from "@/components/cta";
 import { compare } from "@/components/geo-sections";
 import { offers, support } from "@/lib/offers";
-import { processFaq, processSteps } from "@/lib/process";
+import { processFaq } from "@/lib/process";
 
 const featureIcons = { design: Palette, qr: QrCode, pack: Package, parser: Send, account: UserRound, admin: LayoutDashboard, factory: Factory, press: Newspaper };
-
-// Второстепенные страницы — кнопки над сертификатами
-const sitePages = [
-  { href: "/cases/", label: "Кейсы" }, { href: "/blog/", label: "Блог" }, { href: "/services/", label: "Услуги" }, { href: "/products/", label: "Продукты" },
-  { href: "/libraries/", label: "Библиотеки" }, { href: "/startups/", label: "База стартапов" }, { href: "/tools/", label: "Каталог инструментов" },
-  { href: "/glossary/", label: "Глоссарий" }, { href: "/design-styles/", label: "Дизайн-направления" }, { href: "/fonts/", label: "Шрифты" }, { href: "/design-systems/", label: "Дизайн-системы" }, { href: "/ui-libraries/", label: "UI-библиотеки" },
-  { href: "/geo-audit/", label: "GEO-аудит" }, { href: "/methodology/", label: "Методика замеров" }, { href: "/partners/", label: "Партнёрская программа" },
-  { href: "/card/", label: "Визитка" }, { href: "/contacts/", label: "Контакты" },
-];
 
 const faq = [
   { q: "Сколько стоит личный сайт?", a: `${offers.personal.price}: эксклюзивный дизайн, упаковка продуктов и услуг, парсер заявок в Telegram и QR-визитка. Первый год администрирования входит в стоимость.` },
@@ -59,6 +48,7 @@ const bonuses = [
 ];
 
 const caseStudies = getCaseStudies();
+const posts = getPosts().slice(0, 3);
 
 export default function Home() {
   return (
@@ -91,9 +81,8 @@ export default function Home() {
             {["Создание", "персональных", "и корпоративных", "сайтов"].map((w, i) => <Fragment key={i}>{i > 0 && " "}<span className="hero-word" style={{ animationDelay: `${120 + i * 70}ms` }}>{w}</span></Fragment>)}
           </h1>
           <p style={{ animationDelay: "420ms" }} className="hero-in mt-5 max-w-2xl text-lg text-muted-foreground">
-            Чтобы вас находили в Яндексе и советовали ChatGPT, Алиса и GigaChat. Личный сайт — за 1⁠–⁠2 недели, корпоративный — за 3⁠–⁠6, первый год администрирования входит в цену.
+            С продвижением в ChatGPT, Perplexity, Claude, Алиса и GigaChat
           </p>
-          <p style={{ animationDelay: "460ms" }} className="hero-in mt-3 text-sm text-muted-foreground">Больше 100 сайтов с {site.since} года · договор и чек самозанятого</p>
         </Container>
 
         <Container className="hero-in mt-10" style={{ animationDelay: "500ms" }}>
@@ -133,38 +122,25 @@ export default function Home() {
         <LogoMarquee />
       </Section>
 
-      {/* Кейсы */}
+      {/* Кейсы: все карточки в слайдере с боковой прокруткой, по 2 на экране (18.11.2026) */}
       <Section id="cases" className="scroll-mt-14 border-t bg-card">
         <Container>
-          <Eyebrow>Кейсы</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Подробные разборы проектов</h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">Задача, решения, этапы и результат — на примерах сайтов и продуктов последних лет.</p>
-          {caseStudies.length > 0 ? (
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">{caseStudies.slice(0, 3).map((c) => <CaseCard key={c.slug} c={c} />)}</div>
-          ) : null}
-          <Button asChild variant="outline" className="mt-8"><Link href="/cases/">Все кейсы и проекты <ArrowRight /></Link></Button>
+          <Eyebrow className="text-center">Кейсы</Eyebrow>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Подробные разборы проектов</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">Задача, решения, этапы и результат — на примерах сайтов и продуктов последних лет.</p>
+          <ul className="case-slider -mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-4 px-4 pb-4 sm:-mx-6 sm:scroll-px-6 sm:px-6" aria-label="Кейсы">
+            {caseStudies.map((c) => <li key={c.slug} className="grid w-[85%] shrink-0 snap-start sm:w-[calc(50%-0.5rem)]"><CaseCard c={c} /></li>)}
+          </ul>
         </Container>
       </Section>
 
       {/* Чуть подушним: причины сверху, сравнение «обычный → AI-native» снизу — одна секция */}
       <Section className="border-t">
         <Container>
-          <Eyebrow>Теперь чуть подушним</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight text-balance sm:text-4xl">Сайт для людей <span className="text-brand">→</span> сайт для людей и нейросетей</h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">Люди всё чаще не ищут сайты в Яндексе и Google, а спрашивают нейросеть и получают готовый ответ. Поэтому каждый мой сайт — AI-native: его понимают и люди, и ChatGPT с Алисой. SEO приводит из поиска, AEO — в быстрые ответы, GEO — в рекомендации нейросетей.</p>
-          <ul className="mt-10 grid divide-y rounded-xl border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-            {([
-              [MessageSquareText, "Ответ вместо ссылок", "Алиса AI, ChatGPT и Perplexity дают готовый ответ. До сайта доходят только те, кого назвали."],
-              [Braces, "Побеждает понятный", "Нейросети цитируют источники с чёткой структурой, фактами и разметкой, а не самые красивые сайты."],
-              [Hourglass, "Окно открыто", "Большинство компаний в рунете ещё не занимаются GEO. Кто начнёт сейчас, займёт место в ответах."],
-            ] as const).map(([Icon, t, d]) => (
-              <li key={t} className="p-5">
-                <p className="flex items-center gap-2 font-medium"><Icon className="size-4 text-brand" />{t}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{d}</p>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-4 overflow-hidden rounded-xl border">
+          <Eyebrow className="text-center">Теперь чуть подушним</Eyebrow>
+          <h2 className="mx-auto text-center text-2xl font-semibold leading-tight tracking-tight sm:whitespace-nowrap sm:text-4xl">Сайт для людей <span className="text-brand">→</span> сайт для нейросетей</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">Люди всё чаще не ищут сайты в Яндексе и Google, а спрашивают нейросеть и получают готовый ответ. Поэтому каждый мой сайт — AI-native: его понимают и люди, и ChatGPT с Алисой. SEO приводит из поиска, AEO — в быстрые ответы, GEO — в рекомендации нейросетей.</p>
+          <div className="mt-10 overflow-hidden rounded-xl border">
             <div className="grid grid-cols-2 border-b font-mono text-xs uppercase tracking-wider">
               <p className="bg-card p-4 text-muted-foreground">Обычный сайт</p>
               <p className="border-l border-brand/30 bg-brand-bg p-4 text-brand">AI-native сайт</p>
@@ -178,16 +154,16 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <p className="mt-6 text-sm text-muted-foreground">nikalimp.ru собран по тем же правилам: <Link href="/llms.txt" className="text-brand hover:underline">llms.txt</Link>, разметка на каждой странице, текст без JavaScript.</p>
+          <p className="mt-6 text-center text-sm text-muted-foreground">nikalimp.ru собран по тем же правилам: <Link href="/llms.txt" className="text-brand hover:underline">llms.txt</Link>, разметка на каждой странице, текст без JavaScript.</p>
         </Container>
       </Section>
 
       {/* Администрирование и бонусы — один блок (18.11.2026: раньше «Дисклеймер» и «Неочевидные бонусы») */}
       <Section className="border-t">
         <Container>
-          <Eyebrow>Что вы получаете, кроме сайта</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Сайт с администрированием: каждый месяц видно, что он приносит</h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">Я администрирую все проекты, потому что сайт должен зарабатывать, а не просто существовать. Первый год входит в стоимость, дальше — {support.price}.</p>
+          <Eyebrow className="text-center">Что вы получаете, кроме сайта</Eyebrow>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Сайт с администрированием: каждый месяц видно, что он приносит</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">Я администрирую все проекты, потому что сайт должен зарабатывать, а не просто существовать. Первый год входит в стоимость, дальше — {support.price}.</p>
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {[...supportCards, ...bonuses].map((c) => (
               <div key={c.title} className="card rounded-xl border p-6">
@@ -200,31 +176,13 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* Этапы коротко; полная версия с «От вас / Результат» — /services/#process (18.11.2026) */}
-      <Section className="border-t bg-card">
-        <Container>
-          <Eyebrow>Этапы</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Как я делаю сайт: 9 этапов от аудита до замера</h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">Сначала спецификация: страницы, тексты и критерии приёмки фиксируются в документе. Потом дизайн и код. Личный сайт — 1⁠–⁠2 недели, корпоративный — 3⁠–⁠6 недель.</p>
-          <ol className="mt-8 grid gap-3 sm:grid-cols-3">
-            {processSteps.map((st, i) => (
-              <li key={st.title} className="flex gap-3 rounded-xl border bg-background p-4">
-                <span className="font-mono text-sm text-brand">{String(i + 1).padStart(2, "0")}</span>
-                <span><span className="block font-medium">{st.title}</span><span className="mt-0.5 block text-sm text-muted-foreground">{st.time}</span></span>
-              </li>
-            ))}
-          </ol>
-          <Button asChild variant="outline" className="mt-8"><Link href="/services/#process">Что происходит на каждом этапе <ArrowRight /></Link></Button>
-        </Container>
-      </Section>
-
-      <Cta offer="site" />
+      <Cta offer="site" center />
 
       {/* FAQ */}
       <Section className="border-t bg-card">
         <Container className="max-w-3xl">
-          <Eyebrow>Вопросы</Eyebrow>
-          <h2 className="text-3xl font-semibold tracking-tight">Частые вопросы</h2>
+          <Eyebrow className="text-center">Вопросы</Eyebrow>
+          <h2 className="text-center text-3xl font-semibold tracking-tight">Частые вопросы</h2>
           <div className="mt-8 divide-y border-y">
             {[...faq, ...processFaq].map((f) => (
               <details key={f.q} className="group py-4">
@@ -238,23 +196,26 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* Навигация по сайту и сертификаты */}
+      {/* Последние статьи блога (18.11.2026) */}
       <Section className="border-t">
         <Container>
-          <Eyebrow>Ещё на сайте</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Сертификаты, награды и полезные разделы</h2>
-          <nav aria-label="Разделы сайта" className="mt-8">
-            <ul className="flex flex-wrap gap-2">
-              {sitePages.map((p) => (
-                <li key={p.href}><Link href={p.href} className="inline-flex h-10 items-center gap-1.5 rounded-full border bg-background px-4 text-sm transition-colors hover:border-brand/40 hover:text-brand">{p.label}<ArrowRight className="size-3.5 opacity-50" /></Link></li>
-              ))}
-            </ul>
-          </nav>
-          <p className="mt-12 mb-5 text-sm text-muted-foreground">Сертификаты и награды — нажмите, чтобы посмотреть документы</p>
-          <AchievementStories groups={achievements} />
+          <Eyebrow className="text-center">Блог</Eyebrow>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Последние статьи</h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {posts.map((p) => (
+              <Link key={p.slug} href={`/blog/${p.slug}/`} className="card group flex flex-col overflow-hidden rounded-xl border hover:bg-accent">
+                {p.cover && <img src={p.cover} alt="" loading="lazy" width={1200} height={630} className="aspect-[40/21] w-full border-b object-cover" />}
+                <div className="flex flex-1 flex-col p-5">
+                  <p className="text-sm text-muted-foreground">{formatDate(p.date)}</p>
+                  <h3 className="mt-2 text-lg font-semibold leading-snug group-hover:text-brand">{p.title}</h3>
+                  <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{p.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 text-center"><Button asChild variant="outline"><Link href="/blog/">Все статьи <ArrowRight /></Link></Button></div>
         </Container>
       </Section>
-
     </>
   );
 }
