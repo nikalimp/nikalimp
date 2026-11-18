@@ -111,6 +111,10 @@
   "website-or-telegram-channel": {
    "tg": "off",
    "max": "off"
+  },
+  "where-ai-checks-company-facts": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
