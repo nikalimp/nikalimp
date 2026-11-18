@@ -102,7 +102,7 @@ export default function MethodPage() {
         </Container>
       </Section>
 
-      <Cta />
+      <Cta offer="geo" />
     </>
   );
 }

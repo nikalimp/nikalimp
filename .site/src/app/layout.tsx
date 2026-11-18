@@ -26,6 +26,9 @@ const metrikaScript = `(function(){var done=0;function load(){if(done)return;don
 // Подсветка рамки карточки за курсором: только CSS-переменные, контент не трогает
 const spotlightScript = `document.addEventListener('pointermove',function(e){var c=e.target.closest&&e.target.closest('.card');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true});`;
 
+// Цели Метрики на клики во внешние каналы связи (18.11.2026): Telegram и запись в календарь раньше не считались вовсе
+const contactGoalsScript = `document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||!window.ym)return;var h=a.href;var g=/t\\.me\\/nikalimp/.test(h)?'click_telegram':/calendar\\.notion\\.so/.test(h)?'click_booking':/^tel:/.test(h)?'click_phone':/^mailto:/.test(h)?'click_email':'';if(g)ym(${metrikaId},'reachGoal',g,{page:location.pathname})},true);`;
+
 const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})()`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -43,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
         <Footer />
         <script dangerouslySetInnerHTML={{ __html: spotlightScript }} />
+        <script dangerouslySetInnerHTML={{ __html: contactGoalsScript }} />
       </body>
     </html>
   );

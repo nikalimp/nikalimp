@@ -16,6 +16,7 @@ import { toolCollections } from "@/lib/collections";
 import { site } from "@/lib/site";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { Cta } from "@/components/cta";
+import { offerForCategory } from "@/lib/lead-offers";
 import { JsonLd } from "@/components/json-ld";
 import { Button } from "@/components/ui/button";
 import { Chip, RussiaBadge, ToolLink, ToolMark, shortPrice } from "@/components/tool-parts";
@@ -153,7 +154,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           {(() => {
             const n = t.name.toLowerCase();
             const term = getTerms().find((x) => x.term.toLowerCase() === n || x.en.toLowerCase() === n);
-            return term ? <p className="mt-6 text-sm text-muted-foreground">Что такое {term.term} простыми словами — <Link href={`/glossary/${term.slug}/`} className="underline underline-offset-4 hover:text-foreground">в глоссарии</Link>.</p> : null;
+            return term ? <p className="mt-6 text-sm text-muted-foreground">Что такое {term.term} простыми словами — <Link href={`/glossary/${term.slug}/`} className="underline underline-offset-4 hover:text-foreground">в глоссарии</Link>.</p> : null;
           })()}
 
           <LeadMagnet kind={magnetFor(t.category)} className="my-10" />
@@ -316,7 +317,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </a>
         </div>
       )}
-      <div className="pb-16 sm:pb-0"><Cta /></div>
+      <div className="pb-16 sm:pb-0"><Cta offer={offerForCategory(t.category)} /></div>
     </>
   );
 }

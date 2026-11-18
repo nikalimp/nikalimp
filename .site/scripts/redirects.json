@@ -92,7 +92,7 @@
   "/services/landing-page/": "/services/personal-website/",
   "/services/admin-panel-dashboard/": "/services/web-service-development/",
   "/services/website-support/": "/services/corporate-website/",
-  "/process/": "/#process",
+  "/process/": "/services/#process",
   "/tilda-sites/*": "/sites/*",
   "/page23901716.html": "/"
 }

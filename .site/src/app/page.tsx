@@ -7,18 +7,14 @@ import { LogoMarquee } from "@/components/logo-marquee";
 import { AchievementStories } from "@/components/achievement-stories";
 import { achievements } from "@/lib/achievements";
 import { site } from "@/lib/site";
-import { story } from "@/lib/story";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
-import { faqSchema, graph, orgId } from "@/lib/schema";
+import { faqSchema, graph } from "@/lib/schema";
 import { Cta } from "@/components/cta";
 import { compare } from "@/components/geo-sections";
-import { SystemSection } from "@/components/system-section";
-import { StoryCarousel } from "@/components/story-carousel";
-import { PartnerCalculator } from "@/components/partner-calculator";
 import { offers, support } from "@/lib/offers";
-import { deliverables, processAnswer, processFaq, processSteps } from "@/lib/process";
+import { processFaq, processSteps } from "@/lib/process";
 
 const featureIcons = { design: Palette, qr: QrCode, pack: Package, parser: Send, account: UserRound, admin: LayoutDashboard, factory: Factory, press: Newspaper };
 
@@ -70,14 +66,6 @@ export default function Home() {
       <JsonLd
         data={graph(
           faqSchema([...faq, ...processFaq]),
-          {
-            "@type": "HowTo",
-            name: "Как проходит разработка сайта",
-            description: processAnswer,
-            url: `${site.url}/#process`,
-            provider: { "@id": orgId },
-            step: processSteps.map((st, i) => ({ "@type": "HowToStep", position: i + 1, name: st.title, text: `${st.what} Результат: ${st.result}`, url: `${site.url}/#step-${i + 1}` })),
-          },
         )}
       />
 
@@ -103,8 +91,9 @@ export default function Home() {
             {["Создание", "персональных", "и корпоративных", "сайтов"].map((w, i) => <Fragment key={i}>{i > 0 && " "}<span className="hero-word" style={{ animationDelay: `${120 + i * 70}ms` }}>{w}</span></Fragment>)}
           </h1>
           <p style={{ animationDelay: "420ms" }} className="hero-in mt-5 max-w-2xl text-lg text-muted-foreground">
-            С продвижением в ChatGPT, Perplexity, Claude, Алиса и GigaChat
+            Чтобы вас находили в Яндексе и советовали ChatGPT, Алиса и GigaChat. Личный сайт — за 1⁠–⁠2 недели, корпоративный — за 3⁠–⁠6, первый год администрирования входит в цену.
           </p>
+          <p style={{ animationDelay: "460ms" }} className="hero-in mt-3 text-sm text-muted-foreground">Больше 100 сайтов с {site.since} года · договор и чек самозанятого</p>
         </Container>
 
         <Container className="hero-in mt-10" style={{ animationDelay: "500ms" }}>
@@ -137,95 +126,23 @@ export default function Home() {
                 <s className="font-normal text-muted-foreground decoration-2">{offers.bundle.oldPrice}</s>
               </p>
             </div>
-            <Button asChild size="lg" className="h-auto min-h-11 shrink-0 whitespace-normal py-2.5"><a href={site.booking} target="_blank" rel="noopener">Записаться на консультацию <ArrowRight /></a></Button>
+            <Button asChild size="lg" className="h-auto min-h-11 shrink-0 whitespace-normal py-2.5"><a href="#lead">Обсудить проект <ArrowRight /></a></Button>
           </div>
         </Container>
 
         <LogoMarquee />
       </Section>
 
-      {/* Сторителлинг */}
-      <Section id="story" className="scroll-mt-14 overflow-hidden border-t bg-card">
+      {/* Кейсы */}
+      <Section id="cases" className="scroll-mt-14 border-t bg-card">
         <Container>
-          <Eyebrow>Моя история</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Умение адаптироваться — главный навык</h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">Каждый год я меняю страну и совершенствую свои навыки: от преподавателя акробатики в Екатеринбурге до работы с лидерами мнений и стартапами в сфере MarTech.</p>
-          <StoryCarousel steps={story} />
-        </Container>
-      </Section>
-
-      {/* Дисклеймер */}
-      <Section className="border-t">
-        <Container>
-          <Eyebrow>Дисклеймер</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">В 2026 я выбрал путь эссенциалиста и начал говорить «нет» мертворождённым проектам</h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">Каждый сайт должен зарабатывать деньги, поэтому я администрирую все проекты. Первый год входит в стоимость, дальше — {support.price}.</p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {supportCards.map((c) => (
-              <div key={c.title} className="card rounded-xl border p-6">
-                <span className="card-icon inline-flex size-10 items-center justify-center rounded-lg bg-brand-bg text-brand"><c.icon className="size-5" /></span>
-                <p className="mt-4 font-semibold">{c.title}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{c.text}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Неочевидные бонусы */}
-      <Section className="border-t bg-card">
-        <Container>
-          <Eyebrow>Неочевидные бонусы</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Что вы получите, кроме сайта</h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {bonuses.map((c) => (
-              <div key={c.title} className="card rounded-xl border bg-background p-6">
-                <span className="card-icon inline-flex size-10 items-center justify-center rounded-lg bg-brand-bg text-brand"><c.icon className="size-5" /></span>
-                <p className="mt-4 font-semibold">{c.title}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{c.text}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Этапы — перенесено со страницы /process/ 29.10.2026 */}
-      <Section id="process" className="scroll-mt-14 border-t">
-        <Container className="max-w-3xl">
-          <Eyebrow>Этапы</Eyebrow>
-          <h2 className="text-3xl font-semibold tracking-tight">Как я делаю сайт: 9 этапов от брифа до запуска</h2>
-          <p className="mt-4 text-muted-foreground">{processAnswer}</p>
-          <p className="mt-2 text-sm text-muted-foreground">Сроки указаны для личного / корпоративного сайта.</p>
-          <ol className="mt-10">
-            {processSteps.map((st, i) => (
-              <li key={st.title} id={`step-${i + 1}`} className="relative grid grid-cols-[2.5rem_1fr] gap-4 pb-10 last:pb-0 sm:gap-6">
-                {i < processSteps.length - 1 && <span aria-hidden="true" className="absolute bottom-1 left-5 top-11 w-px -translate-x-1/2 bg-gradient-to-b from-brand/50 to-border" />}
-                <span className="relative z-10 inline-flex size-10 items-center justify-center rounded-full border border-brand/40 bg-background font-mono text-sm text-brand">{String(i + 1).padStart(2, "0")}</span>
-                <div className="pt-1.5">
-                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                    <h3 className="text-lg font-semibold">{st.title}</h3>
-                    <span className="text-sm text-muted-foreground">{st.time}</span>
-                  </div>
-                  <p className="mt-2">{st.what}</p>
-                  <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
-                    <div className="rounded-lg border bg-background p-4">
-                      <dt className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">От вас</dt>
-                      <dd className="mt-1.5">{st.you}</dd>
-                    </div>
-                    <div className="rounded-lg border border-brand/30 bg-brand-bg p-4">
-                      <dt className="font-mono text-[11px] uppercase tracking-wider text-brand">Результат</dt>
-                      <dd className="mt-1.5">{st.result}</dd>
-                    </div>
-                  </dl>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <h3 className="mt-16 text-2xl font-semibold tracking-tight">Что вы получаете</h3>
-          <ul className="mt-6 space-y-3">
-            {deliverables.map((d) => <li key={d} className="flex gap-3"><Check className="mt-0.5 size-4 shrink-0 text-brand" />{d}</li>)}
-          </ul>
+          <Eyebrow>Кейсы</Eyebrow>
+          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Подробные разборы проектов</h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">Задача, решения, этапы и результат — на примерах сайтов и продуктов последних лет.</p>
+          {caseStudies.length > 0 ? (
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">{caseStudies.slice(0, 3).map((c) => <CaseCard key={c.slug} c={c} />)}</div>
+          ) : null}
+          <Button asChild variant="outline" className="mt-8"><Link href="/cases/">Все кейсы и проекты <ArrowRight /></Link></Button>
         </Container>
       </Section>
 
@@ -264,29 +181,60 @@ export default function Home() {
           <p className="mt-6 text-sm text-muted-foreground">nikalimp.ru собран по тем же правилам: <Link href="/llms.txt" className="text-brand hover:underline">llms.txt</Link>, разметка на каждой странице, текст без JavaScript.</p>
         </Container>
       </Section>
-      <SystemSection />
 
-      {/* Кейсы */}
-      <Section id="cases" className="scroll-mt-14 border-t bg-card">
+      {/* Администрирование и бонусы — один блок (18.11.2026: раньше «Дисклеймер» и «Неочевидные бонусы») */}
+      <Section className="border-t">
         <Container>
-          <Eyebrow>Кейсы</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Подробные разборы проектов</h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">Задача, решения, этапы и результат — на примерах сайтов и продуктов последних лет.</p>
-          {caseStudies.length > 0 ? (
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">{caseStudies.slice(0, 3).map((c) => <CaseCard key={c.slug} c={c} />)}</div>
-          ) : null}
-          <Button asChild variant="outline" className="mt-8"><Link href="/cases/">Все кейсы и проекты <ArrowRight /></Link></Button>
+          <Eyebrow>Что вы получаете, кроме сайта</Eyebrow>
+          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Сайт с администрированием: каждый месяц видно, что он приносит</h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">Я администрирую все проекты, потому что сайт должен зарабатывать, а не просто существовать. Первый год входит в стоимость, дальше — {support.price}.</p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {[...supportCards, ...bonuses].map((c) => (
+              <div key={c.title} className="card rounded-xl border p-6">
+                <span className="card-icon inline-flex size-10 items-center justify-center rounded-lg bg-brand-bg text-brand"><c.icon className="size-5" /></span>
+                <p className="mt-4 font-semibold">{c.title}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{c.text}</p>
+              </div>
+            ))}
+          </div>
         </Container>
       </Section>
 
-      {/* Партнёрка */}
-      <Section className="hero border-t">
+      {/* Этапы коротко; полная версия с «От вас / Результат» — /services/#process (18.11.2026) */}
+      <Section className="border-t bg-card">
         <Container>
-          <Eyebrow>Партнёрка</Eyebrow>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Буду рад вашим рекомендациям</h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">Отблагодарю кэшбэком с каждого оплаченного договора или окажу вам услуги стоимостью в 2 раза больше. Посмотрите, сколько принесёт рекомендация.</p>
-          <div className="mt-8"><PartnerCalculator /></div>
-          <Button asChild variant="outline" className="mt-8"><Link href="/partners/">Узнать подробнее <ArrowRight /></Link></Button>
+          <Eyebrow>Этапы</Eyebrow>
+          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight">Как я делаю сайт: 9 этапов от аудита до замера</h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">Сначала спецификация: страницы, тексты и критерии приёмки фиксируются в документе. Потом дизайн и код. Личный сайт — 1⁠–⁠2 недели, корпоративный — 3⁠–⁠6 недель.</p>
+          <ol className="mt-8 grid gap-3 sm:grid-cols-3">
+            {processSteps.map((st, i) => (
+              <li key={st.title} className="flex gap-3 rounded-xl border bg-background p-4">
+                <span className="font-mono text-sm text-brand">{String(i + 1).padStart(2, "0")}</span>
+                <span><span className="block font-medium">{st.title}</span><span className="mt-0.5 block text-sm text-muted-foreground">{st.time}</span></span>
+              </li>
+            ))}
+          </ol>
+          <Button asChild variant="outline" className="mt-8"><Link href="/services/#process">Что происходит на каждом этапе <ArrowRight /></Link></Button>
+        </Container>
+      </Section>
+
+      <Cta offer="site" />
+
+      {/* FAQ */}
+      <Section className="border-t bg-card">
+        <Container className="max-w-3xl">
+          <Eyebrow>Вопросы</Eyebrow>
+          <h2 className="text-3xl font-semibold tracking-tight">Частые вопросы</h2>
+          <div className="mt-8 divide-y border-y">
+            {[...faq, ...processFaq].map((f) => (
+              <details key={f.q} className="group py-4">
+                <summary className="cursor-pointer list-none font-medium marker:hidden">
+                  <span className="flex items-center justify-between gap-4">{f.q}<span className="text-muted-foreground transition-transform group-open:rotate-45">+</span></span>
+                </summary>
+                <p className="mt-3 text-muted-foreground">{f.a}</p>
+              </details>
+            ))}
+          </div>
         </Container>
       </Section>
 
@@ -307,25 +255,6 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* FAQ */}
-      <Section className="border-t bg-card">
-        <Container className="max-w-3xl">
-          <Eyebrow>Вопросы</Eyebrow>
-          <h2 className="text-3xl font-semibold tracking-tight">Частые вопросы</h2>
-          <div className="mt-8 divide-y border-y">
-            {[...faq, ...processFaq].map((f) => (
-              <details key={f.q} className="group py-4">
-                <summary className="cursor-pointer list-none font-medium marker:hidden">
-                  <span className="flex items-center justify-between gap-4">{f.q}<span className="text-muted-foreground transition-transform group-open:rotate-45">+</span></span>
-                </summary>
-                <p className="mt-3 text-muted-foreground">{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Cta />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { getSubcategories } from "@/lib/tools";
 import { site } from "@/lib/site";
 import { Container, Section } from "@/components/container";
 import { Cta } from "@/components/cta";
+import { offerForCategory } from "@/lib/lead-offers";
 import { JsonLd } from "@/components/json-ld";
 import { RussiaBadge, ToolMark, shortPrice } from "@/components/tool-parts";
 import { breadcrumbs, graph } from "@/lib/schema";
@@ -74,7 +75,7 @@ export default async function SubcategoryPage({ params }: { params: Promise<{ su
           <p className="mt-8 text-center text-sm"><Link href="/tools/" className="underline underline-offset-4">Все категории инструментов →</Link></p>
         </Container>
       </Section>
-      <Cta />
+      <Cta offer={offerForCategory(g.category)} />
     </>
   );
 }

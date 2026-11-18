@@ -1,18 +1,16 @@
 import { site } from "@/lib/site";
+import type { LeadOfferId } from "@/lib/lead-offers";
 import { Container, Section } from "./container";
-import { Button } from "./ui/button";
+import { LeadForm } from "./lead-form";
 
-export function Cta() {
+/** Нижний блок каждой страницы: форма заявки с оффером под тип страницы (18.11.2026; раньше — две кнопки во внешние сервисы). */
+export function Cta({ offer = "site", siteUrl }: { offer?: LeadOfferId; siteUrl?: string }) {
   return (
-    <Section className="hero border-t">
+    <Section id="lead" className="hero scroll-mt-14 border-t">
       <div className="hero-bg" aria-hidden="true"><div className="hero-glow" /></div>
-      <Container className="text-center">
-        <h2 className="text-3xl font-semibold tracking-tight">Узнайте, что нейросети говорят о вашем бизнесе</h2>
-        <p className="mx-auto mt-3 max-w-xl text-muted-foreground">Запишитесь на бесплатную 30-минутную консультацию в Zoom или напишите в Telegram — разберём ваш бизнес и решим, с чего начать.</p>
-        <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <Button asChild size="lg"><a href={site.booking} target="_blank" rel="noopener">Записаться на консультацию</a></Button>
-          <Button asChild size="lg" variant="outline"><a href={site.telegram} target="_blank" rel="noopener">Написать в Telegram</a></Button>
-        </div>
+      <Container className="max-w-3xl">
+        <LeadForm offer={offer} siteUrl={siteUrl} />
+        <p className="mt-6 text-sm text-muted-foreground">Удобнее голосом? <a href={site.booking} target="_blank" rel="noopener" className="underline underline-offset-4">Запишитесь на 30 минут в Zoom</a> — разберём задачу и решим, с чего начать.</p>
       </Container>
     </Section>
   );

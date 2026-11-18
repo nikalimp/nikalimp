@@ -92,7 +92,7 @@ export default async function DesignStylePage({ params }: { params: Promise<{ sl
           )}
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="design" />
     </>
   );
 }

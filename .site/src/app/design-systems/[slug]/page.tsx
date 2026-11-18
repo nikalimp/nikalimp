@@ -22,14 +22,14 @@ export function generateStaticParams() {
 
 // Самый длинный вариант заголовка, который влезает в 65 знаков вместе с « — NikAlimp», иначе короче
 const fit = (v: string[]) => v.find((x) => x.length + 11 <= 65) ?? v.find((x) => x.length <= 65) ?? v[v.length - 1];
-const titleOf = (s: DsItem) => fit([`${s.name}: дизайн-система, библиотеки блоков и компонентов`, `${s.name}: дизайн-система и библиотеки блоков`, `${s.name}: дизайн-система и библиотеки`, `${s.name} — дизайн-система`]);
+const titleOf = (s: DsItem) => fit([`${s.name}: дизайн-система, библиотеки блоков и компонентов`, `${s.name}: дизайн-система и библиотеки блоков`, `${s.name}: дизайн-система и библиотеки`, `${s.name} — дизайн-система`]);
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const s = getSystem(slug);
   if (!s) return {};
   const n = librariesOf(s.slug).length;
-  const desc = `${s.name} — ${s.short.replace(/\.$/, "").toLowerCase()}. ${s.about}${n ? ` ${n} ${plural(n, "библиотека", "библиотеки", "библиотек")} блоков, компонентов и анимаций к системе.` : ""}`;
+  const desc = `${s.name} — ${s.short.replace(/\.$/, "").toLowerCase()}. ${s.about}${n ? ` ${n} ${plural(n, "библиотека", "библиотеки", "библиотек")} блоков, компонентов и анимаций к системе.` : ""}`;
   return { title: metaTitle(titleOf(s)), description: metaDesc(desc), alternates: { canonical: `/design-systems/${s.slug}/` }, openGraph: { type: "article", title: titleOf(s), description: metaDesc(desc) } };
 }
 
@@ -49,7 +49,7 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ s
     <>
       <JsonLd data={graph(
         { "@type": "Article", headline: titleOf(s), description: s.about, url: `${site.url}${url}`, inLanguage: "ru-RU", author: { "@id": personId }, dateModified: s.checked, about: { "@type": "SoftwareSourceCode", name: s.name, url: s.url, ...(s.github ? { codeRepository: `https://github.com/${s.github}` } : {}), ...(s.license ? { license: s.license } : {}), programmingLanguage: s.frameworks } },
-        ...(libs.length ? [{ "@type": "ItemList", name: `Библиотеки для ${s.name}`, itemListElement: libs.map((l, i) => ({ "@type": "ListItem", position: i + 1, name: l.name, url: `${site.url}/ui-libraries/${l.slug}/` })) }] : []),
+        ...(libs.length ? [{ "@type": "ItemList", name: `Библиотеки для ${s.name}`, itemListElement: libs.map((l, i) => ({ "@type": "ListItem", position: i + 1, name: l.name, url: `${site.url}/ui-libraries/${l.slug}/` })) }] : []),
         faqSchema(faq),
         breadcrumbs([{ name: "Главная", path: "/" }, { name: "Библиотеки", path: "/libraries/" }, { name: "Дизайн-системы", path: "/design-systems/" }, { name: s.name, path: url }]),
       )} />
@@ -65,11 +65,11 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ s
           <DsStatus x={s} />
 
           <div className="prose-site mx-auto mt-10 max-w-3xl">
-            <h2>Что такое {s.name}</h2>
+            <h2>Что такое {s.name}</h2>
             <p>{s.about}</p>
-            {s.best_for && <p>{typograf(`Для каких проектов: ${s.best_for}.`)}</p>}
+            {s.best_for && <p>{typograf(`Для каких проектов: ${s.best_for}.`)}</p>}
             <p>{fam.text}</p>
-            {s.tool && <p>Подробный обзор с тарифами и аналогами — в <Link href={`/tools/${s.tool}/`}>каталоге инструментов</Link>.</p>}
+            {s.tool && <p>Подробный обзор с тарифами и аналогами — в <Link href={`/tools/${s.tool}/`}>каталоге инструментов</Link>.</p>}
           </div>
 
           <div className="mx-auto mt-8 max-w-3xl">
@@ -78,11 +78,11 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ s
           </div>
 
           <div className="mt-16">
-            <h2 className="text-center text-2xl font-semibold tracking-tight">{libs.length ? `Библиотеки для ${s.name}` : "Библиотеки"}</h2>
+            <h2 className="text-center text-2xl font-semibold tracking-tight">{libs.length ? `Библиотеки для ${s.name}` : "Библиотеки"}</h2>
             <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
               {typograf(libs.length
-                ? `${libs.length} ${plural(libs.length, "библиотека", "библиотеки", "библиотек")} поверх системы: готовые секции, компоненты, анимации, шаблоны и темы. Подключайте их к проекту, чтобы не рисовать каждый блок с нуля.`
-                : `Отдельных библиотек секций и анимаций для ${s.name} в каталоге пока нет: система закрывает основные задачи своими компонентами. Ниже — универсальные библиотеки анимаций, которые работают с любым стеком.`)}
+                ? `${libs.length} ${plural(libs.length, "библиотека", "библиотеки", "библиотек")} поверх системы: готовые секции, компоненты, анимации, шаблоны и темы. Подключайте их к проекту, чтобы не рисовать каждый блок с нуля.`
+                : `Отдельных библиотек секций и анимаций для ${s.name} в каталоге пока нет: система закрывает основные задачи своими компонентами. Ниже — универсальные библиотеки анимаций, которые работают с любым стеком.`)}
             </p>
             {groups.map((g) => (
               <section key={g.t} className="mt-10" aria-labelledby={`g-${g.t}`}>
@@ -91,8 +91,8 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ s
               </section>
             ))}
             <section className="mt-12" aria-labelledby="g-any">
-              <h3 id="g-any" className="text-lg font-semibold">Анимации для любой системы</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{typograf(`Эти библиотеки не зависят от дизайн-системы и работают вместе с ${s.name}.`)}</p>
+              <h3 id="g-any" className="text-lg font-semibold">Анимации для любой системы</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{typograf(`Эти библиотеки не зависят от дизайн-системы и работают вместе с ${s.name}.`)}</p>
               <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{any.map((l) => <DsCard key={l.slug} x={l} compact />)}</ul>
               <p className="mt-4 text-sm"><Link href="/ui-libraries/" className="text-brand hover:underline">Все UI-библиотеки →</Link></p>
             </section>
@@ -102,14 +102,14 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ s
 
           {services.length > 0 && (
             <div className="mx-auto mt-14 max-w-3xl">
-              <h2 className="text-xl font-semibold tracking-tight">{typograf(`Сделаю проект на ${s.name}`)}</h2>
-              <p className="mt-2 text-muted-foreground">{typograf("Собираю сайты и сервисы на одной дизайн-системе с библиотеками блоков и анимаций: так проект выглядит цельно, а новые страницы появляются быстро. Каждый сайт готов к поиску и ответам нейросетей.")}</p>
+              <h2 className="text-xl font-semibold tracking-tight">{typograf(`Сделаю проект на ${s.name}`)}</h2>
+              <p className="mt-2 text-muted-foreground">{typograf("Собираю сайты и сервисы на одной дизайн-системе с библиотеками блоков и анимаций: так проект выглядит цельно, а новые страницы появляются быстро. Каждый сайт готов к поиску и ответам нейросетей.")}</p>
               <div className="mt-5 grid gap-4 sm:grid-cols-2">{services.map((x) => <ServiceCard key={x.slug} s={x} />)}</div>
             </div>
           )}
 
           <div className="mx-auto mt-14 max-w-3xl">
-            <h2 className="text-xl font-semibold tracking-tight">Вопросы и ответы: {s.name}</h2>
+            <h2 className="text-xl font-semibold tracking-tight">Вопросы и ответы: {s.name}</h2>
             <div className="mt-4 divide-y rounded-xl border">
               {faq.map((f) => (
                 <details key={f.q} className="group px-5 py-4">
@@ -129,7 +129,7 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ s
           )}
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="design" />
     </>
   );
 }

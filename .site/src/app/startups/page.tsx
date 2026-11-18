@@ -68,7 +68,7 @@ export default function StartupsPage() {
           </div>
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="startup" />
     </>
   );
 }

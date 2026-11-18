@@ -56,7 +56,7 @@ export default function FontsPage() {
           </div>
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="design" />
     </>
   );
 }

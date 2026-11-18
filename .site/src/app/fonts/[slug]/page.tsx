@@ -125,7 +125,7 @@ export default async function FontPage({ params }: { params: Promise<{ slug: str
           )}
         </Container>
       </Section>
-      <Cta />
+      <Cta offer="design" />
     </>
   );
 }
