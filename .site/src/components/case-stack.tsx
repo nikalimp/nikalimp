@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { ShowAllButton } from "./show-all";
 import type { CaseStudy } from "@/lib/case-studies";
 
 // Кейсы на главной (19.11.2026): одна колонка, внутри карточки — картинка слева, текст справа.
@@ -45,9 +46,9 @@ export function CaseStack({ cases }: { cases: CaseStudy[] }) {
       <ol ref={list} className="case-stack mt-10 space-y-6" aria-label="Кейсы">
         {cases.map((c, i) => (
           <li key={c.slug} hidden={!all && i >= VISIBLE} className="md:sticky" style={{ top: `calc(5rem + ${Math.min(i, VISIBLE) * 1.25}rem)` }}>
-            <article className="case-stack-card group grid overflow-hidden rounded-2xl border bg-background shadow-[0_-8px_30px_-12px_rgb(0_0_0/0.18)] md:grid-cols-2">
+            <article className="case-stack-card grid overflow-hidden rounded-2xl border bg-background shadow-[0_-8px_30px_-12px_rgb(0_0_0/0.18)] md:grid-cols-2">
               <Link href={`/cases/${c.slug}/`} tabIndex={-1} aria-hidden="true" className="block overflow-hidden border-b md:border-b-0 md:border-r">
-                {c.cover && <img src={c.cover} alt="" width={1600} height={1000} loading={i < 2 ? "eager" : "lazy"} className="aspect-[16/10] h-full w-full object-cover object-left-top transition-transform duration-500 group-hover:scale-[1.02]" />}
+                {c.cover && <img src={c.cover} alt="" width={1600} height={1000} loading={i < 2 ? "eager" : "lazy"} className="aspect-[16/10] h-full w-full object-cover object-left-top" />}
               </Link>
               <div className="flex flex-col p-6 sm:p-8">
                 <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{c.type} · {c.status === "Запущен" ? c.year : c.status}</p>
@@ -72,9 +73,7 @@ export function CaseStack({ cases }: { cases: CaseStudy[] }) {
       </ol>
       {cases.length > VISIBLE && !all && (
         <div className="mt-8 text-center">
-          <button type="button" onClick={() => setAll(true)} className="inline-flex h-11 items-center gap-2 rounded-lg border bg-background px-5 text-sm font-medium hover:bg-accent">
-            Показать все — {cases.length}<ChevronDown className="size-4" />
-          </button>
+          <ShowAllButton count={cases.length} onClick={() => setAll(true)} />
         </div>
       )}
     </>

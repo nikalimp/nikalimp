@@ -6,7 +6,7 @@ import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbs, graph, personId } from "@/lib/schema";
 import { cases, casesCount } from "@/lib/cases";
-import { ArrowUpRight } from "lucide-react";
+import { ProjectList } from "@/components/project-list";
 import { getCaseStudies } from "@/lib/case-studies";
 import { CaseCard } from "@/components/case-card";
 import { StoryCarousel } from "@/components/story-carousel";
@@ -48,23 +48,7 @@ export default function Cases() {
 
           <h2 className="mt-12 text-2xl font-semibold tracking-tight">Проекты</h2>
           <p className="mt-3 leading-relaxed text-muted-foreground">{casesCount} проектов с 2021 года: сайты, продукты и прототипы. Часть работ под NDA — название и детали раскрыть не могу. Подробные разборы — в карточках выше.</p>
-          {cases.map((y) => (
-            <section key={y.year} className="mt-8">
-              <h3 className="font-mono text-sm text-brand">{y.year}</h3>
-              <ul className="mt-3 divide-y border-y">
-                {y.items.map((c, i) => (
-                  <li key={i} className="flex flex-col gap-1 py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-                    <p>{c.name && <span className="font-medium">{c.name}</span>}{c.name && <span className="text-muted-foreground"> — </span>}<span className={c.name ? "text-muted-foreground" : ""}>{c.text}</span></p>
-                    <p className="flex shrink-0 gap-4 text-sm">
-                      {c.nda && <span className="rounded border px-1.5 py-0.5 font-mono text-[11px] uppercase tracking-wider text-muted-foreground">NDA</span>}
-                      {c.site && <a href={c.site} target="_blank" rel="noopener" className="inline-flex items-center gap-0.5 text-brand hover:underline">Сайт <ArrowUpRight className="size-3.5" /></a>}
-                      {c.behance && <a href={`https://www.behance.net/gallery/${c.behance}`} target="_blank" rel="noopener" className="inline-flex items-center gap-0.5 text-brand hover:underline">Behance <ArrowUpRight className="size-3.5" /></a>}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
+          {cases.map((y) => <ProjectList key={y.year} year={y.year} items={y.items} />)}
 
 
         </Container>
