@@ -2,6 +2,11 @@ import { Fragment } from "react";
 import { getCaseStudies } from "@/lib/case-studies";
 import { formatDate, getPosts } from "@/lib/posts";
 import { CaseStack } from "@/components/case-stack";
+import { ProjectList } from "@/components/project-list";
+import { ShowAll } from "@/components/show-all";
+import { StoryCarousel } from "@/components/story-carousel";
+import { story } from "@/lib/story";
+import { cases, casesCount } from "@/lib/cases";
 import Link from "next/link";
 import { ArrowRight, BarChart3, Check, X, BookOpen, Factory, Newspaper, Package, Send, Handshake, LayoutDashboard, QrCode, UserRound, Palette, PencilRuler, Sparkles, UserRoundSearch } from "lucide-react";
 import { LogoMarquee } from "@/components/logo-marquee";
@@ -48,6 +53,7 @@ const bonuses = [
 ];
 
 const caseStudies = getCaseStudies();
+const [latest, ...earlier] = cases;
 const posts = getPosts().slice(0, 3);
 
 export default function Home() {
@@ -126,9 +132,28 @@ export default function Home() {
       <Section id="cases" className="scroll-mt-14 border-t bg-card">
         <Container>
           <Eyebrow className="text-center">Кейсы</Eyebrow>
-          <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Подробные разборы проектов</h2>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Подробные разборы проектов за 2026</h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">Задача, решения, этапы и результат — на примерах сайтов и продуктов последних лет.</p>
           <CaseStack cases={caseStudies} />
+
+          {/* Список проектов: 2025 сразу, остальные годы — по кнопке «Показать все» */}
+          <h3 className="mt-20 text-center text-2xl font-semibold tracking-tight">Список проектов за {latest.year}</h3>
+          <div className="mx-auto max-w-3xl">
+            <ProjectList year={latest.year} items={latest.items} />
+            <ShowAll count={casesCount}>
+              {earlier.map((y) => <ProjectList key={y.year} year={y.year} items={y.items} />)}
+            </ShowAll>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Моя история — возвращена на главную под кейсы 19.11.2026 (также на /cases/#story) */}
+      <Section id="story" className="scroll-mt-14 overflow-hidden border-t">
+        <Container>
+          <Eyebrow className="text-center">Моя история</Eyebrow>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Умение адаптироваться — главный навык</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">Каждый год я меняю страну и совершенствую свои навыки: от преподавателя акробатики в Екатеринбурге до работы с лидерами мнений и стартапами в сфере MarTech.</p>
+          <StoryCarousel steps={story} />
         </Container>
       </Section>
 
