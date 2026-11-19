@@ -115,6 +115,10 @@
   "where-ai-checks-company-facts": {
    "tg": "off",
    "max": "off"
+  },
+  "alice-ai-landing-page-recommendations": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
