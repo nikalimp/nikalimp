@@ -119,6 +119,10 @@
   "alice-ai-landing-page-recommendations": {
    "tg": "off",
    "max": "off"
+  },
+  "dashboard-tools": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
