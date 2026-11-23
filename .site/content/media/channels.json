@@ -123,6 +123,10 @@
   "dashboard-tools": {
    "tg": "off",
    "max": "off"
+  },
+  "reklama-u-blogerov-dlya-nejrosetej": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
