@@ -4,7 +4,7 @@ import { libraries } from "@/lib/products";
 import { getStartupsWithPages } from "@/lib/startups";
 import { getTools } from "@/lib/tools";
 import { getTerms } from "@/lib/glossary";
-import { getDesignStyles } from "@/lib/design-styles";
+import { getArtDirections } from "@/lib/art-direction";
 import { getFonts } from "@/lib/fonts";
 import { getGallerySites } from "@/lib/sites";
 import { getSystems, getUiLibraries } from "@/lib/design-systems";
@@ -16,14 +16,14 @@ import { breadcrumbs, graph } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Библиотеки: стартапы, сервисы и стили дизайна",
-  description: "Справочные базы для тех, кто делает сайты и продукты: российские стартапы, сервисы для SEO и веба, глоссарий GEO и SEO и дизайн-направления с примерами.",
+  description: "Справочные базы для тех, кто делает сайты и продукты: российские стартапы, сервисы для SEO и веба, глоссарий GEO и SEO и художественные направления с примерами.",
   alternates: { canonical: "/libraries/" },
 };
 
 export default function LibrariesPage() {
   const count: Record<string, number> = {
     "/startups/": getStartupsWithPages().length, "/sites/": getGallerySites().length, "/tools/": getTools().length, "/glossary/": getTerms().length,
-    "/design-styles/": getDesignStyles().length, "/fonts/": getFonts().length,
+    "/art-direction/": getArtDirections().length, "/fonts/": getFonts().length,
     "/design-systems/": getSystems().length, "/ui-libraries/": getUiLibraries().length,
   };
   const items = libraries.filter((l) => count[l.href] > 0);
@@ -36,7 +36,7 @@ export default function LibrariesPage() {
       <Section className="pt-12">
         <Container>
           <h1 className="mx-auto max-w-3xl text-balance text-center text-3xl font-semibold tracking-tight sm:text-4xl">Библиотеки</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">Справочные базы, которые я собираю для своей работы и открываю всем: стартапы, примеры красивых сайтов, сервисы, термины, визуальные стили, шрифты, дизайн-системы и UI-библиотеки. Всё бесплатно и без регистрации.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">Справочные базы, которые я собираю для своей работы и открываю всем: стартапы, примеры красивых сайтов, сервисы, термины, визуальные стили, шрифты, дизайн-системы и UI-библиотеки. Всё бесплатно и без регистрации.</p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {items.map((l) => {
               const Icon = l.icon;
@@ -63,7 +63,7 @@ export default function LibrariesPage() {
             </div>
             <div>
               <h2 className="mb-3 text-xl font-semibold tracking-tight">Как часто обновляются</h2>
-              <p className="text-muted-foreground">Базу стартапов и каталог инструментов обновляю каждый месяц: добавляю новые проекты, сверяю цены и доступность из России. Глоссарий и дизайн-направления пополняются по мере того, как появляются новые термины и тренды. Нашли ошибку или хотите что-то добавить — <a href={site.telegram} target="_blank" rel="noopener" className="text-foreground underline underline-offset-4">напишите мне в Telegram</a>.</p>
+              <p className="text-muted-foreground">Базу стартапов и каталог инструментов обновляю каждый месяц: добавляю новые проекты, сверяю цены и доступность из России. Глоссарий и художественные направления пополняются по мере того, как появляются новые термины и визуальные приёмы. Нашли ошибку или хотите что-то добавить — <a href={site.telegram} target="_blank" rel="noopener" className="text-foreground underline underline-offset-4">напишите мне в Telegram</a>.</p>
             </div>
           </div>
         </Container>

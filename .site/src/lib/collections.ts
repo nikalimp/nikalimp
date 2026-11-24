@@ -7,7 +7,7 @@ export type CollectionLink = { href: string; title: string; text: string };
 const sites: CollectionLink = { href: "/sites/", title: "Примеры сайтов", text: "коллекция красивых сайтов по нишам" };
 const systems: CollectionLink = { href: "/design-systems/", title: "Дизайн-системы", text: "shadcn/ui, MUI, Gravity UI и другие" };
 const libraries: CollectionLink = { href: "/ui-libraries/", title: "UI-библиотеки", text: "блоки, компоненты и анимации для сайтов" };
-const styles: CollectionLink = { href: "/design-styles/", title: "Дизайн-направления", text: "20 визуальных стилей с примерами" };
+const styles: CollectionLink = { href: "/art-direction/", title: "Художественные направления", text: "стили искусства и дизайна с примерами" };
 const fonts: CollectionLink = { href: "/fonts/", title: "Шрифты с кириллицей", text: "бесплатный каталог с превью" };
 
 const bySubcategory: Record<string, CollectionLink[]> = {

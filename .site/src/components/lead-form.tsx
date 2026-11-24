@@ -12,7 +12,7 @@ import { leadOffers, type LeadOfferId } from "@/lib/lead-offers";
 type Ym = (...a: unknown[]) => void;
 const goal = (name: string, params?: Record<string, string>) => { try { (window as unknown as { ym?: Ym }).ym?.(site.metrikaId, "reachGoal", name, params); } catch {} };
 
-export function LeadForm({ offer, siteUrl = "", compact = false, dark = false, center = false, className = "" }: { offer: LeadOfferId; siteUrl?: string; compact?: boolean; dark?: boolean; center?: boolean; className?: string }) {
+export function LeadForm({ offer, siteUrl = "", defaultTask = "", compact = false, dark = false, center = false, className = "" }: { offer: LeadOfferId; siteUrl?: string; defaultTask?: string; compact?: boolean; dark?: boolean; center?: boolean; className?: string }) {
   const o = leadOffers[offer];
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
@@ -71,7 +71,7 @@ export function LeadForm({ offer, siteUrl = "", compact = false, dark = false, c
         </label>
         <label className="grid gap-1.5 text-sm">
           <span className="font-medium">Задача <span className={`font-normal ${muted}`}>(коротко)</span></span>
-          <input name="task" maxLength={500} placeholder={o.task} className={field} />
+          <input name="task" defaultValue={defaultTask} maxLength={500} placeholder={o.task} className={field} />
         </label>
         <label className={`flex items-start gap-2.5 text-sm sm:col-span-2 ${muted}`}>
           <input type="checkbox" name="consent" value="yes" required className="mt-0.5 size-4 shrink-0 accent-[var(--brand)]" />

@@ -12,7 +12,7 @@ if (!fs.existsSync(src)) { console.log("sitemap-sections: out/sitemap.xml нет
 // Раздел → файл. Всё, что не попало в список, — в pages.xml (главная, услуги, генераторы, кейсы).
 const GROUPS = {
   blog: ["blog"], glossary: ["glossary"], tools: ["tools"], startups: ["startups"], fonts: ["fonts"], sites: ["sites"],
-  design: ["design-styles", "design-systems", "ui-libraries", "libraries"],
+  design: ["art-direction", "design-systems", "ui-libraries", "libraries"],
 };
 const groupOf = (loc) => {
   const first = new URL(loc).pathname.split("/").filter(Boolean)[0] ?? "";
