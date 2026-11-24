@@ -38,6 +38,8 @@ AddCharset UTF-8 .txt .xml .html
 # Работает, только если на хостинге включён Apache: nginx .htaccess не читает.
 # Коллекция сайтов переехала с /tilda-sites/ (7.11.2026, адреса успели уйти в IndexNow)
 RedirectMatch 301 ^/tilda-sites/(.*)$ https://nikalimp.ru/sites/$1
+# Коллекция «Дизайн-направления» переименована в «Художественные направления» (24.11.2026)
+RedirectMatch 301 ^/design-styles(?:/(.*))?$ https://nikalimp.ru/art-direction/$1
 RedirectMatch 301 ^/about/?$ https://nikalimp.ru/cases/
 RedirectMatch 301 ^/kejsy/?$ https://nikalimp.ru/cases/
 RedirectMatch 301 ^/uslugi/?$ https://nikalimp.ru/services/

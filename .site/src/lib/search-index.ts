@@ -5,7 +5,7 @@ import { getTerms } from "./glossary";
 import { getTools } from "./tools";
 import { getStartupBase, getStartupsWithPages } from "./startups";
 import { getGalleryBase, getGallerySites } from "./sites";
-import { getDesignStyles } from "./design-styles";
+import { getArtDirections } from "./art-direction";
 import { getSystems, getUiLibraries } from "./design-systems";
 import { getFonts } from "./fonts";
 import { processAnswer } from "./process";
@@ -39,8 +39,8 @@ const pages: SearchDoc[] = [
   { t: "GEO-аудит", u: "/geo-audit/", s: "Продукты", d: `Что нейросети отвечают о вашем бизнесе и план на 90 дней. ${audit.price} или ${audit.free}.`, k: "аудит экспресс-проверка бесплатно проверка видимости" },
   { t: "Глоссарий GEO, AEO и SEO", u: "/glossary/", s: "Продукты", d: "Термины продвижения в нейросетях и поиске простыми словами.", k: "словарь термины" },
   { t: "Каталог инструментов", u: "/tools/", s: "Продукты", d: "Сервисы для SEO, GEO, веба и дизайна: цены, аналоги, работа из России.", k: "сервисы инструменты" },
-  { t: "Библиотеки", u: "/libraries/", s: "Страницы", d: "Справочные базы: стартапы, инструменты, глоссарий, дизайн-направления и шрифты.", k: "библиотеки справочник базы" },
-  { t: "Дизайн-направления", u: "/design-styles/", s: "Продукты", d: "20 визуальных стилей с живыми примерами: что это, где уместно, цвета, шрифты и промпт для нейросети.", k: "стили дизайна тренды глассморфизм необрутализм" },
+  { t: "Библиотеки", u: "/libraries/", s: "Страницы", d: "Справочные базы: стартапы, инструменты, глоссарий, художественные направления и шрифты.", k: "библиотеки справочник базы" },
+  { t: "Художественные направления", u: "/art-direction/", s: "Продукты", d: "Справочник стилей искусства и дизайна с примерами: от импрессионизма и ренессанса до швейцарской вёрстки и глассморфизма.", k: "художественные направления стили живописи дизайна импрессионизм швейцарская верстка глассморфизм необрутализм" },
   { t: "Дизайн-системы", u: "/design-systems/", s: "Продукты", d: "Дизайн-системы для сайтов и сервисов с библиотеками блоков, компонентов и анимаций.", k: "дизайн-система shadcn ui mui gravity tailwind компоненты" },
   { t: "UI-библиотеки", u: "/ui-libraries/", s: "Продукты", d: "Готовые блоки, анимации, шаблоны, иконки и Figma-киты для дизайн-систем.", k: "ui библиотеки блоки секции анимации шаблоны компоненты" },
   { t: "Бесплатные шрифты с кириллицей", u: "/fonts/", s: "Продукты", d: "Кириллические шрифты: превью, начертания, лицензии и пары для сочетания.", k: "шрифты кириллица бесплатно скачать" },
@@ -80,7 +80,7 @@ export function buildSearchIndex(): SearchDoc[] {
       t: t.name, u: `/tools/${t.slug}/`, s: "Инструменты", d: plain(t.short),
       k: [t.category, t.subcategory].filter(Boolean).join(" "), b: cut(plain(t.body)),
     })),
-    ...getDesignStyles().map((d) => ({ t: d.name, u: `/design-styles/${d.slug}/`, s: "Продукты", d: plain(d.short), k: d.also.join(" "), b: cut(plain(d.body)) })),
+    ...getArtDirections().map((d) => ({ t: d.name, u: `/art-direction/${d.slug}/`, s: "Художественные направления", d: plain(d.short), k: d.also.join(" "), b: cut(plain(d.body)) })),
     ...getSystems().map((x) => ({ t: x.name, u: `/design-systems/${x.slug}/`, s: "Дизайн-системы", d: plain(x.short), k: x.frameworks.join(" "), b: cut(plain(x.about)) })),
     ...getUiLibraries().map((x) => ({ t: x.name, u: `/ui-libraries/${x.slug}/`, s: "UI-библиотеки", d: plain(x.short), k: x.frameworks.join(" "), b: cut(plain(x.about)) })),
     ...getFonts().map((f) => ({ t: `Шрифт ${f.n}`, u: `/fonts/${f.s}/`, s: "Шрифты", d: f.c ? "Для коммерции" : "Для личного использования", k: f.a.map((a) => a.n).join(" ") })),

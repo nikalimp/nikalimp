@@ -94,5 +94,7 @@
   "/services/website-support/": "/services/corporate-website/",
   "/process/": "/services/#process",
   "/tilda-sites/*": "/sites/*",
+  "/design-styles/": "/art-direction/",
+  "/design-styles/*": "/art-direction/*",
   "/page23901716.html": "/"
 }

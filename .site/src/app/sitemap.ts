@@ -5,7 +5,7 @@ import { getPosts } from "@/lib/posts";
 import { getDigests } from "@/lib/digests";
 import { getCaseStudies } from "@/lib/case-studies";
 import { getTerms } from "@/lib/glossary";
-import { getDesignStyles } from "@/lib/design-styles";
+import { getArtDirections } from "@/lib/art-direction";
 import { getSystems, getUiLibraries } from "@/lib/design-systems";
 import { getFonts } from "@/lib/fonts";
 import { getGalleryBase, getGalleryCategoryPages, getGallerySites, galleryCatPath } from "@/lib/sites";
@@ -51,8 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getTools().map((t) => ({ url: `${site.url}/tools/${t.slug}/`, priority: t.rich ? 0.7 : 0.5 })),
     ...getSubcategories().map((g) => ({ url: `${site.url}/tools/c/${g.slug}/`, priority: 0.6 })),
     { url: `${site.url}/libraries/`, priority: 0.7 },
-    ...(getDesignStyles().length ? [{ url: `${site.url}/design-styles/`, priority: 0.7 }] : []),
-    ...getDesignStyles().map((s) => ({ url: `${site.url}/design-styles/${s.slug}/`, priority: 0.6 })),
+    ...(getArtDirections().length ? [{ url: `${site.url}/art-direction/`, priority: 0.7 }] : []),
+    ...getArtDirections().map((s) => ({ url: `${site.url}/art-direction/${s.slug}/`, priority: 0.6 })),
     ...(getSystems().length ? [{ url: `${site.url}/design-systems/`, priority: 0.7 }, { url: `${site.url}/ui-libraries/`, priority: 0.7 }] : []),
     ...getSystems().map((x) => ({ url: `${site.url}/design-systems/${x.slug}/`, lastModified: x.checked, priority: 0.6 })),
     ...getUiLibraries().map((x) => ({ url: `${site.url}/ui-libraries/${x.slug}/`, lastModified: x.checked, priority: 0.5 })),
