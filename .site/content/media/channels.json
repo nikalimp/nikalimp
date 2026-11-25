@@ -131,6 +131,10 @@
   "yandeks-biznes-dlya-alisy-chek-list": {
    "tg": "off",
    "max": "off"
+  },
+  "dnevnik-eksperimenta-nedelya-5": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
