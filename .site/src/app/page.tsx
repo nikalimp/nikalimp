@@ -10,6 +10,7 @@ import { cases, casesCount } from "@/lib/cases";
 import Link from "next/link";
 import { ArrowRight, BarChart3, Check, X, BookOpen, Factory, Newspaper, Package, Send, Handshake, LayoutDashboard, QrCode, UserRound, Palette, PencilRuler, Sparkles, UserRoundSearch } from "lucide-react";
 import { LogoMarquee } from "@/components/logo-marquee";
+import { OfficeBuilding } from "@/components/office-building";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
@@ -178,6 +179,16 @@ export default function Home() {
             </ul>
           </div>
           <p className="mt-6 text-center text-sm text-muted-foreground">nikalimp.ru собран по тем же правилам: <Link href="/llms.txt" className="text-brand hover:underline">llms.txt</Link>, разметка на каждой странице, текст без JavaScript.</p>
+        </Container>
+      </Section>
+
+      {/* Интерактивное здание NikAlimp — архитектура студии и инструментов */}
+      <Section id="office" className="scroll-mt-14 border-t bg-card">
+        <Container>
+          <Eyebrow className="text-center">Архитектура студии</Eyebrow>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-semibold tracking-tight">Как устроен офис NikAlimp изнутри</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">Каждый этаж отвечает за свой участок работы, а каждый сотрудник — конкретный инструмент в моей системе. Нажмите на любого, чтобы узнать его роль.</p>
+          <OfficeBuilding />
         </Container>
       </Section>
 
