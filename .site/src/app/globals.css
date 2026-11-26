@@ -314,7 +314,11 @@ main > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: au
 
 /* Пиксельное здание NikAlimp (в духе app.teamly.to): спрайты, игровые баблы, микроанимации */
 .px-font { font-family: "Pixelify Sans", ui-monospace, monospace; }
-.px-scene { --px-out: #2a2f3d; isolation: isolate; }
+.px-scene { --px-out: #2a2f3d; --px-muted: #6b7487; --px-faint: #9aa3b3; isolation: isolate; }
+/* Цвета текста в баблах: бабл всегда светлый (как в игре), поэтому свои токены, а не тема сайта */
+.px-ink { color: var(--px-out); }
+.px-muted { color: var(--px-muted); }
+.px-faint { color: var(--px-faint); }
 .px-sky { background: linear-gradient(180deg, #cfe3fb 0%, #e8f1fd 45%, #f4f8fe 100%); }
 .dark .px-sky { background: linear-gradient(180deg, #0e1b33 0%, #16284a 55%, #1d2f52 100%); }
 .px-street { background: repeating-linear-gradient(90deg, #8a97ad 0 24px, #7d8aa1 24px 48px); border-top: 2px solid #6b7890; }

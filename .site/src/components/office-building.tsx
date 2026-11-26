@@ -663,16 +663,16 @@ function SpeechBubble({
           type="button"
           onClick={(e) => { e.stopPropagation(); onClose(); }}
           aria-label="Закрыть реплику"
-          className="-mr-1 -mt-1 cursor-pointer px-1 text-sm leading-none text-[#6b7487] hover:text-[#2a2f3d]"
+          className="-mr-1 -mt-1 cursor-pointer px-1 text-sm leading-none px-muted hover:text-[var(--px-out)]"
         >
           ✕
         </button>
       </div>
-      <p className="mt-0.5 font-mono text-[11px] leading-tight text-[#6b7487]">
+      <p className="mt-0.5 font-mono text-[11px] leading-tight px-muted">
         {emp.tool}
         {floor ? ` · ${floor.number} этаж` : " · крыша"}
       </p>
-      <p className="mt-2 text-[13px] leading-snug text-[#2a2f3d]">
+      <p className="mt-2 text-[13px] leading-snug px-ink">
         <span className="sr-only">{emp.speech}</span>
         <span aria-hidden="true">
           {emp.speech.slice(0, typed)}
@@ -680,7 +680,7 @@ function SpeechBubble({
         </span>
       </p>
       <div className="mt-2.5 flex items-center justify-between gap-2">
-        <span className="font-mono text-[11px] text-[#9aa3b3]">
+        <span className="font-mono text-[11px] px-faint">
           {index + 1} / {CAST.length}
         </span>
         <button
