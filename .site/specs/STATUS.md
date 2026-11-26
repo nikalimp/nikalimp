@@ -13,6 +13,7 @@
 - 2026-10-23: web:sync — отчёт `specs/reports/update-2026-10-23.md`.
 - 2026-11-14: неделя 09–15.11 — отчёт `content/factory/reports/2026-11-14-weekly.md` (+ PDF), разбор Search Console и чек-лист из 11 пунктов — `specs/reports/gsc/2026-11-14.md` (ждёт ответа Ника, сайт не менялся); 5 статей 16–20.11 в очереди `ready`.
 - 2026-11-18: конверсия в заявку — отчёт `specs/reports/conversion-2026-11-18.md`. Форма заявки на всех страницах (`LeadForm` → `public/api/lead.php`), офферы по разделам (`src/lib/lead-offers.ts`), цели Метрики, главная пересобрана; история — на /cases/, этапы — на /services/#process.
+- 2026-11-26: сравнения `/tools/compare/` — только белый список из 207 пар с показами в Search Console (от 3 за 90 дней или клик) и визитами в Метрике; было 11 851. Список — `src/lib/compare-keep.json`, обновлять `npm run compare:keep` после свежей выгрузки (только растёт). Остальные адреса — 301 на карточку первого инструмента (`public/.htaccess`).
 
 ## Долги
 - Заявки в Telegram: положить на сервер `/var/www/u3672757/data/leads/config.php` с bot_token и chat_id (до этого заявки идут на почту и в `data/leads/leads.jsonl`). В Метрике завести цели-события lead, click_telegram, click_booking (Ник).

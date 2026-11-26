@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { typograf } from "./typograf.mjs";
+import compareKeep from "./compare-keep.json";
 
 // Каталог инструментов читается прямо из vault NikitOS: Library/Tools.
 // tools.csv — список (название, категория, подкатегория, рынок, буква, slug),
@@ -196,13 +197,17 @@ export function getSubcategories() {
 }
 
 /** Пары «X vs Y»: оба инструмента с расширенной карточкой и один — аналог другого. */
+// Сравнения строятся только для пар из белого списка: те, что индексируются и набирают просмотры (решение 26.11.2026).
+// Список собирает scripts/compare-keep.mjs из выгрузок Search Console и Метрики; остальные адреса — 301 на карточку (public/.htaccess).
+const COMPARE_KEEP = new Set<string>(compareKeep.slugs);
+
 export function getComparePairs() {
   const rich = new Map(getTools().filter((t) => t.rich).map((t) => [t.slug, t]));
   const seen = new Set<string>(); const pairs: { slug: string; a: Tool; b: Tool }[] = [];
   for (const a of rich.values()) for (const r of a.analogs) {
     const b = rich.get(r.slug); if (!b) continue;
     const [x, y] = [a, b].sort((p, q) => p.slug.localeCompare(q.slug)); const slug = `${x.slug}-vs-${y.slug}`;
-    if (!seen.has(slug)) { seen.add(slug); pairs.push({ slug, a: x, b: y }); }
+    if (!seen.has(slug) && COMPARE_KEEP.has(slug)) { seen.add(slug); pairs.push({ slug, a: x, b: y }); }
   }
   return pairs;
 }
