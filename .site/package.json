@@ -11,6 +11,7 @@
     "typograf": "node scripts/typograf.mjs",
     "typograf:check": "node scripts/typograf.mjs --check",
     "check": "npm run build && node scripts/check.mjs",
+    "compare:keep": "node scripts/compare-keep.mjs",
     "indexnow:key": "node scripts/indexnow.mjs key"
   },
   "dependencies": {
