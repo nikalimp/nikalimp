@@ -7,6 +7,10 @@
   RewriteEngine On
   RewriteCond %{HTTP_HOST} ^www\.nikalimp\.ru$ [NC]
   RewriteRule ^(.*)$ https://nikalimp.ru/$1 [R=301,L]
+  # Сравнения вне белого списка (src/lib/compare-keep.json, 26.11.2026) → карточка первого инструмента пары.
+  # Оставленные пары есть на диске папкой, условие !-d их не трогает.
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^tools/compare/(.+?)-vs-.+$ https://nikalimp.ru/tools/$1/ [R=301,L]
 </IfModule>
 
 # Защитные заголовки (HSTS включается галочкой в ISPmanager). IfModule — чтобы без mod_headers сайт не падал с 500.
