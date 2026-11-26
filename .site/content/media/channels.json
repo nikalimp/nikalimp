@@ -135,6 +135,10 @@
   "dnevnik-eksperimenta-nedelya-5": {
    "tg": "off",
    "max": "off"
+  },
+  "google-ai-mode-chto-eto": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
