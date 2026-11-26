@@ -312,50 +312,119 @@ main > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: au
 .case-stack-card { --cover: 0; transform-origin: 50% 0; transform: scale(calc(1 - var(--cover) * 0.06)); filter: brightness(calc(1 - var(--cover) * 0.12)); will-change: transform; }
 @media (prefers-reduced-motion: reduce) { .case-stack-card { transform: none; filter: none; } }
 
-/* Интерактивное здание NikAlimp (в духе app.teamly.to): микроанимации агентов, этажей и речевых баблов */
-@keyframes bldBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
-@keyframes bldStep { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-@keyframes bldPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
-@keyframes bldBubbleIn { from { opacity: 0; transform: translateY(6px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+/* Пиксельное здание NikAlimp (в духе app.teamly.to): спрайты, игровые баблы, микроанимации */
+.px-font { font-family: "Pixelify Sans", ui-monospace, monospace; }
+.px-scene { --px-out: #2a2f3d; --px-muted: #6b7487; --px-faint: #9aa3b3; isolation: isolate; }
+/* Цвета текста в баблах: бабл всегда светлый (как в игре), поэтому свои токены, а не тема сайта */
+.px-ink { color: var(--px-out); }
+.px-muted { color: var(--px-muted); }
+.px-faint { color: var(--px-faint); }
+.px-sky { background: linear-gradient(180deg, #cfe3fb 0%, #e8f1fd 45%, #f4f8fe 100%); }
+.dark .px-sky { background: linear-gradient(180deg, #0e1b33 0%, #16284a 55%, #1d2f52 100%); }
+.px-street { background: repeating-linear-gradient(90deg, #8a97ad 0 24px, #7d8aa1 24px 48px); border-top: 2px solid #6b7890; }
+.px-cloud {
+  position: absolute; left: -120px; width: 72px; height: 18px; background: #fff; opacity: .9;
+  box-shadow: 12px -9px 0 0 #fff, 30px -9px 0 0 #fff, 24px -16px 0 -2px #fff;
+  animation: px-cloud 110s linear infinite;
+}
+.px-cloud-sm { transform: scale(.6); opacity: .7; }
+.dark .px-cloud { opacity: .12; }
+@keyframes px-cloud { to { left: calc(100% + 120px); } }
 
-.bld-street {
+.px-plate {
+  position: absolute; left: 3%; top: 8%; z-index: 1; pointer-events: none;
+  padding: 1px 6px; font-size: 10px; font-weight: 600; line-height: 1.5; color: #2a2f3d;
+  background: #fbfcfe; box-shadow: 0 -2px 0 0 #2a2f3d, 0 2px 0 0 #2a2f3d, -2px 0 0 0 #2a2f3d, 2px 0 0 0 #2a2f3d;
+}
+@media (min-width: 640px) { .px-plate { font-size: 12px; } }
+
+.px-agent {
+  position: absolute; z-index: 2; width: clamp(30px, 5.5%, 48px);
+  transform: translateX(-50%); transition: left var(--walk, 2.4s) linear;
+}
+.px-agent[data-open] { z-index: 30; }
+.px-agent-btn { display: block; position: relative; width: 100%; cursor: pointer; border-radius: 4px; }
+.px-agent-btn::before { content: ""; position: absolute; inset: -6px -4px; }
+.px-agent-btn:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.px-agent-btn:hover .px-sprite { filter: drop-shadow(0 0 0 #fff) drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 -2px 0 #fff); }
+.px-sprite { image-rendering: pixelated; }
+.px-legs-b { visibility: hidden; }
+.px-agent[data-walk] .px-legs-a { animation: px-frame .36s steps(1) infinite; }
+.px-agent[data-walk] .px-legs-b { animation: px-frame .36s steps(1) infinite reverse; }
+@keyframes px-frame { 0% { visibility: visible; } 50% { visibility: hidden; } }
+.px-agent[data-walk="left"] .px-sprite { transform: scaleX(-1); }
+.px-upper { animation: px-breathe 1.6s steps(1) infinite; animation-delay: var(--d, 0s); }
+@keyframes px-breathe { 0% { transform: translateY(0); } 50% { transform: translateY(1px); } }
+.px-agent[data-walk] .px-upper { animation: px-breathe .36s steps(1) infinite; }
+.px-eyes { animation: px-blink 4.2s steps(1) infinite; animation-delay: var(--d, 0s); }
+@keyframes px-blink { 0%, 94% { visibility: visible; } 95%, 100% { visibility: hidden; } }
+.px-steam { animation: px-steam 1.4s steps(2) infinite; }
+@keyframes px-steam { 0% { opacity: .9; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-2px); } }
+.px-led { animation: px-led 2s steps(1) infinite; }
+@keyframes px-led { 0%, 60% { opacity: 1; } 61%, 100% { opacity: .25; } }
+.px-fan { animation: px-spin .5s steps(4) infinite; }
+@keyframes px-spin { to { transform: rotate(90deg); } }
+
+.px-marker {
+  position: absolute; left: 50%; bottom: calc(100% + 2px); transform: translateX(-50%);
+  font-size: 10px; line-height: 1; color: var(--brand); animation: px-hop .7s steps(2) infinite;
+}
+@keyframes px-hop { 50% { transform: translate(-50%, -3px); } }
+
+.px-status {
+  position: absolute; left: 50%; bottom: calc(100% + 6px); white-space: nowrap; pointer-events: none;
+  padding: 0 5px; font-size: 10px; font-weight: 600; line-height: 1.6; color: #2a2f3d; background: #fbfcfe;
+  box-shadow: 0 -2px 0 0 #2a2f3d, 0 2px 0 0 #2a2f3d, -2px 0 0 0 #2a2f3d, 2px 0 0 0 #2a2f3d;
+  opacity: 0; transform: translate(-50%, 4px); transition: opacity .2s, transform .2s;
+}
+@media (min-width: 640px) { .px-status { font-size: 11px; } }
+.px-agent[data-says] .px-status, .px-agent:not([data-open]):hover .px-status { opacity: 1; transform: translate(-50%, 0); }
+
+/* Игровой диалоговый бабл: пиксельная рамка через box-shadow, хвостик к говорящему */
+.px-bubble {
+  --tail: 24px;
+  position: absolute; bottom: calc(100% + 14px); z-index: 40;
+  width: min(300px, calc(100vw - 56px)); padding: 10px 12px 9px;
+  text-align: left; background: #fffdf8; cursor: default;
+  box-shadow:
+    0 -3px 0 0 var(--px-out), 0 3px 0 0 var(--px-out), -3px 0 0 0 var(--px-out), 3px 0 0 0 var(--px-out),
+    0 9px 0 0 rgb(42 47 61 / .18);
+  translate: var(--shift, 0px) 0;
+  animation: px-pop .18s steps(3) both;
+}
+.px-bubble[data-anchor="left"] { left: 50%; transform: translateX(calc(-1 * var(--tail))); }
+.px-bubble[data-anchor="center"] { left: 50%; transform: translateX(-50%); --tail: 50%; }
+.px-bubble[data-anchor="right"] { right: 50%; transform: translateX(var(--tail)); }
+.px-bubble[data-below] { bottom: auto; top: calc(100% + 10px); }
+/* Хозяин на крыше: бабл справа от него, хвостик влево */
+.px-bubble[data-anchor="side"] { left: calc(100% + 14px); bottom: 20%; top: auto; width: min(300px, calc(100vw - 150px)); }
+.px-tail {
+  position: absolute; top: calc(100% + 3px); width: 12px; height: 9px; translate: calc(-1 * var(--shift, 0px)) 0;
   background:
-    linear-gradient(transparent 23px, color-mix(in srgb, var(--brand) 6%, transparent) 24px) 0 0 / 24px 24px,
-    linear-gradient(90deg, transparent 23px, color-mix(in srgb, var(--brand) 6%, transparent) 24px) 0 0 / 24px 24px,
-    linear-gradient(180deg, color-mix(in srgb, var(--brand) 7%, var(--background)) 0%, var(--background) 78%);
+    linear-gradient(var(--px-out), var(--px-out)) 0 0 / 12px 3px no-repeat,
+    linear-gradient(#fffdf8, #fffdf8) 3px 0 / 6px 3px no-repeat,
+    linear-gradient(var(--px-out), var(--px-out)) 3px 3px / 6px 3px no-repeat,
+    linear-gradient(var(--px-out), var(--px-out)) 6px 6px / 3px 3px no-repeat;
 }
-.bld-ground {
-  background: repeating-linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--foreground) 10%, var(--card)) 0 36px,
-    color-mix(in srgb, var(--foreground) 5%, var(--card)) 36px 72px
-  );
+.px-bubble[data-anchor="left"] .px-tail { left: calc(var(--tail) - 6px); }
+.px-bubble[data-anchor="center"] .px-tail { left: calc(50% - 6px); }
+.px-bubble[data-anchor="right"] .px-tail { right: calc(var(--tail) - 6px); }
+.px-bubble[data-below] .px-tail { top: auto; bottom: 100%; transform: scaleY(-1); }
+.px-bubble[data-anchor="side"] .px-tail { top: auto; bottom: 14px; left: -13px; transform: rotate(90deg); }
+@media (max-width: 639px) {
+  /* На телефоне сбоку нет места: бабл хозяина открывается вниз */
+  .px-bubble[data-anchor="side"] { left: 50%; top: calc(100% + 10px); bottom: auto; width: min(300px, calc(100vw - 56px)); transform: translateX(-24px); }
+  .px-bubble[data-anchor="side"] .px-tail { top: auto; bottom: 100%; left: 18px; transform: scaleY(-1); }
 }
-.bld-agent {
-  position: absolute;
-  bottom: 10px;
-  transform: translateX(-50%);
-  transition: left 2.4s linear;
-}
-.bld-agent-body { animation: bldBob 3s ease-in-out infinite; }
-.bld-agent[data-walk] .bld-agent-body { animation: bldStep 0.45s steps(2, end) infinite; }
-.bld-agent[data-walk="left"] .bld-agent-svg { transform: scaleX(-1); }
-.bld-say {
-  opacity: 0;
-  transform: translate(-50%, 4px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  box-shadow: 2px 2px 0 var(--border);
-}
-.bld-agent[data-says="true"] .bld-say,
-.bld-agent:hover .bld-say,
-.bld-agent:focus-visible .bld-say {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
-.bld-edge { animation: bldPulse 2s ease-in-out infinite; }
-.bld-bubble-in { animation: bldBubbleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.px-next { color: var(--px-out); padding: 2px 4px; }
+.px-next:hover { color: #2f6fe4; }
+.px-next:focus-visible { outline: 2px solid #2f6fe4; outline-offset: 2px; }
+.px-blink { animation: px-blink-arrow .8s steps(1) infinite; display: inline-block; }
+@keyframes px-blink-arrow { 50% { opacity: 0; } }
+@keyframes px-pop { from { opacity: 0; scale: .96; } to { opacity: 1; scale: 1; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .bld-agent { transition: none; }
-  .bld-agent-body, .bld-agent[data-walk] .bld-agent-body, .bld-edge, .bld-bubble-in { animation: none; }
+  .px-agent { transition: none; }
+  .px-upper, .px-eyes, .px-steam, .px-led, .px-fan, .px-cloud, .px-marker, .px-blink, .px-bubble,
+  .px-agent[data-walk] .px-legs-a, .px-agent[data-walk] .px-legs-b { animation: none; }
 }
