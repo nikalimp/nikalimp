@@ -9,6 +9,8 @@ const systems: CollectionLink = { href: "/design-systems/", title: "Дизайн
 const libraries: CollectionLink = { href: "/ui-libraries/", title: "UI-библиотеки", text: "блоки, компоненты и анимации для сайтов" };
 const styles: CollectionLink = { href: "/art-direction/", title: "Художественные направления", text: "стили искусства и дизайна с примерами" };
 const fonts: CollectionLink = { href: "/fonts/", title: "Шрифты с кириллицей", text: "бесплатный каталог с превью" };
+const agents: CollectionLink = { href: "/agents/", title: "ИИ-агенты NikAlimp", text: "13 ролей от брифа до заявок" };
+const plugins: CollectionLink = { href: "/plugins/", title: "Плагины и MCP", text: "инструкции по установке для ИИ-агентов" };
 
 const bySubcategory: Record<string, CollectionLink[]> = {
   "Конструкторы сайтов": [sites, styles],
@@ -28,6 +30,8 @@ const byCategory: Record<string, CollectionLink[]> = {
   "UI/UX дизайн": [systems, styles, libraries, fonts],
   "Графический дизайн и бренд": [styles, fonts, sites],
   "No-code и CMS": [sites, styles],
+  "AI и LLM": [agents, plugins],
+  "Веб-разработка": [plugins, agents, systems],
 };
 
 /** Для карточки инструмента: своя страница в коллекции (если есть) + подборки по подкатегории */

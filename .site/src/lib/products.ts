@@ -1,4 +1,4 @@
-import { Blocks, BookOpen, ClipboardCheck, FileSearch, FileSignature, Gauge, Layers, Link2, ListTree, Palette, QrCode, Rocket, ShieldCheck, Type, Wrench, type LucideIcon, LayoutTemplate } from "lucide-react";
+import { Blocks, BookOpen, Bot, ClipboardCheck, FileSearch, FileSignature, Gauge, Layers, Link2, ListTree, Palette, Plug, QrCode, Rocket, ShieldCheck, Type, Wrench, type LucideIcon, LayoutTemplate } from "lucide-react";
 
 // Общий список продуктов: шапка, подвал, страница /products/ и главная берут его отсюда
 export type Product = {
@@ -157,6 +157,24 @@ export const libraries: Product[] = [
     text: "Готовые блоки, анимации, шаблоны и иконки для сайтов",
     about: "Библиотеки готовых секций, анимаций, шаблонов, иконок и Figma-китов: к какой дизайн-системе подходят, сколько стоят и как оплатить из России.",
     icon: Blocks,
+    free: true,
+  },
+  {
+    href: "/agents/",
+    label: "ИИ-агенты",
+    title: "ИИ-агенты NikAlimp",
+    text: "13 ролей от брифа и вёрстки до GEO-замеров, контент-завода и мониторинга",
+    about: "Архитектура команды ИИ-агентов: чем занимается каждый агент, как устроен его рабочий процесс и какие плагины к нему подключены.",
+    icon: Bot,
+    free: true,
+  },
+  {
+    href: "/plugins/",
+    label: "Плагины и MCP",
+    title: "Плагины и MCP для ИИ-агентов",
+    text: "Подробные описания и инструкции по установке MCP-серверов, скиллов и CLI",
+    about: "Проверенные плагины, MCP-серверы и CLI-проверки для Claude Code, Cursor и веб-разработки: установка, настройка и связь с агентами.",
+    icon: Plug,
     free: true,
   },
   {
