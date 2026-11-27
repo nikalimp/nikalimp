@@ -139,6 +139,10 @@
   "google-ai-mode-chto-eto": {
    "tg": "off",
    "max": "off"
+  },
+  "telega-in-telegram-ads": {
+   "tg": "off",
+   "max": "off"
   }
  }
 }
