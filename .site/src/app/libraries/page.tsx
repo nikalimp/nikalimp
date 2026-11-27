@@ -5,6 +5,8 @@ import { getStartupsWithPages } from "@/lib/startups";
 import { getTools } from "@/lib/tools";
 import { getTerms } from "@/lib/glossary";
 import { getArtDirections } from "@/lib/art-direction";
+import { getAgents } from "@/lib/agents";
+import { getPlugins } from "@/lib/plugins";
 import { getFonts } from "@/lib/fonts";
 import { getGallerySites } from "@/lib/sites";
 import { getSystems, getUiLibraries } from "@/lib/design-systems";
@@ -24,6 +26,7 @@ export default function LibrariesPage() {
   const count: Record<string, number> = {
     "/startups/": getStartupsWithPages().length, "/sites/": getGallerySites().length, "/tools/": getTools().length, "/glossary/": getTerms().length,
     "/art-direction/": getArtDirections().length, "/fonts/": getFonts().length,
+    "/agents/": getAgents().length, "/plugins/": getPlugins().length,
     "/design-systems/": getSystems().length, "/ui-libraries/": getUiLibraries().length,
   };
   const items = libraries.filter((l) => count[l.href] > 0);

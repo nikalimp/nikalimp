@@ -6,6 +6,8 @@ import { getTools } from "./tools";
 import { getStartupBase, getStartupsWithPages } from "./startups";
 import { getGalleryBase, getGallerySites } from "./sites";
 import { getArtDirections } from "./art-direction";
+import { getAgents } from "./agents";
+import { getPlugins } from "./plugins";
 import { getSystems, getUiLibraries } from "./design-systems";
 import { getFonts } from "./fonts";
 import { processAnswer } from "./process";
@@ -41,6 +43,8 @@ const pages: SearchDoc[] = [
   { t: "Каталог инструментов", u: "/tools/", s: "Продукты", d: "Сервисы для SEO, GEO, веба и дизайна: цены, аналоги, работа из России.", k: "сервисы инструменты" },
   { t: "Библиотеки", u: "/libraries/", s: "Страницы", d: "Справочные базы: стартапы, инструменты, глоссарий, художественные направления и шрифты.", k: "библиотеки справочник базы" },
   { t: "Художественные направления", u: "/art-direction/", s: "Продукты", d: "Справочник стилей искусства и дизайна с примерами: от импрессионизма и ренессанса до швейцарской вёрстки и глассморфизма.", k: "художественные направления стили живописи дизайна импрессионизм швейцарская верстка глассморфизм необрутализм" },
+  { t: "ИИ-агенты NikAlimp", u: "/agents/", s: "Продукты", d: "13 специализированных ИИ-агентов от брифа и вёрстки до GEO-замеров, контент-завода и мониторинга.", k: "ии агенты автоматизация команда архитектура claude code" },
+  { t: "Плагины и MCP для ИИ-агентов", u: "/plugins/", s: "Продукты", d: "Каталог MCP-серверов, плагинов и CLI-проверок с подробным описанием и инструкцией по установке.", k: "плагины mcp серверы скиллы установка claude code cursor" },
   { t: "Дизайн-системы", u: "/design-systems/", s: "Продукты", d: "Дизайн-системы для сайтов и сервисов с библиотеками блоков, компонентов и анимаций.", k: "дизайн-система shadcn ui mui gravity tailwind компоненты" },
   { t: "UI-библиотеки", u: "/ui-libraries/", s: "Продукты", d: "Готовые блоки, анимации, шаблоны, иконки и Figma-киты для дизайн-систем.", k: "ui библиотеки блоки секции анимации шаблоны компоненты" },
   { t: "Бесплатные шрифты с кириллицей", u: "/fonts/", s: "Продукты", d: "Кириллические шрифты: превью, начертания, лицензии и пары для сочетания.", k: "шрифты кириллица бесплатно скачать" },
@@ -81,6 +85,8 @@ export function buildSearchIndex(): SearchDoc[] {
       k: [t.category, t.subcategory].filter(Boolean).join(" "), b: cut(plain(t.body)),
     })),
     ...getArtDirections().map((d) => ({ t: d.name, u: `/art-direction/${d.slug}/`, s: "Художественные направления", d: plain(d.short), k: d.also.join(" "), b: cut(plain(d.body)) })),
+    ...getAgents().map((a) => ({ t: a.emp.name, u: `/agents/${a.slug}/`, s: "ИИ-агенты", d: plain(a.emp.speech), k: `${a.emp.tool} ${a.emp.role} ${a.floor.title}`, b: cut(plain(a.body)) })),
+    ...getPlugins().map((p) => ({ t: p.name, u: `/plugins/${p.slug}/`, s: "Плагины и MCP", d: plain(p.short), k: `${p.kind} ${p.category} ${p.worksWith.join(" ")}`, b: cut(plain(p.body)) })),
     ...getSystems().map((x) => ({ t: x.name, u: `/design-systems/${x.slug}/`, s: "Дизайн-системы", d: plain(x.short), k: x.frameworks.join(" "), b: cut(plain(x.about)) })),
     ...getUiLibraries().map((x) => ({ t: x.name, u: `/ui-libraries/${x.slug}/`, s: "UI-библиотеки", d: plain(x.short), k: x.frameworks.join(" "), b: cut(plain(x.about)) })),
     ...getFonts().map((f) => ({ t: `Шрифт ${f.n}`, u: `/fonts/${f.s}/`, s: "Шрифты", d: f.c ? "Для коммерции" : "Для личного использования", k: f.a.map((a) => a.n).join(" ") })),

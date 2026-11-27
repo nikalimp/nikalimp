@@ -13,6 +13,7 @@ if (!fs.existsSync(src)) { console.log("sitemap-sections: out/sitemap.xml нет
 const GROUPS = {
   blog: ["blog"], glossary: ["glossary"], tools: ["tools"], startups: ["startups"], fonts: ["fonts"], sites: ["sites"],
   design: ["art-direction", "design-systems", "ui-libraries", "libraries"],
+  agents: ["agents", "plugins"],
 };
 const groupOf = (loc) => {
   const first = new URL(loc).pathname.split("/").filter(Boolean)[0] ?? "";

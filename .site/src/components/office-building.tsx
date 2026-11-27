@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import Link from "next/link";
 import "@fontsource/pixelify-sans/500.css";
 import "@fontsource/pixelify-sans/700.css";
 import { officeFloors, officeHost, type OfficeEmployee, type OfficeFloor } from "@/lib/office";
@@ -683,17 +684,26 @@ function SpeechBubble({
         <span className="font-mono text-[11px] px-faint">
           {index + 1} / {CAST.length}
         </span>
-        <button
-          ref={nextRef}
-          type="button"
-          onClick={(e) => { e.stopPropagation(); onNext(); }}
-          className="px-next cursor-pointer text-xs font-semibold"
-        >
-          {isLast ? "Сначала" : "Дальше"}
-          <svg viewBox="0 0 4 7" shapeRendering="crispEdges" className={cn("ml-1.5 inline-block h-[9px] w-[5px] align-[-1px]", done && "px-blink")} aria-hidden="true">
-            <path d="M0 0h1v1h1v1h1v1h1v1h-1v1h-1v1h-1v1h-1z" fill="currentColor" />
-          </svg>
-        </button>
+        <div className="flex items-center gap-3">
+          <Link
+            href={emp.id === officeHost.id ? "/agents/" : `/agents/${emp.id}/`}
+            onClick={(e) => e.stopPropagation()}
+            className="text-xs font-medium text-brand hover:underline"
+          >
+            {emp.id === officeHost.id ? "Все агенты" : "Подробнее"}
+          </Link>
+          <button
+            ref={nextRef}
+            type="button"
+            onClick={(e) => { e.stopPropagation(); onNext(); }}
+            className="px-next cursor-pointer text-xs font-semibold"
+          >
+            {isLast ? "Сначала" : "Дальше"}
+            <svg viewBox="0 0 4 7" shapeRendering="crispEdges" className={cn("ml-1.5 inline-block h-[9px] w-[5px] align-[-1px]", done && "px-blink")} aria-hidden="true">
+              <path d="M0 0h1v1h1v1h1v1h1v1h-1v1h-1v1h-1v1h-1z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
       </div>
       <span className="px-tail" aria-hidden="true" />
     </div>
@@ -972,7 +982,10 @@ export function OfficeBuilding() {
       <div className="px-street h-4 rounded-b-2xl" aria-hidden="true" />
 
       <p className="relative border-t border-border bg-card px-4 py-3 text-center text-sm text-muted-foreground sm:rounded-b-2xl">
-        Нажмите на любого сотрудника — он расскажет о себе. Кнопка «Дальше» проведёт по всем этажам.
+        Нажмите на любого сотрудника — он расскажет о себе.{" "}
+        <Link href="/agents/" className="font-medium text-foreground underline underline-offset-4 hover:text-brand">Все 13 агентов</Link>
+        {" · "}
+        <Link href="/plugins/" className="font-medium text-foreground underline underline-offset-4 hover:text-brand">Плагины и MCP</Link>
       </p>
 
       {/* Полный текст для поисковиков и нейросетей без JavaScript */}
@@ -989,9 +1002,9 @@ export function OfficeBuilding() {
               <ul className="mt-1 list-disc pl-5">
                 {floor.employees.map((e) => (
                   <li key={e.id}>
-                    <strong>
+                    <a href={`/agents/${e.id}/`} className="font-semibold underline">
                       {e.name} ({e.tool})
-                    </strong>
+                    </a>
                     : {e.speech}
                   </li>
                 ))}
