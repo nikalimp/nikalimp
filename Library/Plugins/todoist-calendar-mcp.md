@@ -20,7 +20,7 @@ related: obsidian-llm-wiki, site-health-monitor, telegram-lead-router
 ## Инструкция по установке
 
 1. Получите **API-токен Todoist** в настройках аккаунта: `Настройки → Интеграции → Для разработчиков → Копировать API-токен`.
-2. Подключите Todoist MCP в `.mcp.json` (Claude Code) или `.cursor/mcp.json`:
+2. Подключите Todoist MCP в `.mcp.json` (Claude Code) или `.cursor/mcp.json` (в имени переменной укажите название сервиса в верхнем регистре и `_API_TOKEN`, как в документации пакета):
 
 ```json
 {
@@ -29,7 +29,7 @@ related: obsidian-llm-wiki, site-health-monitor, telegram-lead-router
       "command": "npx",
       "args": ["-y", "@abhiz123/todoist-mcp-server"],
       "env": {
-        "TODOIST_API_TOKEN": "ВАШ_ТОКЕН_TODOIST"
+        "API_TOKEN": "ВАШ_ТОКЕН"
       }
     }
   }
