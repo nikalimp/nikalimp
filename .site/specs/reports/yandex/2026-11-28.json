@@ -1,0 +1,7098 @@
+{
+ "host": "nikalimp.ru",
+ "generated": "2026-11-28T08:16:42.706Z",
+ "period": [
+  "2026-10-31",
+  "2026-11-27"
+ ],
+ "webmaster": {
+  "host": "https://nikalimp.ru/",
+  "sitemapAdded": {
+   "url": "https://nikalimp.ru/sitemap.xml",
+   "status": 504,
+   "body": ""
+  },
+  "verified": true,
+  "candidates": [
+   "https://nikalimp.ru/ verified=true"
+  ],
+  "summary": {
+   "sqi": 0,
+   "excluded_pages_count": 1,
+   "searchable_pages_count": 60,
+   "site_problems": {
+    "POSSIBLE_PROBLEM": 2
+   }
+  },
+  "queries": {
+   "count": 0,
+   "queries": [],
+   "date_from": "2026-10-31",
+   "date_to": "2026-11-24"
+  },
+  "history": {
+   "indicators": {
+    "TOTAL_SHOWS": [
+     {
+      "date": "2026-10-31T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-01T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-02T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-03T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-04T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-05T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-06T00:00:00.000+03:00",
+      "value": 5
+     },
+     {
+      "date": "2026-11-07T00:00:00.000+03:00",
+      "value": 3
+     },
+     {
+      "date": "2026-11-08T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-09T00:00:00.000+03:00",
+      "value": 28
+     },
+     {
+      "date": "2026-11-10T00:00:00.000+03:00",
+      "value": 34
+     },
+     {
+      "date": "2026-11-11T00:00:00.000+03:00",
+      "value": 21
+     },
+     {
+      "date": "2026-11-12T00:00:00.000+03:00",
+      "value": 29
+     },
+     {
+      "date": "2026-11-13T00:00:00.000+03:00",
+      "value": 31
+     },
+     {
+      "date": "2026-11-14T00:00:00.000+03:00",
+      "value": 15
+     },
+     {
+      "date": "2026-11-15T00:00:00.000+03:00",
+      "value": 5
+     },
+     {
+      "date": "2026-11-16T00:00:00.000+03:00",
+      "value": 8
+     },
+     {
+      "date": "2026-11-17T00:00:00.000+03:00",
+      "value": 12
+     },
+     {
+      "date": "2026-11-18T00:00:00.000+03:00",
+      "value": 4
+     },
+     {
+      "date": "2026-11-19T00:00:00.000+03:00",
+      "value": 6
+     },
+     {
+      "date": "2026-11-20T00:00:00.000+03:00",
+      "value": 8
+     },
+     {
+      "date": "2026-11-21T00:00:00.000+03:00",
+      "value": 9
+     },
+     {
+      "date": "2026-11-22T00:00:00.000+03:00",
+      "value": 5
+     },
+     {
+      "date": "2026-11-23T00:00:00.000+03:00",
+      "value": 16
+     },
+     {
+      "date": "2026-11-24T00:00:00.000+03:00",
+      "value": 5
+     },
+     {
+      "date": "2026-11-25T00:00:00.000+03:00",
+      "value": 14
+     },
+     {
+      "date": "2026-11-26T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-27T00:00:00.000+03:00",
+      "value": 0
+     }
+    ],
+    "TOTAL_CLICKS": [
+     {
+      "date": "2026-10-31T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-01T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-02T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-03T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-04T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-05T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-06T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-07T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-08T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-09T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-10T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-11T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-12T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-13T00:00:00.000+03:00",
+      "value": 5
+     },
+     {
+      "date": "2026-11-14T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-15T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-16T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-17T00:00:00.000+03:00",
+      "value": 2
+     },
+     {
+      "date": "2026-11-18T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-19T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-20T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-21T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-22T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-23T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-24T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-25T00:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-26T00:00:00.000+03:00",
+      "value": 0
+     },
+     {
+      "date": "2026-11-27T00:00:00.000+03:00",
+      "value": 0
+     }
+    ]
+   }
+  },
+  "indexing": {
+   "indicators": {
+    "HTTP_3XX": [
+     {
+      "date": "2026-11-18T11:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-19T21:00:00.000+03:00",
+      "value": 5
+     },
+     {
+      "date": "2026-11-20T14:00:00.000+03:00",
+      "value": 6
+     },
+     {
+      "date": "2026-11-21T15:00:00.000+03:00",
+      "value": 2
+     },
+     {
+      "date": "2026-11-22T09:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-23T19:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-24T08:00:00.000+03:00",
+      "value": 3
+     },
+     {
+      "date": "2026-11-25T02:00:00.000+03:00",
+      "value": 1
+     }
+    ],
+    "HTTP_2XX": [
+     {
+      "date": "2026-11-17T23:00:00.000+03:00",
+      "value": 937
+     },
+     {
+      "date": "2026-11-18T21:00:00.000+03:00",
+      "value": 928
+     },
+     {
+      "date": "2026-11-19T23:00:00.000+03:00",
+      "value": 824
+     },
+     {
+      "date": "2026-11-20T22:00:00.000+03:00",
+      "value": 1209
+     },
+     {
+      "date": "2026-11-21T22:00:00.000+03:00",
+      "value": 526
+     },
+     {
+      "date": "2026-11-22T22:00:00.000+03:00",
+      "value": 468
+     },
+     {
+      "date": "2026-11-23T23:00:00.000+03:00",
+      "value": 822
+     },
+     {
+      "date": "2026-11-24T13:00:00.000+03:00",
+      "value": 1
+     },
+     {
+      "date": "2026-11-24T20:00:00.000+03:00",
+      "value": 919
+     },
+     {
+      "date": "2026-11-25T16:00:00.000+03:00",
+      "value": 655
+     }
+    ]
+   }
+  },
+  "inSearch": {
+   "history": [
+    {
+     "date": "2026-11-13T10:00:00.000+03:00",
+     "value": 16
+    },
+    {
+     "date": "2026-11-22T10:00:01.952+03:00",
+     "value": 60
+    }
+   ]
+  },
+  "sitemaps": {
+   "sitemaps": []
+  },
+  "diagnostics": {
+   "problems": {
+    "SOFT_404": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DISALLOWED_IN_ROBOTS": {
+     "severity": "FATAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "CONNECT_FAILED": {
+     "severity": "FATAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "NO_SITEMAP_MODIFICATIONS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "SLOW_AVG_RESPONSE_TIME": {
+     "severity": "CRITICAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "THREATS": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "VIDEOHOST_OFFER_FAILED": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_REGIONS": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "ERROR_IN_ROBOTS_TXT": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DUPLICATE_PAGES": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_MIRROR_IS_NOT_HTTPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_METRIKA_COUNTER_BINDING": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "URL_ALERT_5XX": {
+     "severity": "CRITICAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "DOCUMENTS_MISSING_TITLE": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "VIDEOHOST_OFFER_NEED_PAPER": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NOT_MOBILE_FRIENDLY": {
+     "severity": "RECOMMENDATION",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "FAVICON_ERROR": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_ROBOTS_TXT": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "NO_SITEMAPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "PRESENT",
+     "last_state_update": "2026-10-10T08:07:59.368+03:00"
+    },
+    "DOCUMENTS_MISSING_DESCRIPTION": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DNS_ERROR": {
+     "severity": "FATAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "MAIN_PAGE_REDIRECTS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "BIG_FAVICON_ABSENT": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "URL_ALERT_4XX": {
+     "severity": "RECOMMENDATION",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "ERRORS_IN_SITEMAPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DUPLICATE_CONTENT_ATTRS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "FAVICON_PROBLEM": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "TOO_MANY_DOMAINS_ON_SEARCH": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_METRIKA_COUNTER_CRAWL_ENABLED": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "PRESENT",
+     "last_state_update": "2026-11-28T11:05:27.374+03:00"
+    },
+    "INSIGNIFICANT_CGI_PARAMETER": {
+     "severity": "RECOMMENDATION",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "NOT_IN_SPRAV": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_PAGE_ERROR": {
+     "severity": "FATAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    }
+   }
+  }
+ },
+ "metrika": {
+  "counter": {
+   "id": 113548506,
+   "site": "nikalimp.ru",
+   "status": "Active"
+  },
+  "metrics": [
+   "ym:s:visits",
+   "ym:s:users",
+   "ym:s:bounceRate",
+   "ym:s:avgVisitDurationSeconds"
+  ],
+  "sources": {
+   "totals": [
+    2430,
+    1983,
+    29.38271605,
+    86.36502058
+   ],
+   "rows": [
+    {
+     "key": "Search engine traffic",
+     "values": [
+      1285,
+      1192,
+      29.80544747,
+      68.65447471
+     ]
+    },
+    {
+     "key": "Direct traffic",
+     "values": [
+      1019,
+      743,
+      30.42198234,
+      84.60647694
+     ]
+    },
+    {
+     "key": "Internal traffic",
+     "values": [
+      62,
+      29,
+      8.06451613,
+      438.80645161
+     ]
+    },
+    {
+     "key": "Social network traffic",
+     "values": [
+      34,
+      33,
+      17.64705882,
+      61.47058824
+     ]
+    },
+    {
+     "key": "Link traffic",
+     "values": [
+      27,
+      26,
+      33.33333333,
+      226.07407407
+     ]
+    },
+    {
+     "key": "Messenger traffic",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      10.66666667
+     ]
+    }
+   ]
+  },
+  "referers": {
+   "totals": [
+    1408,
+    1262,
+    28.55113636,
+    87.453125
+   ],
+   "rows": [
+    {
+     "key": "google.com",
+     "values": [
+      1267,
+      1174,
+      29.67640095,
+      69.21625888
+     ]
+    },
+    {
+     "key": "nikalimp.ru",
+     "values": [
+      62,
+      29,
+      8.06451613,
+      438.80645161
+     ]
+    },
+    {
+     "key": "l.instagram.com",
+     "values": [
+      27,
+      26,
+      3.7037037,
+      57.22222222
+     ]
+    },
+    {
+     "key": "yandex.ru",
+     "values": [
+      8,
+      8,
+      37.5,
+      27.875
+     ]
+    },
+    {
+     "key": "google.ru",
+     "values": [
+      6,
+      6,
+      33.33333333,
+      44.5
+     ]
+    },
+    {
+     "key": "android-app",
+     "values": [
+      4,
+      3,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "staya.nikalimp.ru",
+     "values": [
+      4,
+      4,
+      75,
+      9.25
+     ]
+    },
+    {
+     "key": "facebook.com",
+     "values": [
+      3,
+      3,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "gemini.google.com",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      9.66666667
+     ]
+    },
+    {
+     "key": "search.google.com",
+     "values": [
+      3,
+      3,
+      0,
+      62.33333333
+     ]
+    },
+    {
+     "key": "alice.yandex.ru",
+     "values": [
+      2,
+      2,
+      50,
+      8.5
+     ]
+    },
+    {
+     "key": "bing.com",
+     "values": [
+      2,
+      2,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "chat.qwen.ai",
+     "values": [
+      2,
+      2,
+      0,
+      30.5
+     ]
+    },
+    {
+     "key": "ecoenergygroup.fr",
+     "values": [
+      2,
+      2,
+      50,
+      15.5
+     ]
+    },
+    {
+     "key": "metrika.yandex.ru",
+     "values": [
+      2,
+      2,
+      0,
+      1163
+     ]
+    },
+    {
+     "key": "perplexity.ai",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "stayaekb.ru",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "away.vk.ru",
+     "values": [
+      1,
+      1,
+      0,
+      26
+     ]
+    },
+    {
+     "key": "google.com.hk",
+     "values": [
+      1,
+      1,
+      100,
+      3
+     ]
+    },
+    {
+     "key": "hvala.nikalimp.ru",
+     "values": [
+      1,
+      1,
+      0,
+      1687
+     ]
+    },
+    {
+     "key": "perlova.nikalimp.ru",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "ugc.nikalimp.ru",
+     "values": [
+      1,
+      1,
+      0,
+      1669
+     ]
+    },
+    {
+     "key": "uraldoma.ru",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "web.telegram.org",
+     "values": [
+      1,
+      1,
+      0,
+      17
+     ]
+    }
+   ]
+  },
+  "ai": [
+   {
+    "key": "gemini.google.com",
+    "values": [
+     3,
+     3,
+     33.33333333,
+     9.66666667
+    ]
+   },
+   {
+    "key": "alice.yandex.ru",
+    "values": [
+     2,
+     2,
+     50,
+     8.5
+    ]
+   },
+   {
+    "key": "perplexity.ai",
+    "values": [
+     2,
+     2,
+     50,
+     7.5
+    ]
+   }
+  ],
+  "landing": {
+   "totals": [
+    2435,
+    1988,
+    29.52772074,
+    86.18767967
+   ],
+   "rows": [
+    {
+     "key": "/startups/interview-boost-ai/",
+     "values": [
+      566,
+      374,
+      28.62190813,
+      18
+     ]
+    },
+    {
+     "key": "/",
+     "values": [
+      285,
+      225,
+      37.54385965,
+      159.46315789
+     ]
+    },
+    {
+     "key": "/startups/",
+     "values": [
+      66,
+      47,
+      7.57575758,
+      456.60606061
+     ]
+    },
+    {
+     "key": "/fonts/",
+     "values": [
+      20,
+      19,
+      5,
+      55.9
+     ]
+    },
+    {
+     "key": "/design-systems/open-props/",
+     "values": [
+      19,
+      1,
+      0,
+      103.36842105
+     ]
+    },
+    {
+     "key": "/glossary/alice-ai/",
+     "values": [
+      17,
+      17,
+      82.35294118,
+      5.94117647
+     ]
+    },
+    {
+     "key": "/startups/nejroinzhener/",
+     "values": [
+      17,
+      14,
+      29.41176471,
+      18.64705882
+     ]
+    },
+    {
+     "key": "/fonts/gilroy/",
+     "values": [
+      16,
+      16,
+      43.75,
+      17.4375
+     ]
+    },
+    {
+     "key": "/startups/soroditeli/",
+     "values": [
+      16,
+      16,
+      37.5,
+      11.75
+     ]
+    },
+    {
+     "key": "/startups/kickcheck/",
+     "values": [
+      11,
+      9,
+      36.36363636,
+      15.09090909
+     ]
+    },
+    {
+     "key": "/startups/youtube-v-tekst/",
+     "values": [
+      11,
+      11,
+      27.27272727,
+      139
+     ]
+    },
+    {
+     "key": "/fonts/rawline/",
+     "values": [
+      10,
+      10,
+      20,
+      34.9
+     ]
+    },
+    {
+     "key": "/startups/keyray/",
+     "values": [
+      10,
+      10,
+      60,
+      6.5
+     ]
+    },
+    {
+     "key": "/startups/price-alert/",
+     "values": [
+      10,
+      9,
+      20,
+      155
+     ]
+    },
+    {
+     "key": "/fonts/blup/",
+     "values": [
+      9,
+      9,
+      77.77777778,
+      5.11111111
+     ]
+    },
+    {
+     "key": "/glossary/",
+     "values": [
+      9,
+      6,
+      33.33333333,
+      119
+     ]
+    },
+    {
+     "key": "/startups/facee-ii-foto-i-trendy/",
+     "values": [
+      9,
+      9,
+      66.66666667,
+      7.88888889
+     ]
+    },
+    {
+     "key": "/startups/medstat-pro/",
+     "values": [
+      9,
+      6,
+      33.33333333,
+      34.88888889
+     ]
+    },
+    {
+     "key": "/startups/taucloud-zashhita-sajtov/",
+     "values": [
+      9,
+      8,
+      33.33333333,
+      11.33333333
+     ]
+    },
+    {
+     "key": "/startups/writer-studio/",
+     "values": [
+      9,
+      8,
+      22.22222222,
+      42.11111111
+     ]
+    },
+    {
+     "key": "/ui-libraries/",
+     "values": [
+      9,
+      9,
+      0,
+      223.22222222
+     ]
+    },
+    {
+     "key": "/design-systems/admiral-ds/",
+     "values": [
+      8,
+      6,
+      0,
+      139
+     ]
+    },
+    {
+     "key": "/fonts/actay/",
+     "values": [
+      8,
+      4,
+      0,
+      52
+     ]
+    },
+    {
+     "key": "/fonts/averta/",
+     "values": [
+      8,
+      8,
+      50,
+      9.75
+     ]
+    },
+    {
+     "key": "/glossary/artificial-intelligence/",
+     "values": [
+      8,
+      8,
+      87.5,
+      2.875
+     ]
+    },
+    {
+     "key": "/startups/chto-smotrim/",
+     "values": [
+      8,
+      8,
+      75,
+      5.375
+     ]
+    },
+    {
+     "key": "/startups/hirety/",
+     "values": [
+      8,
+      8,
+      25,
+      17.625
+     ]
+    },
+    {
+     "key": "/startups/savetest/",
+     "values": [
+      8,
+      1,
+      0,
+      16.25
+     ]
+    },
+    {
+     "key": "/fonts/inter/",
+     "values": [
+      7,
+      7,
+      57.14285714,
+      22.57142857
+     ]
+    },
+    {
+     "key": "/fonts/manrope/",
+     "values": [
+      7,
+      7,
+      14.28571429,
+      46.42857143
+     ]
+    },
+    {
+     "key": "/glossary/image-generation/",
+     "values": [
+      7,
+      6,
+      71.42857143,
+      3.28571429
+     ]
+    },
+    {
+     "key": "/glossary/yookassa/",
+     "values": [
+      7,
+      7,
+      14.28571429,
+      12.85714286
+     ]
+    },
+    {
+     "key": "/sites/",
+     "values": [
+      7,
+      7,
+      57.14285714,
+      79.71428571
+     ]
+    },
+    {
+     "key": "/sites/c/portfolio/design/",
+     "values": [
+      7,
+      7,
+      14.28571429,
+      215.71428571
+     ]
+    },
+    {
+     "key": "/sites/nikolaikuleshov-com/",
+     "values": [
+      7,
+      5,
+      14.28571429,
+      268.14285714
+     ]
+    },
+    {
+     "key": "/startups/blurrr-vibes-finder/",
+     "values": [
+      7,
+      6,
+      14.28571429,
+      15
+     ]
+    },
+    {
+     "key": "/startups/recca-ru/",
+     "values": [
+      7,
+      1,
+      0,
+      18.85714286
+     ]
+    },
+    {
+     "key": "/startups/stimchek/",
+     "values": [
+      7,
+      7,
+      28.57142857,
+      39.85714286
+     ]
+    },
+    {
+     "key": "/startups/ton-love/",
+     "values": [
+      7,
+      7,
+      57.14285714,
+      34.57142857
+     ]
+    },
+    {
+     "key": "/blog/servisy-geo-monitoringa/",
+     "values": [
+      6,
+      6,
+      16.66666667,
+      25
+     ]
+    },
+    {
+     "key": "/fonts/montserrat/",
+     "values": [
+      6,
+      6,
+      16.66666667,
+      59.16666667
+     ]
+    },
+    {
+     "key": "/geo-audit/",
+     "values": [
+      6,
+      4,
+      0,
+      99.66666667
+     ]
+    },
+    {
+     "key": "/glossary/inclusive-design/",
+     "values": [
+      6,
+      3,
+      66.66666667,
+      5
+     ]
+    },
+    {
+     "key": "/startups/mira-onlajn-zapis/",
+     "values": [
+      6,
+      4,
+      16.66666667,
+      55.16666667
+     ]
+    },
+    {
+     "key": "/startups/smartxlsx/",
+     "values": [
+      6,
+      4,
+      16.66666667,
+      16.16666667
+     ]
+    },
+    {
+     "key": "/startups/workaem/",
+     "values": [
+      6,
+      5,
+      50,
+      8.66666667
+     ]
+    },
+    {
+     "key": "/tools/",
+     "values": [
+      6,
+      6,
+      16.66666667,
+      72.66666667
+     ]
+    },
+    {
+     "key": "/tools/combot/",
+     "values": [
+      6,
+      3,
+      0,
+      15.66666667
+     ]
+    },
+    {
+     "key": "/fonts/arodora-pro/",
+     "values": [
+      5,
+      4,
+      40,
+      18.6
+     ]
+    },
+    {
+     "key": "/fonts/gardens-cm/",
+     "values": [
+      5,
+      2,
+      20,
+      12.2
+     ]
+    },
+    {
+     "key": "/fonts/geologica/",
+     "values": [
+      5,
+      5,
+      0,
+      18.2
+     ]
+    },
+    {
+     "key": "/fonts/lilita-one-russian/",
+     "values": [
+      5,
+      5,
+      0,
+      239.4
+     ]
+    },
+    {
+     "key": "/glossary/ai-first/",
+     "values": [
+      5,
+      5,
+      0,
+      15.4
+     ]
+    },
+    {
+     "key": "/startups/lanolstream/",
+     "values": [
+      5,
+      5,
+      20,
+      162.4
+     ]
+    },
+    {
+     "key": "/startups/platforma-slazhivanie/",
+     "values": [
+      5,
+      5,
+      20,
+      131
+     ]
+    },
+    {
+     "key": "/tools/compare/oblako-mail-ru-vs-yandeks-disk/",
+     "values": [
+      5,
+      4,
+      0,
+      15.2
+     ]
+    },
+    {
+     "key": "/blog/ai-ready-website-checklist/",
+     "values": [
+      4,
+      4,
+      25,
+      11
+     ]
+    },
+    {
+     "key": "/fonts/belarus/",
+     "values": [
+      4,
+      4,
+      50,
+      8.25
+     ]
+    },
+    {
+     "key": "/fonts/damn-font/",
+     "values": [
+      4,
+      4,
+      50,
+      10.5
+     ]
+    },
+    {
+     "key": "/fonts/dance-partner/",
+     "values": [
+      4,
+      4,
+      25,
+      321.75
+     ]
+    },
+    {
+     "key": "/fonts/new-computer-modern/",
+     "values": [
+      4,
+      4,
+      0,
+      87.75
+     ]
+    },
+    {
+     "key": "/fonts/santa-catarina/",
+     "values": [
+      4,
+      2,
+      25,
+      12.25
+     ]
+    },
+    {
+     "key": "/fonts/winston/",
+     "values": [
+      4,
+      4,
+      75,
+      23.5
+     ]
+    },
+    {
+     "key": "/glossary/http-3/",
+     "values": [
+      4,
+      3,
+      0,
+      15.25
+     ]
+    },
+    {
+     "key": "/glossary/iconography/",
+     "values": [
+      4,
+      4,
+      25,
+      14.75
+     ]
+    },
+    {
+     "key": "/glossary/loader/",
+     "values": [
+      4,
+      4,
+      75,
+      4
+     ]
+    },
+    {
+     "key": "/glossary/monogram/",
+     "values": [
+      4,
+      1,
+      25,
+      17.25
+     ]
+    },
+    {
+     "key": "/glossary/reels/",
+     "values": [
+      4,
+      4,
+      25,
+      181
+     ]
+    },
+    {
+     "key": "/glossary/vc-ru/",
+     "values": [
+      4,
+      4,
+      25,
+      11.5
+     ]
+    },
+    {
+     "key": "/sites/c/business/events/",
+     "values": [
+      4,
+      4,
+      50,
+      75.5
+     ]
+    },
+    {
+     "key": "/sites/lizagoroshko-com/",
+     "values": [
+      4,
+      2,
+      25,
+      75
+     ]
+    },
+    {
+     "key": "/sites/setyaeva-studio-ru/",
+     "values": [
+      4,
+      4,
+      25,
+      303.5
+     ]
+    },
+    {
+     "key": "/startups/disco-magic/",
+     "values": [
+      4,
+      4,
+      50,
+      11.75
+     ]
+    },
+    {
+     "key": "/startups/dual-n-back/",
+     "values": [
+      4,
+      4,
+      0,
+      271.25
+     ]
+    },
+    {
+     "key": "/startups/koroche-pereskaz-youtube/",
+     "values": [
+      4,
+      4,
+      25,
+      44
+     ]
+    },
+    {
+     "key": "/startups/kosareva-cloud/",
+     "values": [
+      4,
+      4,
+      75,
+      4
+     ]
+    },
+    {
+     "key": "/startups/passport-ai/",
+     "values": [
+      4,
+      4,
+      75,
+      4
+     ]
+    },
+    {
+     "key": "/startups/qmonitoring/",
+     "values": [
+      4,
+      4,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/rezon/",
+     "values": [
+      4,
+      4,
+      50,
+      31.5
+     ]
+    },
+    {
+     "key": "/startups/songhit/",
+     "values": [
+      4,
+      3,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/tgmart-sozdat-magazin/",
+     "values": [
+      4,
+      2,
+      25,
+      23.75
+     ]
+    },
+    {
+     "key": "/startups/video-v-kruzhok/",
+     "values": [
+      4,
+      4,
+      25,
+      56
+     ]
+    },
+    {
+     "key": "/tools/compare/boosty-vs-lava-top/",
+     "values": [
+      4,
+      4,
+      0,
+      27.5
+     ]
+    },
+    {
+     "key": "/tools/grist/",
+     "values": [
+      4,
+      4,
+      75,
+      401
+     ]
+    },
+    {
+     "key": "/tools/unsplash/",
+     "values": [
+      4,
+      4,
+      25,
+      19
+     ]
+    },
+    {
+     "key": "/art-direction/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      134.33333333
+     ]
+    },
+    {
+     "key": "/cases/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      29
+     ]
+    },
+    {
+     "key": "/design-styles/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      705.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/alfa-core/",
+     "values": [
+      3,
+      3,
+      0,
+      317.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/bulma/",
+     "values": [
+      3,
+      1,
+      0,
+      15.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/material-3/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      10.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/taiga-ui/",
+     "values": [
+      3,
+      3,
+      0,
+      19.33333333
+     ]
+    },
+    {
+     "key": "/fonts/akony/",
+     "values": [
+      3,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/always-angry/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5.33333333
+     ]
+    },
+    {
+     "key": "/fonts/annabelle-cyr/",
+     "values": [
+      3,
+      2,
+      0,
+      181.66666667
+     ]
+    },
+    {
+     "key": "/fonts/bonche/",
+     "values": [
+      3,
+      3,
+      0,
+      23.66666667
+     ]
+    },
+    {
+     "key": "/fonts/cascadiacode/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5.33333333
+     ]
+    },
+    {
+     "key": "/fonts/heraclito/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      11.33333333
+     ]
+    },
+    {
+     "key": "/fonts/jost/",
+     "values": [
+      3,
+      3,
+      0,
+      331
+     ]
+    },
+    {
+     "key": "/fonts/norwester/",
+     "values": [
+      3,
+      2,
+      0,
+      236.66666667
+     ]
+    }
+   ]
+  },
+  "landing90": {
+   "totals": [
+    2688,
+    2129,
+    30.20833333,
+    106.95796131
+   ],
+   "rows": [
+    {
+     "key": "/startups/interview-boost-ai/",
+     "values": [
+      566,
+      374,
+      28.62190813,
+      18
+     ]
+    },
+    {
+     "key": "/",
+     "values": [
+      496,
+      339,
+      37.5,
+      229.33669355
+     ]
+    },
+    {
+     "key": "/startups/",
+     "values": [
+      66,
+      47,
+      7.57575758,
+      456.60606061
+     ]
+    },
+    {
+     "key": "/fonts/",
+     "values": [
+      20,
+      19,
+      5,
+      55.9
+     ]
+    },
+    {
+     "key": "/design-systems/open-props/",
+     "values": [
+      19,
+      1,
+      0,
+      103.36842105
+     ]
+    },
+    {
+     "key": "/glossary/alice-ai/",
+     "values": [
+      17,
+      17,
+      82.35294118,
+      5.94117647
+     ]
+    },
+    {
+     "key": "/startups/nejroinzhener/",
+     "values": [
+      17,
+      14,
+      29.41176471,
+      18.64705882
+     ]
+    },
+    {
+     "key": "/fonts/gilroy/",
+     "values": [
+      16,
+      16,
+      43.75,
+      17.4375
+     ]
+    },
+    {
+     "key": "/startups/soroditeli/",
+     "values": [
+      16,
+      16,
+      37.5,
+      11.75
+     ]
+    },
+    {
+     "key": "/startups/kickcheck/",
+     "values": [
+      11,
+      9,
+      36.36363636,
+      15.09090909
+     ]
+    },
+    {
+     "key": "/startups/youtube-v-tekst/",
+     "values": [
+      11,
+      11,
+      27.27272727,
+      139
+     ]
+    },
+    {
+     "key": "/fonts/rawline/",
+     "values": [
+      10,
+      10,
+      20,
+      34.9
+     ]
+    },
+    {
+     "key": "/glossary/",
+     "values": [
+      10,
+      7,
+      30,
+      112.3
+     ]
+    },
+    {
+     "key": "/startups/keyray/",
+     "values": [
+      10,
+      10,
+      60,
+      6.5
+     ]
+    },
+    {
+     "key": "/startups/price-alert/",
+     "values": [
+      10,
+      9,
+      20,
+      155
+     ]
+    },
+    {
+     "key": "/fonts/blup/",
+     "values": [
+      9,
+      9,
+      77.77777778,
+      5.11111111
+     ]
+    },
+    {
+     "key": "/startups/facee-ii-foto-i-trendy/",
+     "values": [
+      9,
+      9,
+      66.66666667,
+      7.88888889
+     ]
+    },
+    {
+     "key": "/startups/medstat-pro/",
+     "values": [
+      9,
+      6,
+      33.33333333,
+      34.88888889
+     ]
+    },
+    {
+     "key": "/startups/taucloud-zashhita-sajtov/",
+     "values": [
+      9,
+      8,
+      33.33333333,
+      11.33333333
+     ]
+    },
+    {
+     "key": "/startups/writer-studio/",
+     "values": [
+      9,
+      8,
+      22.22222222,
+      42.11111111
+     ]
+    },
+    {
+     "key": "/ui-libraries/",
+     "values": [
+      9,
+      9,
+      0,
+      223.22222222
+     ]
+    },
+    {
+     "key": "/design-systems/admiral-ds/",
+     "values": [
+      8,
+      6,
+      0,
+      139
+     ]
+    },
+    {
+     "key": "/fonts/actay/",
+     "values": [
+      8,
+      4,
+      0,
+      52
+     ]
+    },
+    {
+     "key": "/fonts/averta/",
+     "values": [
+      8,
+      8,
+      50,
+      9.75
+     ]
+    },
+    {
+     "key": "/glossary/artificial-intelligence/",
+     "values": [
+      8,
+      8,
+      87.5,
+      2.875
+     ]
+    },
+    {
+     "key": "/startups/chto-smotrim/",
+     "values": [
+      8,
+      8,
+      75,
+      5.375
+     ]
+    },
+    {
+     "key": "/startups/hirety/",
+     "values": [
+      8,
+      8,
+      25,
+      17.625
+     ]
+    },
+    {
+     "key": "/startups/savetest/",
+     "values": [
+      8,
+      1,
+      0,
+      16.25
+     ]
+    },
+    {
+     "key": "/fonts/inter/",
+     "values": [
+      7,
+      7,
+      57.14285714,
+      22.57142857
+     ]
+    },
+    {
+     "key": "/fonts/manrope/",
+     "values": [
+      7,
+      7,
+      14.28571429,
+      46.42857143
+     ]
+    },
+    {
+     "key": "/geo-audit/",
+     "values": [
+      7,
+      5,
+      0,
+      90.71428571
+     ]
+    },
+    {
+     "key": "/glossary/image-generation/",
+     "values": [
+      7,
+      6,
+      71.42857143,
+      3.28571429
+     ]
+    },
+    {
+     "key": "/glossary/yookassa/",
+     "values": [
+      7,
+      7,
+      14.28571429,
+      12.85714286
+     ]
+    },
+    {
+     "key": "/sites/",
+     "values": [
+      7,
+      7,
+      57.14285714,
+      79.71428571
+     ]
+    },
+    {
+     "key": "/sites/c/portfolio/design/",
+     "values": [
+      7,
+      7,
+      14.28571429,
+      215.71428571
+     ]
+    },
+    {
+     "key": "/sites/nikolaikuleshov-com/",
+     "values": [
+      7,
+      5,
+      14.28571429,
+      268.14285714
+     ]
+    },
+    {
+     "key": "/startups/blurrr-vibes-finder/",
+     "values": [
+      7,
+      6,
+      14.28571429,
+      15
+     ]
+    },
+    {
+     "key": "/startups/recca-ru/",
+     "values": [
+      7,
+      1,
+      0,
+      18.85714286
+     ]
+    },
+    {
+     "key": "/startups/stimchek/",
+     "values": [
+      7,
+      7,
+      28.57142857,
+      39.85714286
+     ]
+    },
+    {
+     "key": "/startups/ton-love/",
+     "values": [
+      7,
+      7,
+      57.14285714,
+      34.57142857
+     ]
+    },
+    {
+     "key": "/blog/servisy-geo-monitoringa/",
+     "values": [
+      6,
+      6,
+      16.66666667,
+      25
+     ]
+    },
+    {
+     "key": "/fonts/montserrat/",
+     "values": [
+      6,
+      6,
+      16.66666667,
+      59.16666667
+     ]
+    },
+    {
+     "key": "/glossary/inclusive-design/",
+     "values": [
+      6,
+      3,
+      66.66666667,
+      5
+     ]
+    },
+    {
+     "key": "/startups/mira-onlajn-zapis/",
+     "values": [
+      6,
+      4,
+      16.66666667,
+      55.16666667
+     ]
+    },
+    {
+     "key": "/startups/smartxlsx/",
+     "values": [
+      6,
+      4,
+      16.66666667,
+      16.16666667
+     ]
+    },
+    {
+     "key": "/startups/workaem/",
+     "values": [
+      6,
+      5,
+      50,
+      8.66666667
+     ]
+    },
+    {
+     "key": "/tools/",
+     "values": [
+      6,
+      6,
+      16.66666667,
+      72.66666667
+     ]
+    },
+    {
+     "key": "/tools/combot/",
+     "values": [
+      6,
+      3,
+      0,
+      15.66666667
+     ]
+    },
+    {
+     "key": "/cases/",
+     "values": [
+      5,
+      5,
+      40,
+      20.6
+     ]
+    },
+    {
+     "key": "/fonts/arodora-pro/",
+     "values": [
+      5,
+      4,
+      40,
+      18.6
+     ]
+    },
+    {
+     "key": "/fonts/gardens-cm/",
+     "values": [
+      5,
+      2,
+      20,
+      12.2
+     ]
+    },
+    {
+     "key": "/fonts/geologica/",
+     "values": [
+      5,
+      5,
+      0,
+      18.2
+     ]
+    },
+    {
+     "key": "/fonts/lilita-one-russian/",
+     "values": [
+      5,
+      5,
+      0,
+      239.4
+     ]
+    },
+    {
+     "key": "/glossary/ai-first/",
+     "values": [
+      5,
+      5,
+      0,
+      15.4
+     ]
+    },
+    {
+     "key": "/startups/lanolstream/",
+     "values": [
+      5,
+      5,
+      20,
+      162.4
+     ]
+    },
+    {
+     "key": "/startups/platforma-slazhivanie/",
+     "values": [
+      5,
+      5,
+      20,
+      131
+     ]
+    },
+    {
+     "key": "/tools/compare/oblako-mail-ru-vs-yandeks-disk/",
+     "values": [
+      5,
+      4,
+      0,
+      15.2
+     ]
+    },
+    {
+     "key": "/blog/",
+     "values": [
+      4,
+      3,
+      0,
+      597
+     ]
+    },
+    {
+     "key": "/blog/ai-ready-website-checklist/",
+     "values": [
+      4,
+      4,
+      25,
+      11
+     ]
+    },
+    {
+     "key": "/contacts/",
+     "values": [
+      4,
+      4,
+      75,
+      4
+     ]
+    },
+    {
+     "key": "/fonts/belarus/",
+     "values": [
+      4,
+      4,
+      50,
+      8.25
+     ]
+    },
+    {
+     "key": "/fonts/damn-font/",
+     "values": [
+      4,
+      4,
+      50,
+      10.5
+     ]
+    },
+    {
+     "key": "/fonts/dance-partner/",
+     "values": [
+      4,
+      4,
+      25,
+      321.75
+     ]
+    },
+    {
+     "key": "/fonts/new-computer-modern/",
+     "values": [
+      4,
+      4,
+      0,
+      87.75
+     ]
+    },
+    {
+     "key": "/fonts/santa-catarina/",
+     "values": [
+      4,
+      2,
+      25,
+      12.25
+     ]
+    },
+    {
+     "key": "/fonts/winston/",
+     "values": [
+      4,
+      4,
+      75,
+      23.5
+     ]
+    },
+    {
+     "key": "/glossary/http-3/",
+     "values": [
+      4,
+      3,
+      0,
+      15.25
+     ]
+    },
+    {
+     "key": "/glossary/iconography/",
+     "values": [
+      4,
+      4,
+      25,
+      14.75
+     ]
+    },
+    {
+     "key": "/glossary/loader/",
+     "values": [
+      4,
+      4,
+      75,
+      4
+     ]
+    },
+    {
+     "key": "/glossary/monogram/",
+     "values": [
+      4,
+      1,
+      25,
+      17.25
+     ]
+    },
+    {
+     "key": "/glossary/reels/",
+     "values": [
+      4,
+      4,
+      25,
+      181
+     ]
+    },
+    {
+     "key": "/glossary/vc-ru/",
+     "values": [
+      4,
+      4,
+      25,
+      11.5
+     ]
+    },
+    {
+     "key": "/sites/c/business/events/",
+     "values": [
+      4,
+      4,
+      50,
+      75.5
+     ]
+    },
+    {
+     "key": "/sites/lizagoroshko-com/",
+     "values": [
+      4,
+      2,
+      25,
+      75
+     ]
+    },
+    {
+     "key": "/sites/setyaeva-studio-ru/",
+     "values": [
+      4,
+      4,
+      25,
+      303.5
+     ]
+    },
+    {
+     "key": "/startups/disco-magic/",
+     "values": [
+      4,
+      4,
+      50,
+      11.75
+     ]
+    },
+    {
+     "key": "/startups/dual-n-back/",
+     "values": [
+      4,
+      4,
+      0,
+      271.25
+     ]
+    },
+    {
+     "key": "/startups/koroche-pereskaz-youtube/",
+     "values": [
+      4,
+      4,
+      25,
+      44
+     ]
+    },
+    {
+     "key": "/startups/kosareva-cloud/",
+     "values": [
+      4,
+      4,
+      75,
+      4
+     ]
+    },
+    {
+     "key": "/startups/passport-ai/",
+     "values": [
+      4,
+      4,
+      75,
+      4
+     ]
+    },
+    {
+     "key": "/startups/qmonitoring/",
+     "values": [
+      4,
+      4,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/rezon/",
+     "values": [
+      4,
+      4,
+      50,
+      31.5
+     ]
+    },
+    {
+     "key": "/startups/songhit/",
+     "values": [
+      4,
+      3,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/tgmart-sozdat-magazin/",
+     "values": [
+      4,
+      2,
+      25,
+      23.75
+     ]
+    },
+    {
+     "key": "/startups/video-v-kruzhok/",
+     "values": [
+      4,
+      4,
+      25,
+      56
+     ]
+    },
+    {
+     "key": "/tools/compare/boosty-vs-lava-top/",
+     "values": [
+      4,
+      4,
+      0,
+      27.5
+     ]
+    },
+    {
+     "key": "/tools/grist/",
+     "values": [
+      4,
+      4,
+      75,
+      401
+     ]
+    },
+    {
+     "key": "/tools/unsplash/",
+     "values": [
+      4,
+      4,
+      25,
+      19
+     ]
+    },
+    {
+     "key": "/about/",
+     "values": [
+      3,
+      3,
+      0,
+      642.66666667
+     ]
+    },
+    {
+     "key": "/art-direction/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      134.33333333
+     ]
+    },
+    {
+     "key": "/design-styles/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      705.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/alfa-core/",
+     "values": [
+      3,
+      3,
+      0,
+      317.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/bulma/",
+     "values": [
+      3,
+      1,
+      0,
+      15.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/material-3/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      10.33333333
+     ]
+    },
+    {
+     "key": "/design-systems/taiga-ui/",
+     "values": [
+      3,
+      3,
+      0,
+      19.33333333
+     ]
+    },
+    {
+     "key": "/fonts/akony/",
+     "values": [
+      3,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/always-angry/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5.33333333
+     ]
+    },
+    {
+     "key": "/fonts/annabelle-cyr/",
+     "values": [
+      3,
+      2,
+      0,
+      181.66666667
+     ]
+    },
+    {
+     "key": "/fonts/bonche/",
+     "values": [
+      3,
+      3,
+      0,
+      23.66666667
+     ]
+    },
+    {
+     "key": "/fonts/cascadiacode/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5.33333333
+     ]
+    },
+    {
+     "key": "/fonts/heraclito/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      11.33333333
+     ]
+    },
+    {
+     "key": "/fonts/jost/",
+     "values": [
+      3,
+      3,
+      0,
+      331
+     ]
+    },
+    {
+     "key": "/fonts/norwester/",
+     "values": [
+      3,
+      2,
+      0,
+      236.66666667
+     ]
+    },
+    {
+     "key": "/fonts/nudla-thin/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      289.33333333
+     ]
+    },
+    {
+     "key": "/fonts/nunito/",
+     "values": [
+      3,
+      3,
+      0,
+      17.33333333
+     ]
+    },
+    {
+     "key": "/fonts/oswald/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      97.33333333
+     ]
+    },
+    {
+     "key": "/fonts/panama/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      11
+     ]
+    },
+    {
+     "key": "/fonts/pangolin/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      13.66666667
+     ]
+    },
+    {
+     "key": "/fonts/pangram-sans-rounded/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      9.33333333
+     ]
+    },
+    {
+     "key": "/fonts/songer/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      16.33333333
+     ]
+    },
+    {
+     "key": "/fonts/sst/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5.33333333
+     ]
+    },
+    {
+     "key": "/fonts/zing-rust/",
+     "values": [
+      3,
+      2,
+      0,
+      15.66666667
+     ]
+    },
+    {
+     "key": "/glossary/artifacts/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      10
+     ]
+    },
+    {
+     "key": "/glossary/avatar/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      12
+     ]
+    },
+    {
+     "key": "/glossary/content-creator/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      10
+     ]
+    },
+    {
+     "key": "/glossary/figma-variables/",
+     "values": [
+      3,
+      3,
+      0,
+      19.33333333
+     ]
+    },
+    {
+     "key": "/glossary/free-trial/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      6.66666667
+     ]
+    },
+    {
+     "key": "/glossary/freelance-marketplace/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      469
+     ]
+    },
+    {
+     "key": "/glossary/guest-post/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      5
+     ]
+    },
+    {
+     "key": "/glossary/linear/",
+     "values": [
+      3,
+      3,
+      0,
+      15.33333333
+     ]
+    },
+    {
+     "key": "/glossary/model-api/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      10.33333333
+     ]
+    },
+    {
+     "key": "/glossary/neumorphism/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      49.66666667
+     ]
+    },
+    {
+     "key": "/glossary/shape-up/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      10
+     ]
+    },
+    {
+     "key": "/glossary/wordmark/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      10
+     ]
+    },
+    {
+     "key": "/qr-generator/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      3
+     ]
+    },
+    {
+     "key": "/services/personal-website/",
+     "values": [
+      3,
+      3,
+      0,
+      74.33333333
+     ]
+    },
+    {
+     "key": "/sites/c/education/education/",
+     "values": [
+      3,
+      3,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/sites/c/portfolio/",
+     "values": [
+      3,
+      3,
+      0,
+      110.66666667
+     ]
+    },
+    {
+     "key": "/startups/aerobim/",
+     "values": [
+      3,
+      3,
+      0,
+      113.66666667
+     ]
+    },
+    {
+     "key": "/startups/botbotan-ii-repetitor/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      11
+     ]
+    },
+    {
+     "key": "/startups/c/marketing-sales/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      10
+     ]
+    },
+    {
+     "key": "/startups/carshel/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      17.33333333
+     ]
+    },
+    {
+     "key": "/startups/chatly-umnyj-assistent/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      10
+     ]
+    },
+    {
+     "key": "/startups/feberra-ii-kontent/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      21.66666667
+     ]
+    },
+    {
+     "key": "/startups/georisk/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      74.33333333
+     ]
+    },
+    {
+     "key": "/startups/hireseeker/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      70.33333333
+     ]
+    },
+    {
+     "key": "/startups/hubris/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      10.33333333
+     ]
+    },
+    {
+     "key": "/startups/levsha-ai-studio/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      10.33333333
+     ]
+    },
+    {
+     "key": "/startups/mindthera-ai/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      15.33333333
+     ]
+    },
+    {
+     "key": "/startups/mynutri/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      49
+     ]
+    },
+    {
+     "key": "/startups/nejrochek/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      177.33333333
+     ]
+    },
+    {
+     "key": "/startups/okrest/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      938
+     ]
+    },
+    {
+     "key": "/startups/quaize/",
+     "values": [
+      3,
+      1,
+      33.33333333,
+      12
+     ]
+    },
+    {
+     "key": "/startups/sdelaj-hit/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      11.33333333
+     ]
+    },
+    {
+     "key": "/startups/stikery-i-emodzi-iz-video/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      22.66666667
+     ]
+    },
+    {
+     "key": "/startups/stol-pisatelya/",
+     "values": [
+      3,
+      3,
+      0,
+      211
+     ]
+    },
+    {
+     "key": "/startups/synchra-24/",
+     "values": [
+      3,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/startups/t-template/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      9.66666667
+     ]
+    },
+    {
+     "key": "/startups/talkgym/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      31.33333333
+     ]
+    },
+    {
+     "key": "/startups/vybe/",
+     "values": [
+      3,
+      3,
+      0,
+      132.33333333
+     ]
+    },
+    {
+     "key": "/startups/wikibrain/",
+     "values": [
+      3,
+      2,
+      0,
+      1896.66666667
+     ]
+    },
+    {
+     "key": "/tools/audacity/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      12.33333333
+     ]
+    },
+    {
+     "key": "/tools/brave-search/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      11
+     ]
+    },
+    {
+     "key": "/tools/compare/ghostty-vs-oh-my-zsh/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      380.33333333
+     ]
+    },
+    {
+     "key": "/tools/compare/lucidchart-vs-miro/",
+     "values": [
+      3,
+      1,
+      33.33333333,
+      10
+     ]
+    },
+    {
+     "key": "/tools/compare/max-vs-yandeks-telemost/",
+     "values": [
+      3,
+      2,
+      33.33333333,
+      35
+     ]
+    },
+    {
+     "key": "/tools/compare/rutube-vs-vk-video/",
+     "values": [
+      3,
+      3,
+      0,
+      15.33333333
+     ]
+    },
+    {
+     "key": "/tools/linktree/",
+     "values": [
+      3,
+      3,
+      0,
+      31.66666667
+     ]
+    },
+    {
+     "key": "/tools/tipograf-lebedeva/",
+     "values": [
+      3,
+      3,
+      0,
+      15.66666667
+     ]
+    },
+    {
+     "key": "/tools/windsurf/",
+     "values": [
+      3,
+      3,
+      33.33333333,
+      12.66666667
+     ]
+    },
+    {
+     "key": "/utm-generator/",
+     "values": [
+      3,
+      3,
+      66.66666667,
+      18.66666667
+     ]
+    },
+    {
+     "key": "/card/",
+     "values": [
+      2,
+      2,
+      0,
+      887.5
+     ]
+    },
+    {
+     "key": "/cases/evgeniya-perlova/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/contract-generator/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/design-systems/",
+     "values": [
+      2,
+      2,
+      0,
+      21
+     ]
+    },
+    {
+     "key": "/design-systems/kontur-ui/",
+     "values": [
+      2,
+      2,
+      0,
+      58.5
+     ]
+    },
+    {
+     "key": "/design-systems/shadcn-ui/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/en",
+     "values": [
+      2,
+      2,
+      0,
+      59.5
+     ]
+    },
+    {
+     "key": "/fonts/129-fatboy/",
+     "values": [
+      2,
+      2,
+      50,
+      12
+     ]
+    },
+    {
+     "key": "/fonts/5by7/",
+     "values": [
+      2,
+      2,
+      0,
+      199.5
+     ]
+    },
+    {
+     "key": "/fonts/adderley-bold/",
+     "values": [
+      2,
+      2,
+      0,
+      18
+     ]
+    },
+    {
+     "key": "/fonts/age/",
+     "values": [
+      2,
+      2,
+      0,
+      28
+     ]
+    },
+    {
+     "key": "/fonts/airfool/",
+     "values": [
+      2,
+      2,
+      0,
+      20.5
+     ]
+    },
+    {
+     "key": "/fonts/akrobat/",
+     "values": [
+      2,
+      2,
+      0,
+      64.5
+     ]
+    },
+    {
+     "key": "/fonts/alcotton/",
+     "values": [
+      2,
+      1,
+      0,
+      251.5
+     ]
+    },
+    {
+     "key": "/fonts/arsenica/",
+     "values": [
+      2,
+      2,
+      0,
+      44
+     ]
+    },
+    {
+     "key": "/fonts/caravan/",
+     "values": [
+      2,
+      2,
+      50,
+      8.5
+     ]
+    },
+    {
+     "key": "/fonts/comfortaa/",
+     "values": [
+      2,
+      2,
+      0,
+      11
+     ]
+    },
+    {
+     "key": "/fonts/days-one/",
+     "values": [
+      2,
+      2,
+      50,
+      9
+     ]
+    },
+    {
+     "key": "/fonts/distressed/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/district/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/doppelganger/",
+     "values": [
+      2,
+      2,
+      0,
+      33.5
+     ]
+    },
+    {
+     "key": "/fonts/ekran/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/fantazyor/",
+     "values": [
+      2,
+      2,
+      50,
+      19
+     ]
+    },
+    {
+     "key": "/fonts/garet/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/hack/",
+     "values": [
+      2,
+      2,
+      50,
+      13.5
+     ]
+    },
+    {
+     "key": "/fonts/hauora-sans/",
+     "values": [
+      2,
+      2,
+      0,
+      22.5
+     ]
+    },
+    {
+     "key": "/fonts/hibana/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/iglets/",
+     "values": [
+      2,
+      1,
+      100,
+      2.5
+     ]
+    },
+    {
+     "key": "/fonts/imperial/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/fonts/irch/",
+     "values": [
+      2,
+      2,
+      100,
+      7
+     ]
+    },
+    {
+     "key": "/fonts/journal-wow/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/kazuki-reiwa/",
+     "values": [
+      2,
+      2,
+      0,
+      19
+     ]
+    },
+    {
+     "key": "/fonts/lingua-franca/",
+     "values": [
+      2,
+      2,
+      100,
+      1
+     ]
+    },
+    {
+     "key": "/fonts/micra/",
+     "values": [
+      2,
+      2,
+      0,
+      20.5
+     ]
+    },
+    {
+     "key": "/fonts/miratrix/",
+     "values": [
+      2,
+      2,
+      50,
+      266.5
+     ]
+    },
+    {
+     "key": "/fonts/mont-blanc/",
+     "values": [
+      2,
+      2,
+      0,
+      23
+     ]
+    },
+    {
+     "key": "/fonts/morfin-sans/",
+     "values": [
+      2,
+      2,
+      50,
+      315.5
+     ]
+    },
+    {
+     "key": "/fonts/muller/",
+     "values": [
+      2,
+      2,
+      50,
+      10
+     ]
+    },
+    {
+     "key": "/fonts/oprah/",
+     "values": [
+      2,
+      2,
+      50,
+      9
+     ]
+    },
+    {
+     "key": "/fonts/poiret-one/",
+     "values": [
+      2,
+      2,
+      50,
+      54
+     ]
+    },
+    {
+     "key": "/fonts/polonium/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/prosto-one/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/roboto/",
+     "values": [
+      2,
+      2,
+      0,
+      23
+     ]
+    },
+    {
+     "key": "/fonts/rounded/",
+     "values": [
+      2,
+      2,
+      50,
+      108
+     ]
+    },
+    {
+     "key": "/fonts/rurik/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/russo-one/",
+     "values": [
+      2,
+      2,
+      50,
+      8
+     ]
+    },
+    {
+     "key": "/fonts/source-sans-pro/",
+     "values": [
+      2,
+      2,
+      0,
+      18
+     ]
+    },
+    {
+     "key": "/glossary/blogger/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/glossary/chip/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/glossary/commit/",
+     "values": [
+      2,
+      2,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/dev-mode/",
+     "values": [
+      2,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/entity/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/glossary/fl-ru/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/font/",
+     "values": [
+      2,
+      2,
+      0,
+      44
+     ]
+    },
+    {
+     "key": "/glossary/hero-section/",
+     "values": [
+      2,
+      2,
+      50,
+      23
+     ]
+    },
+    {
+     "key": "/glossary/minimalism/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/mixpanel/",
+     "values": [
+      2,
+      1,
+      0,
+      63.5
+     ]
+    },
+    {
+     "key": "/glossary/moodboard/",
+     "values": [
+      2,
+      2,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "/glossary/pas/",
+     "values": [
+      2,
+      1,
+      50,
+      8
+     ]
+    },
+    {
+     "key": "/glossary/pivot/",
+     "values": [
+      2,
+      2,
+      50,
+      96.5
+     ]
+    },
+    {
+     "key": "/glossary/posthog/",
+     "values": [
+      2,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/problem-solution-fit/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/glossary/scroll/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/serif/",
+     "values": [
+      2,
+      2,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "/glossary/skeleton-screen/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/telegram-search/",
+     "values": [
+      2,
+      2,
+      50,
+      9
+     ]
+    },
+    {
+     "key": "/privacy-generator/",
+     "values": [
+      2,
+      2,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/products/",
+     "values": [
+      2,
+      2,
+      0,
+      154
+     ]
+    },
+    {
+     "key": "/redirect",
+     "values": [
+      2,
+      2,
+      50,
+      15.5
+     ]
+    },
+    {
+     "key": "/seo-audit/",
+     "values": [
+      2,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/services/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/services/content-factory/",
+     "values": [
+      2,
+      2,
+      0,
+      8
+     ]
+    },
+    {
+     "key": "/sites/julia-ryabchenkova-tilda-ws/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/sites/outmeet-tilda-ws/",
+     "values": [
+      2,
+      2,
+      50,
+      9
+     ]
+    },
+    {
+     "key": "/startups/aiesa-ru-api-dlya-rechi/",
+     "values": [
+      2,
+      2,
+      0,
+      21.5
+     ]
+    },
+    {
+     "key": "/startups/aihummer/",
+     "values": [
+      2,
+      2,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/startups/ajva/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/startups/c/for-developers/",
+     "values": [
+      2,
+      1,
+      0,
+      24
+     ]
+    },
+    {
+     "key": "/startups/c/obrazovanie/",
+     "values": [
+      2,
+      2,
+      0,
+      255.5
+     ]
+    },
+    {
+     "key": "/startups/c/telegram-mini-apps/",
+     "values": [
+      2,
+      2,
+      0,
+      20
+     ]
+    },
+    {
+     "key": "/startups/connecta/",
+     "values": [
+      2,
+      2,
+      50,
+      12
+     ]
+    },
+    {
+     "key": "/startups/creatormusic/",
+     "values": [
+      2,
+      2,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/startups/decision-matrix-ai/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/doka-lokalnyj-ai-agent/",
+     "values": [
+      2,
+      2,
+      0,
+      41
+     ]
+    },
+    {
+     "key": "/startups/ecommetriya/",
+     "values": [
+      2,
+      2,
+      50,
+      8.5
+     ]
+    },
+    {
+     "key": "/startups/emuser/",
+     "values": [
+      2,
+      2,
+      0,
+      82
+     ]
+    },
+    {
+     "key": "/startups/finrazbor/",
+     "values": [
+      2,
+      2,
+      50,
+      40.5
+     ]
+    },
+    {
+     "key": "/startups/fleshka/",
+     "values": [
+      2,
+      2,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "/startups/gemdoc/",
+     "values": [
+      2,
+      2,
+      50,
+      8.5
+     ]
+    },
+    {
+     "key": "/startups/generator-kp/",
+     "values": [
+      2,
+      2,
+      0,
+      106
+     ]
+    },
+    {
+     "key": "/startups/geo-scout/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/harvi/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/startups/htmlkin/",
+     "values": [
+      2,
+      2,
+      0,
+      71.5
+     ]
+    },
+    {
+     "key": "/startups/infokly-codeboard/",
+     "values": [
+      2,
+      1,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/isweesh/",
+     "values": [
+      2,
+      2,
+      50,
+      32.5
+     ]
+    },
+    {
+     "key": "/startups/kinometch/",
+     "values": [
+      2,
+      2,
+      0,
+      28
+     ]
+    },
+    {
+     "key": "/startups/kontent-most/",
+     "values": [
+      2,
+      2,
+      0,
+      20
+     ]
+    },
+    {
+     "key": "/startups/legalsimple/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/startups/logarifmika/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/startups/marketplejs-datasetov/",
+     "values": [
+      2,
+      2,
+      100,
+      4
+     ]
+    },
+    {
+     "key": "/startups/maskgate/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/mirnyj/",
+     "values": [
+      2,
+      2,
+      50,
+      9
+     ]
+    },
+    {
+     "key": "/startups/moya-skazka-myskazka-ru/",
+     "values": [
+      2,
+      2,
+      0,
+      46
+     ]
+    },
+    {
+     "key": "/startups/nejromisha/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/startups/nimbleflow/",
+     "values": [
+      2,
+      2,
+      50,
+      95
+     ]
+    },
+    {
+     "key": "/startups/prezka-ai/",
+     "values": [
+      2,
+      2,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "/startups/rapport-ai/",
+     "values": [
+      2,
+      2,
+      50,
+      11
+     ]
+    },
+    {
+     "key": "/startups/routineops/",
+     "values": [
+      2,
+      2,
+      0,
+      45
+     ]
+    },
+    {
+     "key": "/startups/shmotki/",
+     "values": [
+      2,
+      2,
+      50,
+      9.5
+     ]
+    },
+    {
+     "key": "/startups/solvit/",
+     "values": [
+      2,
+      2,
+      50,
+      14
+     ]
+    },
+    {
+     "key": "/startups/tabrika/",
+     "values": [
+      2,
+      2,
+      0,
+      17.5
+     ]
+    },
+    {
+     "key": "/startups/trenazhyor-marketologa/",
+     "values": [
+      2,
+      2,
+      100,
+      1
+     ]
+    },
+    {
+     "key": "/startups/tupik-to-pick/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/startups/umnaya-urna/",
+     "values": [
+      2,
+      2,
+      0,
+      24
+     ]
+    },
+    {
+     "key": "/startups/uroni/",
+     "values": [
+      2,
+      2,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "/startups/vecta/",
+     "values": [
+      2,
+      2,
+      0,
+      16.5
+     ]
+    },
+    {
+     "key": "/startups/vitrima/",
+     "values": [
+      2,
+      2,
+      0,
+      584.5
+     ]
+    },
+    {
+     "key": "/startups/volsmap/",
+     "values": [
+      2,
+      2,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "/startups/vukki-pulse/",
+     "values": [
+      2,
+      2,
+      50,
+      51
+     ]
+    },
+    {
+     "key": "/startups/yuristbot/",
+     "values": [
+      2,
+      2,
+      0,
+      20
+     ]
+    },
+    {
+     "key": "/tools/21st-dev/",
+     "values": [
+      2,
+      2,
+      50,
+      179.5
+     ]
+    },
+    {
+     "key": "/tools/android-studio/",
+     "values": [
+      2,
+      2,
+      50,
+      8
+     ]
+    },
+    {
+     "key": "/tools/beehiiv/",
+     "values": [
+      2,
+      2,
+      50,
+      9
+     ]
+    },
+    {
+     "key": "/tools/binance-pay/",
+     "values": [
+      2,
+      2,
+      0,
+      22
+     ]
+    },
+    {
+     "key": "/tools/botfather/",
+     "values": [
+      2,
+      1,
+      50,
+      8
+     ]
+    },
+    {
+     "key": "/tools/c/monitoring-vidimosti-v-ai-ai-visibility/",
+     "values": [
+      2,
+      2,
+      50,
+      12
+     ]
+    },
+    {
+     "key": "/tools/c/proverka-i-redaktura-teksta/",
+     "values": [
+      2,
+      2,
+      50,
+      8
+     ]
+    },
+    {
+     "key": "/tools/cal-com/",
+     "values": [
+      2,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/tools/compare/cloudpayments-vs-yukassa/",
+     "values": [
+      2,
+      2,
+      50,
+      476.5
+     ]
+    },
+    {
+     "key": "/tools/compare/google-calendar-vs-yandeks-kalendar/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/tools/compare/hh-ru-vs-superjob/",
+     "values": [
+      2,
+      2,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/tools/compare/hugging-face-vs-lm-studio/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/tools/compare/lucide-vs-phosphor-icons/",
+     "values": [
+      2,
+      2,
+      0,
+      14.5
+     ]
+    },
+    {
+     "key": "/tools/compare/memberstack-vs-tribute/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/tools/compare/profi-ru-vs-youdo/",
+     "values": [
+      2,
+      2,
+      50,
+      7
+     ]
+    },
+    {
+     "key": "/tools/compare/qrator-vs-stormwall/",
+     "values": [
+      2,
+      1,
+      0,
+      69.5
+     ]
+    },
+    {
+     "key": "/tools/compare/selectel-vs-spaceweb/",
+     "values": [
+      2,
+      2,
+      50,
+      11.5
+     ]
+    },
+    {
+     "key": "/tools/compare/vk-cloud-vs-yandex-cloud/",
+     "values": [
+      2,
+      2,
+      0,
+      36
+     ]
+    },
+    {
+     "key": "/tools/dataforseo/",
+     "values": [
+      2,
+      2,
+      0,
+      16.5
+     ]
+    },
+    {
+     "key": "/tools/freelance-ru/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/tools/keynote/",
+     "values": [
+      2,
+      1,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/tools/lava-top/",
+     "values": [
+      2,
+      1,
+      0,
+      15.5
+     ]
+    },
+    {
+     "key": "/tools/maze/",
+     "values": [
+      2,
+      2,
+      0,
+      161
+     ]
+    },
+    {
+     "key": "/tools/metricool/",
+     "values": [
+      2,
+      2,
+      0,
+      23.5
+     ]
+    },
+    {
+     "key": "/tools/microsoft-clarity/",
+     "values": [
+      2,
+      2,
+      0,
+      25
+     ]
+    },
+    {
+     "key": "/tools/netpeak-spider/",
+     "values": [
+      2,
+      2,
+      50,
+      419
+     ]
+    },
+    {
+     "key": "/tools/perfluence/",
+     "values": [
+      2,
+      2,
+      50,
+      8
+     ]
+    },
+    {
+     "key": "/tools/tally/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/tools/vk-video/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/tools/voiceflow/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/tools/warp/",
+     "values": [
+      2,
+      2,
+      50,
+      7.5
+     ]
+    },
+    {
+     "key": "/ui-libraries/21st-dev/",
+     "values": [
+      2,
+      2,
+      50,
+      92
+     ]
+    },
+    {
+     "key": "/ui-libraries/ant-design-pro/",
+     "values": [
+      2,
+      2,
+      0,
+      51
+     ]
+    },
+    {
+     "key": "/ui-libraries/fluent-icons/",
+     "values": [
+      2,
+      2,
+      50,
+      17.5
+     ]
+    },
+    {
+     "key": "/adasd",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/blog/how-to-get-into-alice-ai-answers/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/blog/prodvizhenie-telegram-kanala-v-poiske/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/blog/utm-tags/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/cases/uraldoma/",
+     "values": [
+      1,
+      1,
+      0,
+      246
+     ]
+    },
+    {
+     "key": "/design-styles/neon/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/design-systems/base-ui/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/design-systems/carbon/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/design-systems/element-plus/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/design-systems/geist/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/design-systems/govuk/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/design-systems/gravity-ui/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/design-systems/mantine/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/design-systems/naive-ui/",
+     "values": [
+      1,
+      1,
+      0,
+      36
+     ]
+    },
+    {
+     "key": "/design-systems/prime/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/design-systems/relume/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/design-systems/sap-ui5/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/design-systems/shadcn-flutter/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/design-systems/spectrum/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/design-systems/untitled-ui/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/design-systems/vkui/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/design-systems/zard-ui/",
+     "values": [
+      1,
+      1,
+      0,
+      22
+     ]
+    },
+    {
+     "key": "/fonts/a-bragga/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/a24/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/ahellya/",
+     "values": [
+      1,
+      1,
+      0,
+      19
+     ]
+    },
+    {
+     "key": "/fonts/alnst/",
+     "values": [
+      1,
+      1,
+      0,
+      1529
+     ]
+    },
+    {
+     "key": "/fonts/amagro/",
+     "values": [
+      1,
+      1,
+      0,
+      144
+     ]
+    },
+    {
+     "key": "/fonts/bebas-neue/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/better-vcr/",
+     "values": [
+      1,
+      1,
+      100,
+      1
+     ]
+    },
+    {
+     "key": "/fonts/breamcatcher/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/buba/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/bushbaby/",
+     "values": [
+      1,
+      1,
+      0,
+      30
+     ]
+    },
+    {
+     "key": "/fonts/capitalist/",
+     "values": [
+      1,
+      1,
+      100,
+      11
+     ]
+    },
+    {
+     "key": "/fonts/caviar-dreams/",
+     "values": [
+      1,
+      1,
+      0,
+      18
+     ]
+    },
+    {
+     "key": "/fonts/cheque/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/dikoe-disco/",
+     "values": [
+      1,
+      1,
+      0,
+      48
+     ]
+    },
+    {
+     "key": "/fonts/drazki-9/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/fonts/ebenya/",
+     "values": [
+      1,
+      1,
+      100,
+      14
+     ]
+    },
+    {
+     "key": "/fonts/first-time-writing/",
+     "values": [
+      1,
+      1,
+      0,
+      27
+     ]
+    },
+    {
+     "key": "/fonts/foglihtenno06-crmxz/",
+     "values": [
+      1,
+      1,
+      0,
+      18
+     ]
+    },
+    {
+     "key": "/fonts/free-fat-font/",
+     "values": [
+      1,
+      1,
+      100,
+      6
+     ]
+    },
+    {
+     "key": "/fonts/freeserif/",
+     "values": [
+      1,
+      1,
+      0,
+      160
+     ]
+    },
+    {
+     "key": "/fonts/golos-text/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/fonts/gulag-pavljenko/",
+     "values": [
+      1,
+      1,
+      0,
+      128
+     ]
+    },
+    {
+     "key": "/fonts/gymkhana/",
+     "values": [
+      1,
+      1,
+      0,
+      21
+     ]
+    },
+    {
+     "key": "/fonts/hitch-hike/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/jetbrains-mono/",
+     "values": [
+      1,
+      1,
+      100,
+      2
+     ]
+    },
+    {
+     "key": "/fonts/jura/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/just-breathe/",
+     "values": [
+      1,
+      1,
+      0,
+      18
+     ]
+    },
+    {
+     "key": "/fonts/kaluny-pro/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/km-standard-tt/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/kom-post/",
+     "values": [
+      1,
+      1,
+      0,
+      29
+     ]
+    },
+    {
+     "key": "/fonts/komi/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/konstruktor/",
+     "values": [
+      1,
+      1,
+      0,
+      49
+     ]
+    },
+    {
+     "key": "/fonts/kosmos-129/",
+     "values": [
+      1,
+      1,
+      0,
+      27
+     ]
+    },
+    {
+     "key": "/fonts/lato-hairline/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/fonts/leo-hand/",
+     "values": [
+      1,
+      1,
+      0,
+      36
+     ]
+    },
+    {
+     "key": "/fonts/moiamova/",
+     "values": [
+      1,
+      1,
+      100,
+      4
+     ]
+    },
+    {
+     "key": "/fonts/neoneon/",
+     "values": [
+      1,
+      1,
+      0,
+      853
+     ]
+    },
+    {
+     "key": "/fonts/new-standard/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/noah/",
+     "values": [
+      1,
+      1,
+      0,
+      96
+     ]
+    },
+    {
+     "key": "/fonts/nord/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/old-standard-tt/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/orelega-one/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/otscookie/",
+     "values": [
+      1,
+      1,
+      0,
+      23
+     ]
+    },
+    {
+     "key": "/fonts/ouroboros-regular/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/palatino-linotype/",
+     "values": [
+      1,
+      1,
+      0,
+      35
+     ]
+    },
+    {
+     "key": "/fonts/pixel-cyr/",
+     "values": [
+      1,
+      1,
+      0,
+      415
+     ]
+    },
+    {
+     "key": "/fonts/pulstar/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/sambia/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/segment-b-narrow-bold-italic/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/shoebox/",
+     "values": [
+      1,
+      1,
+      0,
+      28
+     ]
+    },
+    {
+     "key": "/fonts/source-serif-pro/",
+     "values": [
+      1,
+      1,
+      0,
+      273
+     ]
+    },
+    {
+     "key": "/fonts/sports-world/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/fonts/steclo/",
+     "values": [
+      1,
+      1,
+      100,
+      2
+     ]
+    },
+    {
+     "key": "/fonts/stengazeta/",
+     "values": [
+      1,
+      1,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/fonts/stiff-staff/",
+     "values": [
+      1,
+      1,
+      0,
+      2
+     ]
+    },
+    {
+     "key": "/fonts/svetka-type/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/fonts/tilda-sans/",
+     "values": [
+      1,
+      1,
+      0,
+      30
+     ]
+    },
+    {
+     "key": "/fonts/veter/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/3d-graphics/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/advertising-cost-of-sales/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/aeo/",
+     "values": [
+      1,
+      1,
+      0,
+      283
+     ]
+    },
+    {
+     "key": "/glossary/aesthetic-usability-effect/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/agentic-search/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/ahrefs/",
+     "values": [
+      1,
+      1,
+      0,
+      28
+     ]
+    },
+    {
+     "key": "/glossary/ai-image-generation/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/ai-krauler/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/bolt/",
+     "values": [
+      1,
+      1,
+      0,
+      14
+     ]
+    },
+    {
+     "key": "/glossary/bootstrapping/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/brotli/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/bundle/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/card/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/changelog/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/cmyk/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/cname/",
+     "values": [
+      1,
+      1,
+      0,
+      77
+     ]
+    },
+    {
+     "key": "/glossary/color/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/contact-form/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/cookie-consent-banner/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/dashboard-design/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/definition-of-ready/",
+     "values": [
+      1,
+      1,
+      0,
+      20
+     ]
+    },
+    {
+     "key": "/glossary/design-handoff/",
+     "values": [
+      1,
+      1,
+      0,
+      23
+     ]
+    },
+    {
+     "key": "/glossary/design-review/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/discovery-interview/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/double-diamond/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/end-to-end-test/",
+     "values": [
+      1,
+      1,
+      0,
+      2126
+     ]
+    },
+    {
+     "key": "/glossary/environment-variables/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/f-pattern/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/font-size/",
+     "values": [
+      1,
+      1,
+      0,
+      24
+     ]
+    },
+    {
+     "key": "/glossary/geo/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/gestures/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/google-fonts/",
+     "values": [
+      1,
+      1,
+      0,
+      33
+     ]
+    },
+    {
+     "key": "/glossary/gradient/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/gutter/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/hamburger-menu/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/helpful-content/",
+     "values": [
+      1,
+      1,
+      0,
+      93
+     ]
+    },
+    {
+     "key": "/glossary/hick-s-law/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/hourly-rate/",
+     "values": [
+      1,
+      1,
+      0,
+      40
+     ]
+    },
+    {
+     "key": "/glossary/human-centered-design/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/human-interface-guidelines/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/impact-mapping/",
+     "values": [
+      1,
+      1,
+      0,
+      13
+     ]
+    },
+    {
+     "key": "/glossary/info-product/",
+     "values": [
+      1,
+      1,
+      0,
+      18
+     ]
+    },
+    {
+     "key": "/glossary/interaction-design/",
+     "values": [
+      1,
+      1,
+      0,
+      25
+     ]
+    },
+    {
+     "key": "/glossary/jpeg/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/llm-traffic/",
+     "values": [
+      1,
+      1,
+      0,
+      14
+     ]
+    },
+    {
+     "key": "/glossary/low-fi/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/multimodality/",
+     "values": [
+      1,
+      1,
+      0,
+      48
+     ]
+    },
+    {
+     "key": "/glossary/netlify/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/neural-network/",
+     "values": [
+      1,
+      1,
+      0,
+      1953
+     ]
+    },
+    {
+     "key": "/glossary/niche/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/open-weights/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/optimizatsiya-pod-golosovoy-poisk/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/placeholder/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/plugin/",
+     "values": [
+      1,
+      1,
+      100,
+      12
+     ]
+    },
+    {
+     "key": "/glossary/popup/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/pre-seed/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/product-thinking/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/product-vision/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/product/",
+     "values": [
+      1,
+      1,
+      0,
+      397
+     ]
+    },
+    {
+     "key": "/glossary/radix-ui/",
+     "values": [
+      1,
+      1,
+      0,
+      427
+     ]
+    },
+    {
+     "key": "/glossary/responsive-design/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/restyling/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/rule-of-thirds/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/scaling/",
+     "values": [
+      1,
+      1,
+      0,
+      66
+     ]
+    },
+    {
+     "key": "/glossary/semantic-similarity/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/seo-dlya-marketpleysov/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/serpstat/",
+     "values": [
+      1,
+      1,
+      0,
+      70
+     ]
+    },
+    {
+     "key": "/glossary/service-design/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/session/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/sketch/",
+     "values": [
+      1,
+      1,
+      0,
+      20
+     ]
+    },
+    {
+     "key": "/glossary/static-website/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/subscriber/",
+     "values": [
+      1,
+      1,
+      100,
+      1
+     ]
+    },
+    {
+     "key": "/glossary/tabs/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/toast-notification/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/topvisor/",
+     "values": [
+      1,
+      1,
+      0,
+      673
+     ]
+    },
+    {
+     "key": "/glossary/tracking/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/ux-sitemap/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/glossary/versioning/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/vertical-video/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/glossary/voice-ui/",
+     "values": [
+      1,
+      1,
+      0,
+      21
+     ]
+    },
+    {
+     "key": "/glossary/web-application/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/whois/",
+     "values": [
+      1,
+      1,
+      0,
+      56
+     ]
+    },
+    {
+     "key": "/glossary/widget/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/glossary/wordpress-theme/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/kejsy/",
+     "values": [
+      1,
+      1,
+      0,
+      3031
+     ]
+    },
+    {
+     "key": "/libraries/",
+     "values": [
+      1,
+      1,
+      0,
+      243
+     ]
+    },
+    {
+     "key": "/produkty/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/semantics/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/services/admin-panel-dashboard/",
+     "values": [
+      1,
+      1,
+      0,
+      3
+     ]
+    },
+    {
+     "key": "/services/web-service-development/",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/services/website-geo/",
+     "values": [
+      1,
+      1,
+      0,
+      29
+     ]
+    },
+    {
+     "key": "/sites/atelier-kowalski-tilda-ws/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/sites/c/business/kids/",
+     "values": [
+      1,
+      1,
+      0,
+      51
+     ]
+    },
+    {
+     "key": "/sites/c/business/pets/",
+     "values": [
+      1,
+      1,
+      0,
+      20
+     ]
+    },
+    {
+     "key": "/sites/c/business/psychology/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/sites/c/business/travel/",
+     "values": [
+      1,
+      1,
+      0,
+      219
+     ]
+    },
+    {
+     "key": "/sites/c/store/fashion/",
+     "values": [
+      1,
+      1,
+      100,
+      1
+     ]
+    },
+    {
+     "key": "/sites/citadel-study-branding/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/sites/dsgn-circle-studio-kz/",
+     "values": [
+      1,
+      1,
+      0,
+      23
+     ]
+    },
+    {
+     "key": "/sites/fuckup-ads-band/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/sites/mrs-alinaas-com/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/sites/sverhtochno-new-tilda-ws/",
+     "values": [
+      1,
+      1,
+      0,
+      60
+     ]
+    },
+    {
+     "key": "/startups/3d-spool/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/startups/aizor/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/startups/algobond/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    }
+   ]
+  },
+  "daily": {
+   "totals": [
+    2435,
+    1988
+   ],
+   "rows": [
+    {
+     "key": "2026-10-31",
+     "values": [
+      17,
+      15
+     ]
+    },
+    {
+     "key": "2026-11-01",
+     "values": [
+      19,
+      14
+     ]
+    },
+    {
+     "key": "2026-11-02",
+     "values": [
+      11,
+      11
+     ]
+    },
+    {
+     "key": "2026-11-03",
+     "values": [
+      32,
+      26
+     ]
+    },
+    {
+     "key": "2026-11-04",
+     "values": [
+      94,
+      92
+     ]
+    },
+    {
+     "key": "2026-11-05",
+     "values": [
+      64,
+      62
+     ]
+    },
+    {
+     "key": "2026-11-06",
+     "values": [
+      100,
+      95
+     ]
+    },
+    {
+     "key": "2026-11-07",
+     "values": [
+      125,
+      117
+     ]
+    },
+    {
+     "key": "2026-11-08",
+     "values": [
+      124,
+      115
+     ]
+    },
+    {
+     "key": "2026-11-09",
+     "values": [
+      130,
+      123
+     ]
+    },
+    {
+     "key": "2026-11-10",
+     "values": [
+      121,
+      115
+     ]
+    },
+    {
+     "key": "2026-11-11",
+     "values": [
+      98,
+      90
+     ]
+    },
+    {
+     "key": "2026-11-12",
+     "values": [
+      87,
+      84
+     ]
+    },
+    {
+     "key": "2026-11-13",
+     "values": [
+      117,
+      113
+     ]
+    },
+    {
+     "key": "2026-11-14",
+     "values": [
+      85,
+      78
+     ]
+    },
+    {
+     "key": "2026-11-15",
+     "values": [
+      82,
+      78
+     ]
+    },
+    {
+     "key": "2026-11-16",
+     "values": [
+      117,
+      113
+     ]
+    },
+    {
+     "key": "2026-11-17",
+     "values": [
+      91,
+      86
+     ]
+    },
+    {
+     "key": "2026-11-18",
+     "values": [
+      97,
+      89
+     ]
+    },
+    {
+     "key": "2026-11-19",
+     "values": [
+      129,
+      121
+     ]
+    },
+    {
+     "key": "2026-11-20",
+     "values": [
+      70,
+      69
+     ]
+    },
+    {
+     "key": "2026-11-21",
+     "values": [
+      64,
+      61
+     ]
+    },
+    {
+     "key": "2026-11-22",
+     "values": [
+      78,
+      78
+     ]
+    },
+    {
+     "key": "2026-11-23",
+     "values": [
+      84,
+      83
+     ]
+    },
+    {
+     "key": "2026-11-24",
+     "values": [
+      79,
+      72
+     ]
+    },
+    {
+     "key": "2026-11-25",
+     "values": [
+      120,
+      114
+     ]
+    },
+    {
+     "key": "2026-11-26",
+     "values": [
+      108,
+      100
+     ]
+    },
+    {
+     "key": "2026-11-27",
+     "values": [
+      92,
+      85
+     ]
+    }
+   ]
+  },
+  "goalsAny": {
+   "totals": [
+    354
+   ],
+   "rows": [
+    {
+     "key": "Search engine traffic",
+     "values": [
+      258
+     ]
+    },
+    {
+     "key": "Direct traffic",
+     "values": [
+      74
+     ]
+    },
+    {
+     "key": "Internal traffic",
+     "values": [
+      10
+     ]
+    },
+    {
+     "key": "Social network traffic",
+     "values": [
+      7
+     ]
+    },
+    {
+     "key": "Link traffic",
+     "values": [
+      5
+     ]
+    }
+   ]
+  },
+  "leads": {
+   "goals": [
+    {
+     "id": 683171301,
+     "name": "Заявка с сайта (форма)"
+    },
+    {
+     "id": 678987064,
+     "name": "Автоцель: отправка формы"
+    },
+    {
+     "id": 683171348,
+     "name": "Запись на консультацию (календарь)"
+    }
+   ],
+   "bySource": {
+    "totals": [
+     2,
+     42,
+     1
+    ],
+    "rows": [
+     {
+      "key": "Direct traffic",
+      "values": [
+       2,
+       11,
+       1
+      ]
+     },
+     {
+      "key": "Internal traffic",
+      "values": [
+       0,
+       4,
+       0
+      ]
+     },
+     {
+      "key": "Link traffic",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "Search engine traffic",
+      "values": [
+       0,
+       23,
+       0
+      ]
+     },
+     {
+      "key": "Social network traffic",
+      "values": [
+       0,
+       3,
+       0
+      ]
+     }
+    ]
+   },
+   "byLanding": {
+    "totals": [
+     2,
+     42,
+     1
+    ],
+    "rows": [
+     {
+      "key": "/",
+      "values": [
+       2,
+       12,
+       1
+      ]
+     },
+     {
+      "key": "/design-systems/admiral-ds/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/fonts/5by7/",
+      "values": [
+       0,
+       4,
+       0
+      ]
+     },
+     {
+      "key": "/geo-audit/",
+      "values": [
+       0,
+       3,
+       0
+      ]
+     },
+     {
+      "key": "/glossary/product/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/glossary/topvisor/",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "/sites/",
+      "values": [
+       0,
+       3,
+       0
+      ]
+     },
+     {
+      "key": "/sites/lizagoroshko-com/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/chto-smotrim/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/doka-lokalnyj-ai-agent/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/emuser/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/georisk/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/interview-boost-ai/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/koroche-pereskaz-youtube/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/lanolstream/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/medstat-pro/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/nejrochek/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/psy-dnevnik-emoczij-ai/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/routineops/",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "/startups/servis-ochen-szhatyh-url/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/youtube-v-tekst/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     }
+    ]
+   },
+   "daily": {
+    "totals": [
+     2,
+     42,
+     1
+    ],
+    "rows": [
+     {
+      "key": "2026-11-05",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-06",
+      "values": [
+       0,
+       4,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-07",
+      "values": [
+       0,
+       5,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-08",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-09",
+      "values": [
+       0,
+       5,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-10",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-11",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-12",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-14",
+      "values": [
+       0,
+       3,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-15",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-16",
+      "values": [
+       0,
+       4,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-17",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-18",
+      "values": [
+       1,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-20",
+      "values": [
+       1,
+       2,
+       1
+      ]
+     },
+     {
+      "key": "2026-11-21",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-24",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "2026-11-27",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     }
+    ]
+   },
+   "byLanding90": {
+    "totals": [
+     2,
+     42,
+     1
+    ],
+    "rows": [
+     {
+      "key": "/",
+      "values": [
+       2,
+       12,
+       1
+      ]
+     },
+     {
+      "key": "/design-systems/admiral-ds/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/fonts/5by7/",
+      "values": [
+       0,
+       4,
+       0
+      ]
+     },
+     {
+      "key": "/geo-audit/",
+      "values": [
+       0,
+       3,
+       0
+      ]
+     },
+     {
+      "key": "/glossary/product/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/glossary/topvisor/",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "/sites/",
+      "values": [
+       0,
+       3,
+       0
+      ]
+     },
+     {
+      "key": "/sites/lizagoroshko-com/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/chto-smotrim/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/doka-lokalnyj-ai-agent/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/emuser/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/georisk/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/interview-boost-ai/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/koroche-pereskaz-youtube/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/lanolstream/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/medstat-pro/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/nejrochek/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/psy-dnevnik-emoczij-ai/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/routineops/",
+      "values": [
+       0,
+       2,
+       0
+      ]
+     },
+     {
+      "key": "/startups/servis-ochen-szhatyh-url/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     },
+     {
+      "key": "/startups/youtube-v-tekst/",
+      "values": [
+       0,
+       1,
+       0
+      ]
+     }
+    ]
+   }
+  }
+ }
+}
